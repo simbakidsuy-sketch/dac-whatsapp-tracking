@@ -1,0 +1,49 @@
+name: DAC WhatsApp Tracking
+
+on:
+  schedule:
+    # Corre cada 30 minutos
+    - cron: "*/30 * * * *"
+  workflow_dispatch:
+    # Permite tocar "Run workflow" a mano desde la pestana Actions, para probar
+    inputs:
+      dry_run:
+        description: "Modo de prueba (no manda WhatsApp reales)"
+        required: false
+        default: "true"
+
+permissions:
+  contents: write
+
+jobs:
+  track:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Descargar el repositorio
+        uses: actions/checkout@v4
+
+      - name: Configurar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Instalar dependencias
+        run: pip install -r requirements.txt
+
+      - name: Ejecutar el script
+        env:
+          DAC_LOGIN: ${{ secrets.DAC_LOGIN }}
+          DAC_PASSWORD: ${{ secrets.DAC_PASSWORD }}
+          DAC_ENV: prod
+          OPTIMIFY_API_KEY: ${{ secrets.OPTIMIFY_API_KEY }}
+          OPTIMIFY_LOCATION_ID: ${{ secrets.OPTIMIFY_LOCATION_ID }}
+          DRY_RUN: ${{ github.event_name == 'workflow_dispatch' && inputs.dry_run || '0' }}
+        run: python dac_whatsapp_tracker.py
+
+      - name: Guardar el estado actualizado
+        run: |
+          git config user.name "dac-whatsapp-bot"
+          git config user.email "actions@github.com"
+          git add state.json
+          git diff --quiet --cached || git commit -m "Actualiza estado de envios"
+          git push
