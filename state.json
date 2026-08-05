@@ -1,1 +1,80 @@
-{}
+{
+  "8821381103186": {
+    "destinatario": "JURI SILVA",
+    "phone": null,
+    "status": "Tu paquete se encuentra en VICHADERO",
+    "updated_at": "2026-08-05T19:43:08"
+  },
+  "8821381121770": {
+    "destinatario": "EVELYN CAROLINA JOURDÁN PÉREZ",
+    "phone": null,
+    "status": "Tu paquete fue entregado",
+    "updated_at": "2026-08-05T19:43:08"
+  },
+  "8821381202695": {
+    "destinatario": "MICAELA ARAUJO",
+    "phone": null,
+    "status": "Tu paquete fue entregado",
+    "updated_at": "2026-08-05T19:43:08"
+  },
+  "8821382157834": {
+    "destinatario": "AUGUSTO LACAVA",
+    "phone": null,
+    "status": "Tu paquete está en reparto (9 a 20hs)",
+    "updated_at": "2026-08-05T19:43:08"
+  },
+  "8821384706310": {
+    "destinatario": "JONATHAN CORNÚ",
+    "phone": null,
+    "status": "Tu paquete fue entregado",
+    "updated_at": "2026-08-05T19:43:08"
+  },
+  "8821384706634": {
+    "destinatario": "MARINA PEDROSO",
+    "phone": null,
+    "status": "Tu paquete se encuentra en ARTIGAS",
+    "updated_at": "2026-08-05T19:43:08"
+  },
+  "8821384706859": {
+    "destinatario": "MARTÍN FERNÁNDEZ",
+    "phone": null,
+    "status": "Tu paquete fue entregado",
+    "updated_at": "2026-08-05T19:43:08"
+  },
+  "8821385047670": {
+    "destinatario": "JORGELINA MARÍA MOREIRA SANA",
+    "phone": null,
+    "status": "Tu paquete fue entregado",
+    "updated_at": "2026-08-05T19:43:08"
+  },
+  "8821386569593": {
+    "destinatario": "MARÍA ELENA DE CARBALLO",
+    "phone": null,
+    "status": "Tu paquete fue recibido por DAC en: LA COMERCIAL",
+    "updated_at": "2026-08-05T19:43:08"
+  },
+  "8821386674114": {
+    "destinatario": "IVANNA YANINA JORGE FELLOZA",
+    "phone": null,
+    "status": "Tu paquete fue recibido por DAC en: LA COMERCIAL",
+    "updated_at": "2026-08-05T19:43:08"
+  },
+  "8821386817910": {
+    "destinatario": "VALERIA TOURNIET",
+    "phone": null,
+    "status": "Tu paquete fue recibido por DAC en: LA COMERCIAL",
+    "updated_at": "2026-08-05T19:43:08"
+  },
+  "8821388501456": {
+    "destinatario": "YEZMIN JOZAMI",
+    "phone": null,
+    "status": "Tu paquete fue recibido por DAC en: LA COMERCIAL",
+    "updated_at": "2026-08-05T19:43:08"
+  },
+  "8821388501573": {
+    "destinatario": "SOFIA VIGGIANO",
+    "phone": null,
+    "status": "Tu paquete fue recibido por DAC en: LA COMERCIAL",
+    "updated_at": "2026-08-05T19:43:08"
+  }
+}
