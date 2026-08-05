@@ -35,9 +35,9 @@ DAC_ENV = os.environ.get("DAC_ENV", "prod")
 OPTIMIFY_API_KEY = os.environ["OPTIMIFY_API_KEY"]
 OPTIMIFY_LOCATION_ID = os.environ["OPTIMIFY_LOCATION_ID"]
 
-# Si esta en "1", no manda WhatsApp de verdad, solo muestra en el log lo que mandaria.
+# Si esta en modo prueba, no manda WhatsApp de verdad, solo muestra en el log lo que mandaria.
 # Util para probar sin gastar mensajes reales mientras se aprueba la plantilla de WhatsApp.
-DRY_RUN = os.environ.get("DRY_RUN", "0") == "1"
+DRY_RUN = os.environ.get("DRY_RUN", "0").strip().lower() in ("1", "true", "yes")
 
 STATE_FILE = "state.json"
 
@@ -47,7 +47,7 @@ DAC_HOSTS = {
 }
 DAC_BASE_URL = f"{DAC_HOSTS[DAC_ENV]}/JAgencia/JAgencia.asmx"
 
-GHL_BASE_URL = "https://services.leadconnectorhub.com"
+GHL_BASE_URL = "https://services.leadconnectorhq.com"
 GHL_API_VERSION = "2021-07-28"
 
 # Cuantos dias hacia atras revisar guias (para agarrar envios que siguen en camino)
@@ -145,12 +145,21 @@ def dac_rastreo_guia(id_sesion: str, k_guia: str, k_oficina_origen: str = "") ->
 
 def buscar_telefono(detalle_guia: dict) -> str | None:
     """
-    La documentacion oficial de wsRastreoGuia no lista un campo de telefono,
-    pero por las dudas buscamos cualquier campo cuyo nombre sugiera que es un
-    telefono, por si DAC lo devuelve sin documentar.
+    Busca el telefono del DESTINATARIO (cliente), no el del remitente (Simba Kids).
+
+    wsObtieneGuiasCliente devuelve el campo 'Telefono_Destinatario' (a veces vacio,
+    si no se cargo al hacer el envio). Priorizamos ese campo exacto; si no esta,
+    buscamos cualquier otro campo que mencione telefono pero que NO sea del
+    remitente/emisor.
     """
+    valor_directo = detalle_guia.get("Telefono_Destinatario")
+    if valor_directo:
+        return str(valor_directo)
+
     for key, value in detalle_guia.items():
         key_lower = key.lower()
+        if "remitente" in key_lower or "emisor" in key_lower:
+            continue  # ese telefono es el nuestro (Simba Kids), no el del cliente
         if ("telefono" in key_lower or "phone" in key_lower or "celular" in key_lower) and value:
             return str(value)
     return None
@@ -169,8 +178,12 @@ def ghl_headers() -> dict:
 
 
 def normalizar_telefono_uy(telefono: str) -> str:
-    """Convierte un telefono uruguayo a formato internacional +598XXXXXXXX."""
-    limpio = "".join(ch for ch in telefono if ch.isdigit() or ch == "+")
+    """Convierte un telefono uruguayo a formato internacional +598XXXXXXXX.
+
+    A veces DAC guarda mas de un numero separado por '/' o ','; usamos el primero.
+    """
+    primero = telefono.split("/")[0].split(",")[0].strip()
+    limpio = "".join(ch for ch in primero if ch.isdigit() or ch == "+")
     if limpio.startswith("+598"):
         return limpio
     if limpio.startswith("598"):
@@ -248,8 +261,13 @@ def guardar_estado(estado: dict) -> None:
 # ---------------------------------------------------------------------------
 
 def mensaje_para_estado(estado_guia: str, codigo_rastreo: str) -> str:
-    texto = MENSAJES_POR_ESTADO.get(estado_guia.upper(), f"Actualizacion de tu envio: {estado_guia}.")
-    return f"Hola! {texto} (Simba Kids - seguimiento {codigo_rastreo})"
+    # Si tenemos una traduccion mas amigable para este estado exacto, la usamos.
+    # Si no (DAC a veces manda frases completas y propias, como
+    # "Tu paquete se encuentra en VICHADERO"), usamos esa misma frase tal cual.
+    texto = MENSAJES_POR_ESTADO.get(estado_guia.upper(), estado_guia)
+    if not texto.endswith((".", "!", "?")):
+        texto += "."
+    return f"Hola! Novedad de tu pedido Simba Kids: {texto} (seguimiento {codigo_rastreo})"
 
 
 def main() -> int:
@@ -288,27 +306,12 @@ def main() -> int:
         log(f"  DEBUG datos crudos de la guia (wsObtieneGuiasCliente): {json.dumps(guia, ensure_ascii=False)}")
         cambios += 1
 
-        # Probamos algunos nombres de campo posibles para la oficina de origen,
-        # ya que la lista de guias no documenta exactamente cual usar.
-        k_oficina_origen = (
-            guia.get("K_Oficina_Origen")
-            or guia.get("Oficina_Origen")
-            or guia.get("K_Oficina")
-            or ""
-        )
-
-        # Traemos el detalle para sacar destinatario + telefono + codigo de rastreo
-        try:
-            detalle = dac_rastreo_guia(id_sesion, k_guia, str(k_oficina_origen))
-            if detalle:
-                log(f"  DEBUG datos crudos del detalle (wsRastreoGuia): {json.dumps(detalle, ensure_ascii=False)}")
-        except Exception as exc:
-            log(f"  ERROR al pedir el detalle de la guia {k_guia}: {exc}")
-            detalle = {}
-
-        destinatario = detalle.get("Destinatario") or guia.get("Destinatario") or "cliente"
-        codigo_rastreo = detalle.get("Codigo_Rastreo") or k_guia
-        telefono = buscar_telefono(detalle) or buscar_telefono(guia)
+        # wsObtieneGuiasCliente ya trae todo lo que necesitamos (destinatario,
+        # telefono y estado), asi que no hace falta llamar a wsRastreoGuia.
+        # El K_Guia que devuelve esta lista es en realidad el codigo de rastreo.
+        destinatario = guia.get("Destinatario") or "cliente"
+        codigo_rastreo = k_guia
+        telefono = buscar_telefono(guia)
 
         registro_previo = estado_guardado.get(k_guia, {})
         if not telefono:
