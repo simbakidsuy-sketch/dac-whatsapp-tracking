@@ -116,7 +116,12 @@ def dac_guias_recientes(id_sesion: str, k_cliente: str) -> list[dict]:
 
 
 def dac_rastreo_guia(id_sesion: str, k_guia: str, k_oficina_origen: str = "") -> dict:
-    """Trae el detalle completo de una guia puntual (para sacar telefono/destinatario)."""
+    """Trae el detalle completo de una guia puntual (para sacar telefono/destinatario).
+
+    Si DAC devuelve un error (por ejemplo, falta la oficina de origen), 'data'
+    puede venir como texto en vez de objeto. En ese caso devolvemos {} y logueamos
+    el motivo, en vez de romper el script.
+    """
     r = requests.post(
         f"{DAC_BASE_URL}/wsRastreoGuia",
         json={
@@ -132,6 +137,9 @@ def dac_rastreo_guia(id_sesion: str, k_guia: str, k_oficina_origen: str = "") ->
     payload = data.get("data") or {}
     if isinstance(payload, list):
         payload = payload[0] if payload else {}
+    if not isinstance(payload, dict):
+        log(f"  AVISO: wsRastreoGuia para guia {k_guia} no devolvio un detalle utilizable: {data}")
+        return {}
     return payload
 
 
@@ -277,11 +285,23 @@ def main() -> int:
             continue  # no cambio nada para esta guia
 
         log(f"Guia {k_guia}: '{estado_anterior}' -> '{estado_actual}'")
+        log(f"  DEBUG datos crudos de la guia (wsObtieneGuiasCliente): {json.dumps(guia, ensure_ascii=False)}")
         cambios += 1
+
+        # Probamos algunos nombres de campo posibles para la oficina de origen,
+        # ya que la lista de guias no documenta exactamente cual usar.
+        k_oficina_origen = (
+            guia.get("K_Oficina_Origen")
+            or guia.get("Oficina_Origen")
+            or guia.get("K_Oficina")
+            or ""
+        )
 
         # Traemos el detalle para sacar destinatario + telefono + codigo de rastreo
         try:
-            detalle = dac_rastreo_guia(id_sesion, k_guia)
+            detalle = dac_rastreo_guia(id_sesion, k_guia, str(k_oficina_origen))
+            if detalle:
+                log(f"  DEBUG datos crudos del detalle (wsRastreoGuia): {json.dumps(detalle, ensure_ascii=False)}")
         except Exception as exc:
             log(f"  ERROR al pedir el detalle de la guia {k_guia}: {exc}")
             detalle = {}
