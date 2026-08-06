@@ -88,11 +88,5 @@
     "phone": null,
     "status": "El remitente hizo el despacho virtual y DAC está esperando tu paquete",
     "updated_at": "2026-08-06T08:06:46"
-  },
-  "8821391594474": {
-    "destinatario": "MARCELO PAMPINELLA",
-    "phone": "098118376",
-    "status": "El remitente hizo el despacho virtual y DAC está esperando tu paquete",
-    "updated_at": "2026-08-06T12:22:43"
   }
 }
