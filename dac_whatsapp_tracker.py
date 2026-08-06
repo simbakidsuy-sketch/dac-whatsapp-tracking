@@ -6,11 +6,16 @@ Como funciona (resumen):
 1. Se loguea en la API de DAC (wsLogin).
 2. Pide la lista de guias (envios) activas de los ultimos dias (wsObtieneGuiasCliente).
 3. Compara el estado de cada guia contra lo guardado en state.json (la ultima vez que corrio).
-4. Si el estado cambio, busca el telefono del destinatario. DAC confirmo que sus
-   consultas de guias NUNCA devuelven el telefono, asi que lo sacamos del campo
-   Observaciones, donde lo cargamos a mano como "TEL:099123456" al crear la etiqueta.
-5. Busca o crea el contacto en Optimify (GoHighLevel) por telefono, y le manda
-   un WhatsApp con la novedad.
+4. Si el estado cambio, busca o crea el contacto en Optimify (GoHighLevel) por
+   telefono, y le actualiza los custom fields 'Estado envio DAC' y
+   'Codigo seguimiento DAC'.
+5. Ese cambio en 'Estado envio DAC' dispara automaticamente un Workflow en
+   Optimify ("Notificar envio DAC por WhatsApp"), que es quien realmente manda
+   el WhatsApp al cliente usando la plantilla aprobada por Meta
+   (seguimiento_envio_simba). Este script NO llama directamente a la API de
+   WhatsApp: eso evita el problema de la ventana de 24hs de Meta, porque el
+   Workflow siempre manda via plantilla aprobada, sin importar cuando fue el
+   ultimo mensaje del cliente.
 6. Guarda el nuevo estado en state.json para no mandar el mismo mensaje dos veces.
 
 Este script esta pensado para correr solo, disparado por GitHub Actions
@@ -36,6 +41,17 @@ DAC_ENV = os.environ.get("DAC_ENV", "prod")
 
 OPTIMIFY_API_KEY = os.environ["OPTIMIFY_API_KEY"]
 OPTIMIFY_LOCATION_ID = os.environ["OPTIMIFY_LOCATION_ID"]
+
+# IDs de los custom fields de contacto en Optimify (Settings > Custom Fields).
+# Se usan para guardar el estado y el codigo de rastreo en el contacto; un
+# Workflow en Optimify ("Notificar envio DAC por WhatsApp") esta configurado
+# para dispararse solo cuando 'Estado envio DAC' cambia, y ese Workflow es el
+# que efectivamente manda el WhatsApp usando la plantilla aprobada por Meta
+# (seguimiento_envio_simba). Este script YA NO manda el WhatsApp directamente:
+# eso evita el problema de la ventana de 24hs, porque el Workflow siempre manda
+# via plantilla aprobada.
+GHL_CUSTOM_FIELD_ESTADO = "tQLmOu1tbZO1flHDtxye"    # contact.estado_envio_dac
+GHL_CUSTOM_FIELD_CODIGO = "gCQOWLDJlM0BoggDRvKi"    # contact.codigo_seguimiento_dac
 
 # Si esta en modo prueba, no manda WhatsApp de verdad, solo muestra en el log lo que mandaria.
 # Util para probar sin gastar mensajes reales mientras se aprueba la plantilla de WhatsApp.
@@ -205,12 +221,20 @@ def normalizar_telefono_uy(telefono: str) -> str:
     return "+598" + limpio
 
 
-def ghl_buscar_o_crear_contacto(nombre: str, telefono: str) -> str | None:
-    """Busca un contacto por telefono; si no existe, lo crea. Devuelve el contactId."""
+def ghl_buscar_o_crear_contacto(
+    nombre: str, telefono: str, estado_texto: str, codigo_rastreo: str
+) -> str | None:
+    """Busca un contacto por telefono; si no existe, lo crea. Devuelve el contactId.
+
+    De paso, actualiza los custom fields 'Estado envio DAC' y 'Codigo seguimiento
+    DAC' del contacto. Cuando 'Estado envio DAC' cambia de valor, esto dispara
+    automaticamente el Workflow "Notificar envio DAC por WhatsApp" en Optimify,
+    que es quien realmente manda el WhatsApp (usando la plantilla aprobada por
+    Meta). Asi evitamos mandar mensajes libres que Meta rechaza fuera de la
+    ventana de 24hs.
+    """
     telefono_norm = normalizar_telefono_uy(telefono)
 
-    # 1) upsert: crea el contacto si no existe, o lo actualiza si ya existia
-    #    (usa el telefono como identificador unico).
     r = requests.post(
         f"{GHL_BASE_URL}/contacts/upsert",
         headers=ghl_headers(),
@@ -219,6 +243,10 @@ def ghl_buscar_o_crear_contacto(nombre: str, telefono: str) -> str | None:
             "name": nombre,
             "phone": telefono_norm,
             "source": "DAC WhatsApp Tracking",
+            "customFields": [
+                {"id": GHL_CUSTOM_FIELD_ESTADO, "field_value": estado_texto},
+                {"id": GHL_CUSTOM_FIELD_CODIGO, "field_value": codigo_rastreo},
+            ],
         },
         timeout=30,
     )
@@ -229,27 +257,6 @@ def ghl_buscar_o_crear_contacto(nombre: str, telefono: str) -> str | None:
     data = r.json()
     contacto = data.get("contact") or data
     return contacto.get("id")
-
-
-def ghl_enviar_whatsapp(contact_id: str, mensaje: str) -> bool:
-    if DRY_RUN:
-        log(f"  [DRY RUN] Se mandaria WhatsApp a contactId={contact_id}: {mensaje!r}")
-        return True
-
-    r = requests.post(
-        f"{GHL_BASE_URL}/conversations/messages",
-        headers=ghl_headers(),
-        json={
-            "type": "WhatsApp",
-            "contactId": contact_id,
-            "message": mensaje,
-        },
-        timeout=30,
-    )
-    if r.status_code >= 300:
-        log(f"  ERROR mandando WhatsApp: {r.status_code} {r.text}")
-        return False
-    return True
 
 
 # ---------------------------------------------------------------------------
@@ -272,14 +279,19 @@ def guardar_estado(estado: dict) -> None:
 # Logica principal
 # ---------------------------------------------------------------------------
 
-def mensaje_para_estado(estado_guia: str, codigo_rastreo: str) -> str:
-    # Si tenemos una traduccion mas amigable para este estado exacto, la usamos.
-    # Si no (DAC a veces manda frases completas y propias, como
-    # "Tu paquete se encuentra en VICHADERO"), usamos esa misma frase tal cual.
+def texto_amigable_para_estado(estado_guia: str) -> str:
+    """Traduce el estado crudo de DAC a un texto mas humano para el cliente.
+
+    Este texto es lo que se guarda en el custom field 'Estado envio DAC' del
+    contacto (variable {{2}} de la plantilla de WhatsApp seguimiento_envio_simba).
+    Si no tenemos traduccion para el estado exacto (DAC a veces manda frases
+    propias, como "Tu paquete se encuentra en VICHADERO"), usamos esa misma
+    frase tal cual viene.
+    """
     texto = MENSAJES_POR_ESTADO.get(estado_guia.upper(), estado_guia)
     if not texto.endswith((".", "!", "?")):
         texto += "."
-    return f"Hola! Novedad de tu pedido Simba Kids: {texto} (seguimiento {codigo_rastreo})"
+    return texto
 
 
 def main() -> int:
@@ -330,13 +342,24 @@ def main() -> int:
             telefono = registro_previo.get("phone")
 
         if telefono:
-            contact_id = ghl_buscar_o_crear_contacto(destinatario, telefono)
-            if contact_id:
-                mensaje = mensaje_para_estado(estado_actual, codigo_rastreo)
-                ok = ghl_enviar_whatsapp(contact_id, mensaje)
-                log(f"  WhatsApp {'enviado' if ok else 'FALLO'} a {destinatario} ({telefono})")
+            estado_texto = texto_amigable_para_estado(estado_actual)
+            if DRY_RUN:
+                log(
+                    f"  [DRY RUN] Actualizaria contacto {destinatario} ({telefono}) "
+                    f"con Estado envio DAC={estado_texto!r}, Codigo seguimiento DAC={codigo_rastreo!r} "
+                    f"(esto dispararia el envio de WhatsApp via el Workflow de Optimify)"
+                )
             else:
-                log(f"  No se pudo resolver el contacto en Optimify para {destinatario}")
+                contact_id = ghl_buscar_o_crear_contacto(
+                    destinatario, telefono, estado_texto, codigo_rastreo
+                )
+                if contact_id:
+                    # Actualizar 'Estado envio DAC' dispara automaticamente el
+                    # Workflow "Notificar envio DAC por WhatsApp" en Optimify,
+                    # que manda el WhatsApp usando la plantilla aprobada por Meta.
+                    log(f"  Contacto actualizado en Optimify ({destinatario}, {telefono}); WhatsApp disparado via Workflow.")
+                else:
+                    log(f"  No se pudo resolver el contacto en Optimify para {destinatario}")
         else:
             log(f"  Sin telefono disponible para la guia {k_guia} ({destinatario}); no se manda WhatsApp.")
             contactos_sin_telefono.append({"guia": k_guia, "destinatario": destinatario, "estado": estado_actual})
