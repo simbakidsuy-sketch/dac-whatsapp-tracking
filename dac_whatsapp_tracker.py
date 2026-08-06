@@ -6,8 +6,9 @@ Como funciona (resumen):
 1. Se loguea en la API de DAC (wsLogin).
 2. Pide la lista de guias (envios) activas de los ultimos dias (wsObtieneGuiasCliente).
 3. Compara el estado de cada guia contra lo guardado en state.json (la ultima vez que corrio).
-4. Si el estado cambio, busca el detalle completo (wsRastreoGuia) para sacar el
-   nombre del destinatario y, si esta disponible, el telefono.
+4. Si el estado cambio, busca el telefono del destinatario. DAC confirmo que sus
+   consultas de guias NUNCA devuelven el telefono, asi que lo sacamos del campo
+   Observaciones, donde lo cargamos a mano como "TEL:099123456" al crear la etiqueta.
 5. Busca o crea el contacto en Optimify (GoHighLevel) por telefono, y le manda
    un WhatsApp con la novedad.
 6. Guarda el nuevo estado en state.json para no mandar el mismo mensaje dos veces.
@@ -18,6 +19,7 @@ cada cierto tiempo (ver .github/workflows/track.yml).
 
 import json
 import os
+import re
 import sys
 from datetime import datetime, timedelta
 
@@ -143,18 +145,28 @@ def dac_rastreo_guia(id_sesion: str, k_guia: str, k_oficina_origen: str = "") ->
     return payload
 
 
+RE_TELEFONO_EN_OBSERVACIONES = re.compile(r"TEL[:\s]*([\d\s\-\+]{7,15})", re.IGNORECASE)
+
+
 def buscar_telefono(detalle_guia: dict) -> str | None:
     """
     Busca el telefono del DESTINATARIO (cliente), no el del remitente (Simba Kids).
 
-    wsObtieneGuiasCliente devuelve el campo 'Telefono_Destinatario' (a veces vacio,
-    si no se cargo al hacer el envio). Priorizamos ese campo exacto; si no esta,
-    buscamos cualquier otro campo que mencione telefono pero que NO sea del
-    remitente/emisor.
+    DAC confirmo que wsObtieneGuiasCliente NUNCA devuelve el telefono del
+    destinatario (ni cargando la etiqueta a mano ni por API), asi que la
+    fuente real es el campo 'Observaciones': ahi cargamos manualmente el
+    telefono con el formato "TEL:099123456" al crear cada etiqueta en DAC.
+    Se deja tambien el chequeo de 'Telefono_Destinatario' por si DAC lo llega
+    a habilitar en el futuro.
     """
     valor_directo = detalle_guia.get("Telefono_Destinatario")
     if valor_directo:
         return str(valor_directo)
+
+    observaciones = detalle_guia.get("Observaciones") or ""
+    match = RE_TELEFONO_EN_OBSERVACIONES.search(observaciones)
+    if match:
+        return match.group(1).strip()
 
     for key, value in detalle_guia.items():
         key_lower = key.lower()
