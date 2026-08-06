@@ -50,8 +50,8 @@
   "8821386569593": {
     "destinatario": "MARÍA ELENA DE CARBALLO",
     "phone": null,
-    "status": "Tu paquete se encuentra en CENTRO OPERACIONES MVD",
-    "updated_at": "2026-08-05T22:33:53"
+    "status": "Tu paquete está en viaje a DEPOSITO DURAZNO",
+    "updated_at": "2026-08-06T08:06:46"
   },
   "8821386674114": {
     "destinatario": "IVANNA YANINA JORGE FELLOZA",
@@ -62,19 +62,31 @@
   "8821386817910": {
     "destinatario": "VALERIA TOURNIET",
     "phone": null,
-    "status": "Tu paquete está en viaje a CENTRO OPERACIONES MVD",
-    "updated_at": "2026-08-05T22:33:53"
+    "status": "Tu paquete se encuentra en CENTRO OPERACIONES MVD",
+    "updated_at": "2026-08-06T08:06:46"
   },
   "8821388501456": {
     "destinatario": "YEZMIN JOZAMI",
     "phone": null,
-    "status": "Tu paquete está en viaje a CANELONES",
-    "updated_at": "2026-08-05T22:33:53"
+    "status": "Tu paquete se encuentra en CENTRO OPERACIONES MVD",
+    "updated_at": "2026-08-06T08:06:46"
   },
   "8821388501573": {
     "destinatario": "SOFIA VIGGIANO",
     "phone": null,
-    "status": "Tu paquete fue recibido por DAC en: LA COMERCIAL",
-    "updated_at": "2026-08-05T19:43:08"
+    "status": "Tu paquete está en viaje a COLONIA SHOPPING",
+    "updated_at": "2026-08-06T08:06:46"
+  },
+  "8821390962985": {
+    "destinatario": "RITA GONZALEZ",
+    "phone": null,
+    "status": "El remitente hizo el despacho virtual y DAC está esperando tu paquete",
+    "updated_at": "2026-08-06T08:06:46"
+  },
+  "8821390963236": {
+    "destinatario": "MATEO LARRAMENDI",
+    "phone": null,
+    "status": "El remitente hizo el despacho virtual y DAC está esperando tu paquete",
+    "updated_at": "2026-08-06T08:06:46"
   }
 }
