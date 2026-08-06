@@ -50,8 +50,8 @@
   "8821386569593": {
     "destinatario": "MARÍA ELENA DE CARBALLO",
     "phone": null,
-    "status": "Tu paquete está en viaje a DEPOSITO DURAZNO",
-    "updated_at": "2026-08-06T08:06:46"
+    "status": "Tu paquete se encuentra en DEPOSITO DURAZNO",
+    "updated_at": "2026-08-06T12:22:41"
   },
   "8821386674114": {
     "destinatario": "IVANNA YANINA JORGE FELLOZA",
@@ -74,8 +74,8 @@
   "8821388501573": {
     "destinatario": "SOFIA VIGGIANO",
     "phone": null,
-    "status": "Tu paquete está en viaje a COLONIA SHOPPING",
-    "updated_at": "2026-08-06T08:06:46"
+    "status": "Tu paquete está en reparto (9 a 20hs)",
+    "updated_at": "2026-08-06T12:22:41"
   },
   "8821390962985": {
     "destinatario": "RITA GONZALEZ",
@@ -88,5 +88,11 @@
     "phone": null,
     "status": "El remitente hizo el despacho virtual y DAC está esperando tu paquete",
     "updated_at": "2026-08-06T08:06:46"
+  },
+  "8821391594474": {
+    "destinatario": "MARCELO PAMPINELLA",
+    "phone": "098118376",
+    "status": "El remitente hizo el despacho virtual y DAC está esperando tu paquete",
+    "updated_at": "2026-08-06T12:22:43"
   }
 }
