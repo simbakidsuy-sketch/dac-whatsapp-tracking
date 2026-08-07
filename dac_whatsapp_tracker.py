@@ -29,6 +29,7 @@ import re
 import sys
 import uuid
 from datetime import datetime, timedelta
+from zoneinfo import ZoneInfo
 
 
 import requests
@@ -93,6 +94,23 @@ GHL_API_VERSION = "2021-07-28"
 
 # Cuantos dias hacia atras revisar guias (para agarrar envios que siguen en camino)
 DIAS_A_REVISAR = 5
+
+
+# Horario en el que esta permitido correr el script y mandar WhatsApp a los
+# clientes (hora de Uruguay). Fuera de este horario el script no consulta DAC
+# ni manda nada; simplemente no hace nada y termina. Esto evita que le lleguen
+# mensajes a los clientes de noche o de madrugada.
+TIMEZONE_UY = ZoneInfo("America/Montevideo")
+HORA_INICIO = 8    # 08:00 hs
+HORA_FIN = 21       # hasta las 21:00 hs (no inclusive)
+DIAS_HABILES = {0, 1, 2, 3, 4, 5}    # lunes=0 ... sabado=5 (domingo=6 queda afuera)
+
+
+def dentro_del_horario_permitido(ahora: datetime | None = None) -> bool:
+    """True si 'ahora' (hora de Uruguay) cae de lunes a sabado, entre HORA_INICIO y HORA_FIN."""
+    if ahora is None:
+        ahora = datetime.now(TIMEZONE_UY)
+    return ahora.weekday() in DIAS_HABILES and HORA_INICIO <= ahora.hour < HORA_FIN
 
 
 # Traduccion de estados de DAC a un mensaje mas humano para el cliente.
@@ -359,6 +377,16 @@ def texto_amigable_para_estado(estado_guia: str) -> str:
 
 def main() -> int:
     log(f"Arrancando (entorno DAC={DAC_ENV}, dry_run={DRY_RUN})")
+
+
+    ahora_uy = datetime.now(TIMEZONE_UY)
+    if not dentro_del_horario_permitido(ahora_uy):
+        log(
+            f"Fuera de horario permitido ({ahora_uy.strftime('%A %H:%M')} hora Uruguay; "
+            f"solo se corre de lunes a sabado de {HORA_INICIO:02d}:00 a {HORA_FIN:02d}:00). "
+            f"No se consulta DAC ni se manda nada."
+        )
+        return 0
 
 
     estado_guardado = cargar_estado()
