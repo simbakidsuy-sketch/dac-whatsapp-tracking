@@ -68,8 +68,8 @@
   "8821388501456": {
     "destinatario": "YEZMIN JOZAMI",
     "phone": null,
-    "status": "Tu paquete está en reparto (9 a 20hs)",
-    "updated_at": "2026-08-07T12:29:31"
+    "status": "Tu paquete fue entregado",
+    "updated_at": "2026-08-07T17:31:37"
   },
   "8821388501573": {
     "destinatario": "SOFIA VIGGIANO",
@@ -80,14 +80,14 @@
   "8821390962985": {
     "destinatario": "RITA GONZALEZ",
     "phone": null,
-    "status": "Tu paquete fue recibido por DAC en: TRES CRUCES",
-    "updated_at": "2026-08-07T12:29:31"
+    "status": "Tu paquete está en viaje a DEPOSITO SALTO",
+    "updated_at": "2026-08-07T17:31:37"
   },
   "8821390963236": {
     "destinatario": "MATEO LARRAMENDI",
     "phone": null,
-    "status": "Tu paquete se encuentra en CENTRO DE DISTRIBUCION",
-    "updated_at": "2026-08-07T15:38:46"
+    "status": "Tu paquete está en viaje a SAN LUIS - CANELONES",
+    "updated_at": "2026-08-07T17:31:37"
   },
   "8821391594474": {
     "destinatario": "MARCELO PAMPINELLA",
