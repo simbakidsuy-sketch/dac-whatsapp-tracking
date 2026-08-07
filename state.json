@@ -98,13 +98,13 @@
   "8821392883143": {
     "destinatario": "VICTORIA ECHARTE",
     "phone": "098118376",
-    "status": "Tu paquete se encuentra en COLONIA VALDENSE",
-    "updated_at": "2026-08-07T18:00:27"
+    "status": "Tu paquete fue entregado",
+    "updated_at": "2026-08-07T19:42:48"
   },
   "8821394485267": {
     "destinatario": "ANA BELEN RODRÍGUEZ PERCOPO",
     "phone": "099365822",
-    "status": "Tu paquete fue recibido por DAC en: TRES CRUCES",
-    "updated_at": "2026-08-07T18:00:28"
+    "status": "Tu paquete se encuentra en PIRIAPOLIS",
+    "updated_at": "2026-08-07T19:42:49"
   }
 }
