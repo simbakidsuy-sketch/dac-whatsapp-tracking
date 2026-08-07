@@ -22,25 +22,32 @@ Este script esta pensado para correr solo, disparado por GitHub Actions
 cada cierto tiempo (ver .github/workflows/track.yml).
 """
 
+
 import json
 import os
 import re
 import sys
+import uuid
 from datetime import datetime, timedelta
 
+
 import requests
+
 
 # ---------------------------------------------------------------------------
 # Configuracion (todo esto sale de GitHub Secrets, nunca hardcodeado)
 # ---------------------------------------------------------------------------
+
 
 DAC_LOGIN = os.environ["DAC_LOGIN"]
 DAC_PASSWORD = os.environ["DAC_PASSWORD"]
 # "uat" para pruebas, "prod" para produccion real
 DAC_ENV = os.environ.get("DAC_ENV", "prod")
 
+
 OPTIMIFY_API_KEY = os.environ["OPTIMIFY_API_KEY"]
 OPTIMIFY_LOCATION_ID = os.environ["OPTIMIFY_LOCATION_ID"]
+
 
 # IDs de los custom fields de contacto en Optimify (Settings > Custom Fields).
 # Se usan para guardar el estado y el codigo de rastreo en el contacto; un
@@ -53,11 +60,25 @@ OPTIMIFY_LOCATION_ID = os.environ["OPTIMIFY_LOCATION_ID"]
 GHL_CUSTOM_FIELD_ESTADO = "tQLmOu1tbZO1flHDtxye"    # contact.estado_envio_dac
 GHL_CUSTOM_FIELD_CODIGO = "gCQOWLDJlM0BoggDRvKi"    # contact.codigo_seguimiento_dac
 
+# IMPORTANTE: el Workflow de Optimify dispara cuando 'Estado envio DAC' CAMBIA
+# DE VALOR. El problema es que el primer estado de DAC ("El remitente hizo el
+# despacho virtual...") es literalmente el mismo texto para TODOS los envios,
+# asi que si un mismo contacto (mismo telefono) recibe dos guias distintas,
+# la segunda vez ese campo puede quedar con el MISMO texto que ya tenia, y
+# entonces GHL no detecta ningun cambio real y el Workflow no se dispara.
+# Por eso ademas escribimos un valor unico (UUID) en este campo cada vez que
+# de verdad hay una notificacion para mandar, y el Workflow esta configurado
+# para disparar cuando ESTE campo cambia (que SIEMPRE cambia), en vez de
+# 'Estado envio DAC'.
+GHL_CUSTOM_FIELD_NOTIF_ID = "rYuEkyD1NQdhIkfDUr7u"    # contact.dac_notificacion_id
+
 # Si esta en modo prueba, no manda WhatsApp de verdad, solo muestra en el log lo que mandaria.
 # Util para probar sin gastar mensajes reales mientras se aprueba la plantilla de WhatsApp.
 DRY_RUN = os.environ.get("DRY_RUN", "0").strip().lower() in ("1", "true", "yes")
 
+
 STATE_FILE = "state.json"
+
 
 DAC_HOSTS = {
     "uat": "https://uat.sge.dac.com.uy",
@@ -65,11 +86,14 @@ DAC_HOSTS = {
 }
 DAC_BASE_URL = f"{DAC_HOSTS[DAC_ENV]}/JAgencia/JAgencia.asmx"
 
+
 GHL_BASE_URL = "https://services.leadconnectorhq.com"
 GHL_API_VERSION = "2021-07-28"
 
+
 # Cuantos dias hacia atras revisar guias (para agarrar envios que siguen en camino)
 DIAS_A_REVISAR = 5
+
 
 # Traduccion de estados de DAC a un mensaje mas humano para el cliente.
 # Si un estado no esta en este diccionario, se manda el nombre tal cual viene de DAC.
@@ -84,13 +108,18 @@ MENSAJES_POR_ESTADO = {
 }
 
 
+
+
 def log(msg: str) -> None:
     print(f"[{datetime.now().isoformat(timespec='seconds')}] {msg}", flush=True)
+
+
 
 
 # ---------------------------------------------------------------------------
 # DAC
 # ---------------------------------------------------------------------------
+
 
 def dac_login() -> tuple[str, str]:
     """Devuelve (ID_Sesion, K_Cliente)."""
@@ -107,6 +136,8 @@ def dac_login() -> tuple[str, str]:
     if not payload or not payload.get("ID_Session"):
         raise RuntimeError(f"No se pudo iniciar sesion en DAC: {data}")
     return payload["ID_Session"], str(payload["K_Cliente"])
+
+
 
 
 def dac_guias_recientes(id_sesion: str, k_cliente: str) -> list[dict]:
@@ -131,6 +162,8 @@ def dac_guias_recientes(id_sesion: str, k_cliente: str) -> list[dict]:
     if isinstance(payload, dict):
         payload = [payload]
     return payload
+
+
 
 
 def dac_rastreo_guia(id_sesion: str, k_guia: str, k_oficina_origen: str = "") -> dict:
@@ -161,7 +194,11 @@ def dac_rastreo_guia(id_sesion: str, k_guia: str, k_oficina_origen: str = "") ->
     return payload
 
 
+
+
 RE_TELEFONO_EN_OBSERVACIONES = re.compile(r"TEL[:\s]*([\d\s\-\+]{7,15})", re.IGNORECASE)
+
+
 
 
 def buscar_telefono(detalle_guia: dict) -> str | None:
@@ -179,10 +216,12 @@ def buscar_telefono(detalle_guia: dict) -> str | None:
     if valor_directo:
         return str(valor_directo)
 
+
     observaciones = detalle_guia.get("Observaciones") or ""
     match = RE_TELEFONO_EN_OBSERVACIONES.search(observaciones)
     if match:
         return match.group(1).strip()
+
 
     for key, value in detalle_guia.items():
         key_lower = key.lower()
@@ -193,9 +232,12 @@ def buscar_telefono(detalle_guia: dict) -> str | None:
     return None
 
 
+
+
 # ---------------------------------------------------------------------------
 # Optimify / GoHighLevel
 # ---------------------------------------------------------------------------
+
 
 def ghl_headers() -> dict:
     return {
@@ -205,11 +247,10 @@ def ghl_headers() -> dict:
     }
 
 
-def normalizar_telefono_uy(telefono: str) -> str:
-    """Convierte un telefono uruguayo a formato internacional +598XXXXXXXX.
 
-    A veces DAC guarda mas de un numero separado por '/' o ','; usamos el primero.
-    """
+
+def normalizar_telefono_uy(telefono: str) -> str:
+    """Convierte un telefono uruguayo a formato internacional +598..."""
     primero = telefono.split("/")[0].split(",")[0].strip()
     limpio = "".join(ch for ch in primero if ch.isdigit() or ch == "+")
     if limpio.startswith("+598"):
@@ -219,6 +260,8 @@ def normalizar_telefono_uy(telefono: str) -> str:
     if limpio.startswith("0"):
         return "+598" + limpio[1:]
     return "+598" + limpio
+
+
 
 
 def ghl_buscar_o_crear_contacto(
@@ -232,8 +275,16 @@ def ghl_buscar_o_crear_contacto(
     que es quien realmente manda el WhatsApp (usando la plantilla aprobada por
     Meta). Asi evitamos mandar mensajes libres que Meta rechaza fuera de la
     ventana de 24hs.
+
+    Tambien escribimos un UUID nuevo en 'DAC notificacion id' en cada llamada:
+    el Workflow en realidad dispara sobre ESE campo (no sobre 'Estado envio
+    DAC'), porque el texto del estado puede repetirse entre guias distintas
+    del mismo contacto (por ejemplo, el primer estado de DAC es igual para
+    todos los envios) y en ese caso GHL no detectaria ningun cambio real.
     """
     telefono_norm = normalizar_telefono_uy(telefono)
+    notif_id = str(uuid.uuid4())
+
 
     r = requests.post(
         f"{GHL_BASE_URL}/contacts/upsert",
@@ -246,6 +297,7 @@ def ghl_buscar_o_crear_contacto(
             "customFields": [
                 {"id": GHL_CUSTOM_FIELD_ESTADO, "field_value": estado_texto},
                 {"id": GHL_CUSTOM_FIELD_CODIGO, "field_value": codigo_rastreo},
+                {"id": GHL_CUSTOM_FIELD_NOTIF_ID, "field_value": notif_id},
             ],
         },
         timeout=30,
@@ -254,14 +306,18 @@ def ghl_buscar_o_crear_contacto(
         log(f"  ERROR creando/actualizando contacto en Optimify: {r.status_code} {r.text}")
         return None
 
+
     data = r.json()
     contacto = data.get("contact") or data
     return contacto.get("id")
 
 
+
+
 # ---------------------------------------------------------------------------
 # Estado (para no mandar el mismo mensaje dos veces)
 # ---------------------------------------------------------------------------
+
 
 def cargar_estado() -> dict:
     if os.path.exists(STATE_FILE):
@@ -270,14 +326,19 @@ def cargar_estado() -> dict:
     return {}
 
 
+
+
 def guardar_estado(estado: dict) -> None:
     with open(STATE_FILE, "w", encoding="utf-8") as f:
         json.dump(estado, f, ensure_ascii=False, indent=2, sort_keys=True)
 
 
+
+
 # ---------------------------------------------------------------------------
 # Logica principal
 # ---------------------------------------------------------------------------
+
 
 def texto_amigable_para_estado(estado_guia: str) -> str:
     """Traduce el estado crudo de DAC a un texto mas humano para el cliente.
@@ -294,11 +355,15 @@ def texto_amigable_para_estado(estado_guia: str) -> str:
     return texto
 
 
+
+
 def main() -> int:
     log(f"Arrancando (entorno DAC={DAC_ENV}, dry_run={DRY_RUN})")
 
+
     estado_guardado = cargar_estado()
     contactos_sin_telefono = []
+
 
     try:
         id_sesion, k_cliente = dac_login()
@@ -307,6 +372,7 @@ def main() -> int:
         return 1
     log(f"Login OK en DAC (K_Cliente={k_cliente})")
 
+
     try:
         guias = dac_guias_recientes(id_sesion, k_cliente)
     except Exception as exc:
@@ -314,7 +380,9 @@ def main() -> int:
         return 1
     log(f"Se encontraron {len(guias)} guias en los ultimos {DIAS_A_REVISAR} dias")
 
+
     cambios = 0
+
 
     for guia in guias:
         k_guia = str(guia.get("K_Guia") or "").strip()
@@ -322,13 +390,16 @@ def main() -> int:
         if not k_guia or not estado_actual:
             continue
 
+
         estado_anterior = estado_guardado.get(k_guia, {}).get("status")
         if estado_anterior == estado_actual:
             continue  # no cambio nada para esta guia
 
+
         log(f"Guia {k_guia}: '{estado_anterior}' -> '{estado_actual}'")
         log(f"  DEBUG datos crudos de la guia (wsObtieneGuiasCliente): {json.dumps(guia, ensure_ascii=False)}")
         cambios += 1
+
 
         # wsObtieneGuiasCliente ya trae todo lo que necesitamos (destinatario,
         # telefono y estado), asi que no hace falta llamar a wsRastreoGuia.
@@ -337,9 +408,11 @@ def main() -> int:
         codigo_rastreo = k_guia
         telefono = buscar_telefono(guia)
 
+
         registro_previo = estado_guardado.get(k_guia, {})
         if not telefono:
             telefono = registro_previo.get("phone")
+
 
         if telefono:
             estado_texto = texto_amigable_para_estado(estado_actual)
@@ -364,6 +437,7 @@ def main() -> int:
             log(f"  Sin telefono disponible para la guia {k_guia} ({destinatario}); no se manda WhatsApp.")
             contactos_sin_telefono.append({"guia": k_guia, "destinatario": destinatario, "estado": estado_actual})
 
+
         estado_guardado[k_guia] = {
             "status": estado_actual,
             "destinatario": destinatario,
@@ -371,13 +445,18 @@ def main() -> int:
             "updated_at": datetime.now().isoformat(timespec="seconds"),
         }
 
+
     guardar_estado(estado_guardado)
     log(f"Listo. {cambios} cambios de estado procesados.")
+
 
     if contactos_sin_telefono:
         log(f"AVISO: {len(contactos_sin_telefono)} guias sin telefono disponible: {contactos_sin_telefono}")
 
+
     return 0
+
+
 
 
 if __name__ == "__main__":
