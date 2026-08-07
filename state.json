@@ -62,14 +62,14 @@
   "8821386817910": {
     "destinatario": "VALERIA TOURNIET",
     "phone": null,
-    "status": "Tu paquete se encuentra en CENTRO OPERACIONES MVD",
-    "updated_at": "2026-08-06T08:06:46"
+    "status": "Tu paquete está en reparto (9 a 20hs)",
+    "updated_at": "2026-08-07T12:29:31"
   },
   "8821388501456": {
     "destinatario": "YEZMIN JOZAMI",
     "phone": null,
-    "status": "Tu paquete está en viaje a CANELONES",
-    "updated_at": "2026-08-07T11:12:08"
+    "status": "Tu paquete está en reparto (9 a 20hs)",
+    "updated_at": "2026-08-07T12:29:31"
   },
   "8821388501573": {
     "destinatario": "SOFIA VIGGIANO",
@@ -80,14 +80,14 @@
   "8821390962985": {
     "destinatario": "RITA GONZALEZ",
     "phone": null,
-    "status": "El remitente hizo el despacho virtual y DAC está esperando tu paquete",
-    "updated_at": "2026-08-06T08:06:46"
+    "status": "Tu paquete fue recibido por DAC en: TRES CRUCES",
+    "updated_at": "2026-08-07T12:29:31"
   },
   "8821390963236": {
     "destinatario": "MATEO LARRAMENDI",
     "phone": null,
-    "status": "El remitente hizo el despacho virtual y DAC está esperando tu paquete",
-    "updated_at": "2026-08-06T08:06:46"
+    "status": "Tu paquete fue recibido por DAC en: TRES CRUCES",
+    "updated_at": "2026-08-07T12:29:31"
   },
   "8821391594474": {
     "destinatario": "MARCELO PAMPINELLA",
@@ -98,13 +98,13 @@
   "8821392883143": {
     "destinatario": "VICTORIA ECHARTE",
     "phone": "098118376",
-    "status": "El remitente hizo el despacho virtual y DAC está esperando tu paquete",
-    "updated_at": "2026-08-07T11:12:08"
+    "status": "Tu paquete fue recibido por DAC en: TRES CRUCES",
+    "updated_at": "2026-08-07T12:29:32"
   },
   "8821394485267": {
     "destinatario": "ANA BELEN RODRÍGUEZ PERCOPO",
     "phone": "099365822",
-    "status": "El remitente hizo el despacho virtual y DAC está esperando tu paquete",
-    "updated_at": "2026-08-07T01:44:50"
+    "status": "Tu paquete fue recibido por DAC en: TRES CRUCES",
+    "updated_at": "2026-08-07T12:29:32"
   }
 }
