@@ -62,8 +62,8 @@
   "8821386817910": {
     "destinatario": "VALERIA TOURNIET",
     "phone": null,
-    "status": "Tu paquete está en reparto (9 a 20hs)",
-    "updated_at": "2026-08-07T18:00:27"
+    "status": "Disculpas, no alcanzamos a entregar tu paquete, nuevamente saldrá a reparto",
+    "updated_at": "2026-08-07T23:18:54"
   },
   "8821388501456": {
     "destinatario": "YEZMIN JOZAMI",
@@ -80,8 +80,8 @@
   "8821390962985": {
     "destinatario": "RITA GONZALEZ",
     "phone": null,
-    "status": "Tu paquete está en viaje a DEPOSITO SALTO",
-    "updated_at": "2026-08-07T18:00:27"
+    "status": "Tu paquete se encuentra en DEPOSITO SALTO",
+    "updated_at": "2026-08-07T23:18:54"
   },
   "8821390963236": {
     "destinatario": "MATEO LARRAMENDI",
