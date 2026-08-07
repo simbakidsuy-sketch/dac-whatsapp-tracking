@@ -50,8 +50,8 @@
   "8821386569593": {
     "destinatario": "MARÍA ELENA DE CARBALLO",
     "phone": null,
-    "status": "Tu paquete se encuentra en DEPOSITO DURAZNO",
-    "updated_at": "2026-08-06T12:22:41"
+    "status": "Tu paquete fue entregado",
+    "updated_at": "2026-08-07T15:38:46"
   },
   "8821386674114": {
     "destinatario": "IVANNA YANINA JORGE FELLOZA",
@@ -86,8 +86,8 @@
   "8821390963236": {
     "destinatario": "MATEO LARRAMENDI",
     "phone": null,
-    "status": "Tu paquete fue recibido por DAC en: TRES CRUCES",
-    "updated_at": "2026-08-07T12:29:31"
+    "status": "Tu paquete se encuentra en CENTRO DE DISTRIBUCION",
+    "updated_at": "2026-08-07T15:38:46"
   },
   "8821391594474": {
     "destinatario": "MARCELO PAMPINELLA",
@@ -98,8 +98,8 @@
   "8821392883143": {
     "destinatario": "VICTORIA ECHARTE",
     "phone": "098118376",
-    "status": "Tu paquete fue recibido por DAC en: TRES CRUCES",
-    "updated_at": "2026-08-07T12:29:32"
+    "status": "Tu paquete se encuentra en COLONIA VALDENSE",
+    "updated_at": "2026-08-07T15:38:47"
   },
   "8821394485267": {
     "destinatario": "ANA BELEN RODRÍGUEZ PERCOPO",
