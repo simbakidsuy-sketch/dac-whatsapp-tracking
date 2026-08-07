@@ -106,5 +106,17 @@
     "phone": "099365822",
     "status": "Tu paquete se encuentra en PIRIAPOLIS",
     "updated_at": "2026-08-07T19:42:49"
+  },
+  "8821397430952": {
+    "destinatario": "BRUNA GONÇALVEZ",
+    "phone": "095865362",
+    "status": "El remitente hizo el despacho virtual y DAC está esperando tu paquete",
+    "updated_at": "2026-08-07T21:21:04"
+  },
+  "8821397487924": {
+    "destinatario": "PATRICIA CORNELLI",
+    "phone": "093934047",
+    "status": "El remitente hizo el despacho virtual y DAC está esperando tu paquete",
+    "updated_at": "2026-08-07T21:21:04"
   }
 }
