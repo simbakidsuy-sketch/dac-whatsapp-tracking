@@ -92,6 +92,15 @@ GHL_BASE_URL = "https://services.leadconnectorhq.com"
 GHL_API_VERSION = "2021-07-28"
 
 
+# Prefijo del link publico de rastreo de DAC. Se le pega el K_Guia al final y
+# se manda ese link completo (no solo el codigo) en el custom field 'Codigo
+# seguimiento DAC', para que el cliente pueda entrar con un click desde el
+# WhatsApp. Esto NO toca el texto de la plantilla aprobada por Meta (que sigue
+# diciendo "Seguimiento: {{3}}"): solo cambia el valor que le mandamos a esa
+# variable, asi que no hace falta re-aprobacion de Meta.
+DAC_TRACKING_URL_PREFIX = "https://www.dac.com.uy/envios/rastreo/Codigo_Rastreo/"
+
+
 # Cuantos dias hacia atras revisar guias (para agarrar envios que siguen en camino)
 DIAS_A_REVISAR = 5
 
@@ -433,7 +442,9 @@ def main() -> int:
         # telefono y estado), asi que no hace falta llamar a wsRastreoGuia.
         # El K_Guia que devuelve esta lista es en realidad el codigo de rastreo.
         destinatario = guia.get("Destinatario") or "cliente"
-        codigo_rastreo = k_guia
+        # Mandamos el link completo de rastreo de DAC (no solo el codigo), para
+        # que el cliente pueda entrar directo con un click desde el WhatsApp.
+        codigo_rastreo = f"{DAC_TRACKING_URL_PREFIX}{k_guia}"
         telefono = buscar_telefono(guia)
 
 
