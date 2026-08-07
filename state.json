@@ -74,8 +74,8 @@
   "8821388501573": {
     "destinatario": "SOFIA VIGGIANO",
     "phone": null,
-    "status": "Tu paquete está en reparto (9 a 20hs)",
-    "updated_at": "2026-08-06T12:22:41"
+    "status": "Tu paquete fue entregado",
+    "updated_at": "2026-08-07T01:44:50"
   },
   "8821390962985": {
     "destinatario": "RITA GONZALEZ",
@@ -94,5 +94,17 @@
     "phone": "098118376",
     "status": "El remitente hizo el despacho virtual y DAC está esperando tu paquete",
     "updated_at": "2026-08-06T15:20:55"
+  },
+  "8821392883143": {
+    "destinatario": "VICTORIA ECHARTE",
+    "phone": "098118376",
+    "status": "El remitente hizo el despacho virtual y DAC está esperando tu paquete",
+    "updated_at": "2026-08-07T01:44:50"
+  },
+  "8821394485267": {
+    "destinatario": "ANA BELEN RODRÍGUEZ PERCOPO",
+    "phone": "099365822",
+    "status": "El remitente hizo el despacho virtual y DAC está esperando tu paquete",
+    "updated_at": "2026-08-07T01:44:50"
   }
 }
