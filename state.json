@@ -140,14 +140,14 @@
   "8821401793967": {
     "destinatario": "BETTINA MOREIRA",
     "phone": "095145801",
-    "status": "Tu paquete se encuentra en TRES CRUCES",
-    "updated_at": "2026-08-11T11:32:47"
+    "status": "Tu paquete fue entregado",
+    "updated_at": "2026-08-11T19:46:05"
   },
   "8821401884891": {
     "destinatario": "VICTORIA TELLERIA",
     "phone": "099964124",
-    "status": "Tu paquete está en reparto (9 a 20hs)",
-    "updated_at": "2026-08-11T15:30:39"
+    "status": "Tu paquete fue entregado",
+    "updated_at": "2026-08-11T19:46:06"
   },
   "8821401885167": {
     "destinatario": "JESSICA PÉREZ",
@@ -170,7 +170,13 @@
   "8821402281917": {
     "destinatario": "LETIANA PARARD",
     "phone": "091972804",
+    "status": "Tu paquete está en viaje a TERMINAL FLORIDA",
+    "updated_at": "2026-08-11T19:46:06"
+  },
+  "8821405936989": {
+    "destinatario": "ANA DIAZ",
+    "phone": "098851628",
     "status": "Tu paquete fue recibido por DAC en: LA COMERCIAL",
-    "updated_at": "2026-08-10T18:00:10"
+    "updated_at": "2026-08-11T19:46:06"
   }
 }
