@@ -110,8 +110,8 @@
   "8821397430952": {
     "destinatario": "BRUNA GONÇALVEZ",
     "phone": "095865362",
-    "status": "Tu paquete se encuentra en RIVERA TERMINAL",
-    "updated_at": "2026-08-11T15:30:38"
+    "status": "Tu paquete fue entregado",
+    "updated_at": "2026-08-12T22:25:56"
   },
   "8821397487924": {
     "destinatario": "PATRICIA CORNELLI",
@@ -188,7 +188,7 @@
   "8821409158995": {
     "destinatario": "NADIA CASÁS",
     "phone": "095011976",
-    "status": "Tu paquete fue recibido por DAC en: LA COMERCIAL",
-    "updated_at": "2026-08-12T20:02:51"
+    "status": "Tu paquete está en viaje a TALA",
+    "updated_at": "2026-08-12T22:25:57"
   }
 }
