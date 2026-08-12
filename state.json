@@ -170,13 +170,25 @@
   "8821402281917": {
     "destinatario": "LETIANA PARARD",
     "phone": "091972804",
-    "status": "Tu paquete se encuentra en TERMINAL FLORIDA",
-    "updated_at": "2026-08-11T22:23:56"
+    "status": "Tu paquete fue entregado",
+    "updated_at": "2026-08-12T16:27:09"
   },
   "8821405936989": {
     "destinatario": "ANA DIAZ",
     "phone": "098851628",
     "status": "Tu paquete se encuentra en DEPOSITO DURAZNO",
     "updated_at": "2026-08-12T12:35:10"
+  },
+  "8821409150326": {
+    "destinatario": "GIMENA CHAVASCO",
+    "phone": "098966031",
+    "status": "El remitente hizo el despacho virtual y DAC está esperando tu paquete",
+    "updated_at": "2026-08-12T16:27:09"
+  },
+  "8821409158995": {
+    "destinatario": "NADIA CASÁS",
+    "phone": "095011976",
+    "status": "El remitente hizo el despacho virtual y DAC está esperando tu paquete",
+    "updated_at": "2026-08-12T16:27:09"
   }
 }
