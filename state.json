@@ -128,8 +128,8 @@
   "8821401761963": {
     "destinatario": "FLORENCIA DIEGO",
     "phone": "094863509",
-    "status": "Tu paquete se encuentra en CIUDAD DE LA COSTA SHANGRILA",
-    "updated_at": "2026-08-11T15:30:39"
+    "status": "Tu paquete fue entregado",
+    "updated_at": "2026-08-13T19:47:38"
   },
   "8821401770684": {
     "destinatario": "CAROLINA DASTUGUE",
@@ -182,8 +182,8 @@
   "8821409150326": {
     "destinatario": "GIMENA CHAVASCO",
     "phone": "098966031",
-    "status": "Tu paquete está en reparto (9 a 20hs)",
-    "updated_at": "2026-08-13T12:36:01"
+    "status": "Tu paquete fue entregado",
+    "updated_at": "2026-08-13T19:47:39"
   },
   "8821409158995": {
     "destinatario": "NADIA CASÁS",
@@ -194,7 +194,7 @@
   "8821413248748": {
     "destinatario": "PATRICIA CORNELLI",
     "phone": "093934047",
-    "status": "El remitente hizo el despacho virtual y DAC está esperando tu paquete",
-    "updated_at": "2026-08-13T16:11:52"
+    "status": "Tu paquete fue recibido por DAC en: LA COMERCIAL",
+    "updated_at": "2026-08-13T19:47:39"
   }
 }
