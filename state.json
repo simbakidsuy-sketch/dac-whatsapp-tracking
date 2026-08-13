@@ -188,7 +188,13 @@
   "8821409158995": {
     "destinatario": "NADIA CASÁS",
     "phone": "095011976",
-    "status": "Tu paquete está en reparto (9 a 20hs)",
-    "updated_at": "2026-08-13T12:36:01"
+    "status": "Tu paquete fue entregado",
+    "updated_at": "2026-08-13T16:11:52"
+  },
+  "8821413248748": {
+    "destinatario": "PATRICIA CORNELLI",
+    "phone": "093934047",
+    "status": "El remitente hizo el despacho virtual y DAC está esperando tu paquete",
+    "updated_at": "2026-08-13T16:11:52"
   }
 }
