@@ -176,8 +176,8 @@
   "8821405936989": {
     "destinatario": "ANA DIAZ",
     "phone": "098851628",
-    "status": "Tu paquete está en reparto (9 a 20hs)",
-    "updated_at": "2026-08-14T12:29:11"
+    "status": "Tu paquete fue entregado",
+    "updated_at": "2026-08-14T15:25:56"
   },
   "8821409150326": {
     "destinatario": "GIMENA CHAVASCO",
@@ -194,7 +194,7 @@
   "8821413248748": {
     "destinatario": "PATRICIA CORNELLI",
     "phone": "093934047",
-    "status": "Tu paquete se encuentra en DEPOSITO MERCEDES",
-    "updated_at": "2026-08-14T12:29:11"
+    "status": "Tu paquete fue entregado",
+    "updated_at": "2026-08-14T15:25:56"
   }
 }
