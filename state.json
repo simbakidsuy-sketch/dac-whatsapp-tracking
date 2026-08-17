@@ -1,4 +1,10 @@
 {
+  "6011423845534": {
+    "destinatario": "FIORELA LEITES",
+    "phone": null,
+    "status": "Tu paquete fue recibido por DAC en: RONDEAU",
+    "updated_at": "2026-08-17T18:02:13"
+  },
   "8821381103186": {
     "destinatario": "JURI SILVA",
     "phone": null,
@@ -200,13 +206,13 @@
   "8821421500272": {
     "destinatario": "MAIRA DAHIANA RODRÍGUEZ",
     "phone": "095909039",
-    "status": "El remitente hizo el despacho virtual y DAC está esperando tu paquete",
-    "updated_at": "2026-08-17T11:45:02"
+    "status": "Tu paquete fue recibido por DAC en: RONDEAU",
+    "updated_at": "2026-08-17T18:02:13"
   },
   "8821421926543": {
     "destinatario": "NOELIA PILÓN",
     "phone": "098109351",
-    "status": "El remitente hizo el despacho virtual y DAC está esperando tu paquete",
-    "updated_at": "2026-08-17T13:55:58"
+    "status": "Tu paquete fue recibido por DAC en: RONDEAU",
+    "updated_at": "2026-08-17T18:02:13"
   }
 }
