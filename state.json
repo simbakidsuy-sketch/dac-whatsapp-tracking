@@ -220,5 +220,11 @@
     "phone": "099977614",
     "status": "El remitente hizo el despacho virtual y DAC está esperando tu paquete",
     "updated_at": "2026-08-18T14:05:33"
+  },
+  "8821434169512": {
+    "destinatario": "GLADYS GÓMEZ",
+    "phone": "099485995",
+    "status": "El remitente hizo el despacho virtual y DAC está esperando tu paquete",
+    "updated_at": "2026-08-18T21:50:11"
   }
 }
