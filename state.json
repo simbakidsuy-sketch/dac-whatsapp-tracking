@@ -2,8 +2,8 @@
   "6011423845534": {
     "destinatario": "FIORELA LEITES",
     "phone": null,
-    "status": "Tu paquete está en viaje a SALTO CERRITO",
-    "updated_at": "2026-08-17T22:54:23"
+    "status": "Tu paquete se encuentra en SALTO TERMINAL",
+    "updated_at": "2026-08-18T11:55:32"
   },
   "8821381103186": {
     "destinatario": "JURI SILVA",
@@ -212,7 +212,7 @@
   "8821421926543": {
     "destinatario": "NOELIA PILÓN",
     "phone": "098109351",
-    "status": "Tu paquete está en viaje a NUEVA HELVECIA",
-    "updated_at": "2026-08-17T22:54:23"
+    "status": "Tu paquete se encuentra en COLONIA VALDENSE",
+    "updated_at": "2026-08-18T11:55:32"
   }
 }
