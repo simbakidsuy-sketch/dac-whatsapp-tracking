@@ -226,5 +226,11 @@
     "phone": "099485995",
     "status": "Tu paquete se encuentra en PASO MOLINO",
     "updated_at": "2026-08-19T17:01:41"
+  },
+  "8821445730996": {
+    "destinatario": "VALERIA RODRÍGUEZ",
+    "phone": "098801034",
+    "status": "El remitente hizo el despacho virtual y DAC está esperando tu paquete",
+    "updated_at": "2026-08-19T18:02:52"
   }
 }
