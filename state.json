@@ -218,8 +218,8 @@
   "8821428425274": {
     "destinatario": "GIANINA GIACOSA",
     "phone": "099977614",
-    "status": "Tu paquete está en viaje a DEPOSITO MERCEDES",
-    "updated_at": "2026-08-20T11:02:08"
+    "status": "Tu paquete se encuentra en DEPOSITO MERCEDES",
+    "updated_at": "2026-08-20T14:01:56"
   },
   "8821434169512": {
     "destinatario": "GLADYS GÓMEZ",
@@ -232,5 +232,11 @@
     "phone": "098801034",
     "status": "El remitente hizo el despacho virtual y DAC está esperando tu paquete",
     "updated_at": "2026-08-19T18:02:52"
+  },
+  "8821447611861": {
+    "destinatario": "CINTHIA FEO",
+    "phone": "091316675",
+    "status": "El remitente hizo el despacho virtual y DAC está esperando tu paquete",
+    "updated_at": "2026-08-20T14:01:56"
   }
 }
