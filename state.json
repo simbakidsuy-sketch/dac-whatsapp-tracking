@@ -236,13 +236,13 @@
   "8821447611861": {
     "destinatario": "CINTHIA FEO",
     "phone": "091316675",
-    "status": "Tu paquete está en reparto (9 a 20hs)",
-    "updated_at": "2026-08-21T16:00:27"
+    "status": "Tu paquete fue entregado",
+    "updated_at": "2026-08-21T19:15:59"
   },
   "8821449878897": {
     "destinatario": "MARÍA ELENA DE CARBALLO",
     "phone": "098362926",
-    "status": "El remitente hizo el despacho virtual y DAC está esperando tu paquete",
-    "updated_at": "2026-08-20T22:50:54"
+    "status": "Tu paquete fue recibido por DAC en: LA COMERCIAL",
+    "updated_at": "2026-08-21T19:16:00"
   }
 }
