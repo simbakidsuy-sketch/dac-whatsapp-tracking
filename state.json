@@ -256,5 +256,11 @@
     "phone": null,
     "status": "El remitente hizo el despacho virtual y DAC está esperando tu paquete",
     "updated_at": "2026-08-24T14:25:54"
+  },
+  "8821456693049": {
+    "destinatario": "SOFIA SAMBUCETTI",
+    "phone": "097476507",
+    "status": "El remitente hizo el despacho virtual y DAC está esperando tu paquete",
+    "updated_at": "2026-08-24T17:59:51"
   }
 }
