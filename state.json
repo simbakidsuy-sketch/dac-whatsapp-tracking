@@ -248,8 +248,8 @@
   "8821453443725": {
     "destinatario": "MORITZ SPIER",
     "phone": "099519018",
-    "status": "Tu paquete está en viaje a SAN CARLOS DAC",
-    "updated_at": "2026-08-24T22:48:44"
+    "status": "Tu paquete fue entregado",
+    "updated_at": "2026-08-26T14:26:46"
   },
   "8821455668183": {
     "destinatario": "FRANCISCO GARMENDIA",
@@ -260,7 +260,7 @@
   "8821456693049": {
     "destinatario": "SOFIA SAMBUCETTI",
     "phone": "097476507",
-    "status": "Tu paquete está en viaje a MELO",
-    "updated_at": "2026-08-24T22:48:44"
+    "status": "Tu paquete fue entregado",
+    "updated_at": "2026-08-26T14:26:46"
   }
 }
