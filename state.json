@@ -254,13 +254,19 @@
   "8821455668183": {
     "destinatario": "FRANCISCO GARMENDIA",
     "phone": null,
-    "status": "Tu paquete está en viaje a ARTIGAS",
-    "updated_at": "2026-08-24T22:48:44"
+    "status": "Tu paquete fue entregado",
+    "updated_at": "2026-08-27T13:48:28"
   },
   "8821456693049": {
     "destinatario": "SOFIA SAMBUCETTI",
     "phone": "097476507",
     "status": "Tu paquete fue entregado",
     "updated_at": "2026-08-26T14:26:46"
+  },
+  "8821460713626": {
+    "destinatario": "YANINA MILAGROS JUNCO",
+    "phone": "098697415",
+    "status": "El remitente hizo el despacho virtual y DAC está esperando tu paquete",
+    "updated_at": "2026-08-27T13:48:29"
   }
 }
