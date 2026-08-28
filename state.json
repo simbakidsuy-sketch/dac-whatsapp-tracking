@@ -5,6 +5,12 @@
     "status": "Tu paquete fue entregado",
     "updated_at": "2026-08-18T19:15:54"
   },
+  "6011463288067": {
+    "destinatario": "MONICA MOREIRA",
+    "phone": "LAURA BERARDO",
+    "status": "Tu paquete se encuentra en SALTO TERMINAL",
+    "updated_at": "2026-08-28T17:49:54"
+  },
   "8821381103186": {
     "destinatario": "JURI SILVA",
     "phone": null,
@@ -266,7 +272,25 @@
   "8821460713626": {
     "destinatario": "YANINA MILAGROS JUNCO",
     "phone": "098697415",
-    "status": "El remitente hizo el despacho virtual y DAC está esperando tu paquete",
-    "updated_at": "2026-08-27T13:48:29"
+    "status": "Tu paquete está en viaje a NUEVO BERLIN",
+    "updated_at": "2026-08-28T17:49:53"
+  },
+  "8821465306647": {
+    "destinatario": "DEBORA GONZÁLEZ",
+    "phone": "099742646",
+    "status": "Tu paquete fue recibido por DAC en: LA COMERCIAL",
+    "updated_at": "2026-08-28T17:49:54"
+  },
+  "8821465319250": {
+    "destinatario": "LAURA VIVIANI",
+    "phone": "098167457",
+    "status": "Tu paquete fue recibido por DAC en: LA COMERCIAL",
+    "updated_at": "2026-08-28T17:49:54"
+  },
+  "8821465457651": {
+    "destinatario": "HUGO TAPIA",
+    "phone": "098421609",
+    "status": "Tu paquete fue recibido por DAC en: LA COMERCIAL",
+    "updated_at": "2026-08-28T17:49:54"
   }
 }
