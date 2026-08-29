@@ -278,19 +278,19 @@
   "8821465306647": {
     "destinatario": "DEBORA GONZÁLEZ",
     "phone": "099742646",
-    "status": "Tu paquete está en viaje a CENTRO DE DISTRIBUCION",
-    "updated_at": "2026-08-28T23:04:24"
+    "status": "Tu paquete se encuentra en CENTRO DE DISTRIBUCION",
+    "updated_at": "2026-08-29T11:04:28"
   },
   "8821465319250": {
     "destinatario": "LAURA VIVIANI",
     "phone": "098167457",
-    "status": "Tu paquete se encuentra en CENTRO OPERACIONES MVD",
-    "updated_at": "2026-08-28T23:04:24"
+    "status": "Tu paquete se encuentra en CASTILLOS DAC",
+    "updated_at": "2026-08-29T11:04:29"
   },
   "8821465457651": {
     "destinatario": "HUGO TAPIA",
     "phone": "098421609",
-    "status": "Tu paquete está en viaje a TRINIDAD",
-    "updated_at": "2026-08-28T22:34:26"
+    "status": "Tu paquete se encuentra en TRINIDAD",
+    "updated_at": "2026-08-29T11:04:29"
   }
 }
