@@ -292,5 +292,17 @@
     "phone": "098421609",
     "status": "Tu paquete se encuentra en TRINIDAD",
     "updated_at": "2026-08-29T11:04:29"
+  },
+  "8821468575653": {
+    "destinatario": "VICTORIA GIMENEZ",
+    "phone": "092647088",
+    "status": "El remitente hizo el despacho virtual y DAC está esperando tu paquete",
+    "updated_at": "2026-08-29T16:34:21"
+  },
+  "8821468586241": {
+    "destinatario": "RITA GONZALEZ",
+    "phone": "092228126",
+    "status": "El remitente hizo el despacho virtual y DAC está esperando tu paquete",
+    "updated_at": "2026-08-29T16:34:22"
   }
 }
