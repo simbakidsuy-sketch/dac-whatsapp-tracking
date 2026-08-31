@@ -304,5 +304,11 @@
     "phone": "092228126",
     "status": "Tu paquete fue recibido por DAC en: LA COMERCIAL",
     "updated_at": "2026-08-31T18:04:59"
+  },
+  "8821471946275": {
+    "destinatario": "NOEMI ZIPITRIA",
+    "phone": "092839042",
+    "status": "El remitente hizo el despacho virtual y DAC está esperando tu paquete",
+    "updated_at": "2026-08-31T19:34:35"
   }
 }
