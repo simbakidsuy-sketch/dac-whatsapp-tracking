@@ -310,5 +310,17 @@
     "phone": "092839042",
     "status": "El remitente hizo el despacho virtual y DAC está esperando tu paquete",
     "updated_at": "2026-08-31T19:34:35"
+  },
+  "8821472225133": {
+    "destinatario": "MARIA DESIRELLO",
+    "phone": "098887030",
+    "status": "El remitente hizo el despacho virtual y DAC está esperando tu paquete",
+    "updated_at": "2026-08-31T20:04:36"
+  },
+  "8821472247656": {
+    "destinatario": "DANIEL VIDIELLA",
+    "phone": "091898842",
+    "status": "El remitente hizo el despacho virtual y DAC está esperando tu paquete",
+    "updated_at": "2026-08-31T20:04:37"
   }
 }
