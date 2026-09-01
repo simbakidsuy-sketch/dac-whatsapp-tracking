@@ -322,5 +322,11 @@
     "phone": "091898842",
     "status": "El remitente hizo el despacho virtual y DAC está esperando tu paquete",
     "updated_at": "2026-08-31T20:04:37"
+  },
+  "8821473956950": {
+    "destinatario": "MARIA EUGENIA MOREIRA",
+    "phone": "092081205",
+    "status": "El remitente hizo el despacho virtual y DAC está esperando tu paquete",
+    "updated_at": "2026-09-01T13:08:36"
   }
 }
