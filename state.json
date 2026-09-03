@@ -352,5 +352,17 @@
     "phone": "098624383",
     "status": "El remitente hizo el despacho virtual y DAC está esperando tu paquete",
     "updated_at": "2026-09-03T15:08:00"
+  },
+  "8821483529245": {
+    "destinatario": "ELIANA MAZZOLENNI",
+    "phone": "095957574",
+    "status": "El remitente hizo el despacho virtual y DAC está esperando tu paquete",
+    "updated_at": "2026-09-03T17:07:50"
+  },
+  "8821483578142": {
+    "destinatario": "MAIRINA ESTECHE",
+    "phone": "091363998",
+    "status": "El remitente hizo el despacho virtual y DAC está esperando tu paquete",
+    "updated_at": "2026-09-03T17:07:51"
   }
 }
