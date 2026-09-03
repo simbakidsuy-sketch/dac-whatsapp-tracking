@@ -340,5 +340,11 @@
     "phone": "099750128",
     "status": "Tu paquete está en viaje a FRAY BENTOS",
     "updated_at": "2026-09-02T23:07:23"
+  },
+  "8821482101769": {
+    "destinatario": "ELIANA MUSE",
+    "phone": "091811592",
+    "status": "El remitente hizo el despacho virtual y DAC está esperando tu paquete",
+    "updated_at": "2026-09-03T11:37:56"
   }
 }
