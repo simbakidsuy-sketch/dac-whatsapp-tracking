@@ -364,5 +364,11 @@
     "phone": "091363998",
     "status": "Tu paquete está en viaje a LIBERTAD",
     "updated_at": "2026-09-03T23:07:33"
+  },
+  "8821486921894": {
+    "destinatario": "DEBORA GONZÁLEZ",
+    "phone": "099742646",
+    "status": "El remitente hizo el despacho virtual y DAC está esperando tu paquete",
+    "updated_at": "2026-09-04T13:39:19"
   }
 }
