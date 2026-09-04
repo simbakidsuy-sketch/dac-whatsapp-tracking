@@ -332,8 +332,8 @@
   "8821476689828": {
     "destinatario": "NARDA BERTÓN",
     "phone": "098409826",
-    "status": "Tu paquete se encuentra en COLONIA SHOPPING",
-    "updated_at": "2026-09-03T11:08:17"
+    "status": "Tu paquete fue entregado",
+    "updated_at": "2026-09-04T22:45:34"
   },
   "8821476723211": {
     "destinatario": "PAULA ANDREA LARRECHART PIRICOV",
@@ -362,13 +362,13 @@
   "8821483578142": {
     "destinatario": "MAIRINA ESTECHE",
     "phone": "091363998",
-    "status": "Tu paquete está en viaje a LIBERTAD",
-    "updated_at": "2026-09-03T23:07:33"
+    "status": "Tu paquete fue entregado",
+    "updated_at": "2026-09-04T22:45:34"
   },
   "8821486921894": {
     "destinatario": "DEBORA GONZÁLEZ",
     "phone": "099742646",
-    "status": "Tu paquete fue recibido por DAC en: LA COMERCIAL",
-    "updated_at": "2026-09-04T18:02:54"
+    "status": "Tu paquete está en viaje a CENTRO DE DISTRIBUCION",
+    "updated_at": "2026-09-04T22:45:35"
   }
 }
