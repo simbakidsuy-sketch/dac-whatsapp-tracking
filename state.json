@@ -344,8 +344,8 @@
   "8821482101769": {
     "destinatario": "ELIANA MUSE",
     "phone": "091811592",
-    "status": "Tu paquete se encuentra en SALTO TERMINAL",
-    "updated_at": "2026-09-04T13:08:12"
+    "status": "Tu paquete fue entregado",
+    "updated_at": "2026-09-07T12:53:35"
   },
   "8821482922031": {
     "destinatario": "MARIA ESTHER FERNANDEZ VERA",
@@ -368,7 +368,25 @@
   "8821486921894": {
     "destinatario": "DEBORA GONZÁLEZ",
     "phone": "099742646",
-    "status": "Tu paquete se encuentra en CENTRO OPERACIONES MVD",
-    "updated_at": "2026-09-05T12:54:29"
+    "status": "Tu paquete está en reparto (9 a 20hs)",
+    "updated_at": "2026-09-07T12:53:35"
+  },
+  "8821493451396": {
+    "destinatario": "PAULA SAMBUCETTI",
+    "phone": "091495478",
+    "status": "El remitente hizo el despacho virtual y DAC está esperando tu paquete",
+    "updated_at": "2026-09-07T12:53:36"
+  },
+  "8821493477047": {
+    "destinatario": "YANINA PÉREZ",
+    "phone": "091949332",
+    "status": "El remitente hizo el despacho virtual y DAC está esperando tu paquete",
+    "updated_at": "2026-09-07T12:53:36"
+  },
+  "8821493563481": {
+    "destinatario": "SILVANA VILLALBA",
+    "phone": "098325137",
+    "status": "El remitente hizo el despacho virtual y DAC está esperando tu paquete",
+    "updated_at": "2026-09-07T12:53:36"
   }
 }
