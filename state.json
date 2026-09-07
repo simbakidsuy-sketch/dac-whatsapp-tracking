@@ -388,5 +388,11 @@
     "phone": "098325137",
     "status": "Tu paquete fue recibido por DAC en: LA COMERCIAL",
     "updated_at": "2026-09-07T18:04:16"
+  },
+  "8821496233445": {
+    "destinatario": "YANINA PEREZ",
+    "phone": "091949332",
+    "status": "El remitente hizo el despacho virtual y DAC está esperando tu paquete",
+    "updated_at": "2026-09-07T21:41:00"
   }
 }
