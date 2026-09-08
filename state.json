@@ -386,13 +386,19 @@
   "8821493563481": {
     "destinatario": "SILVANA VILLALBA",
     "phone": "098325137",
-    "status": "Tu paquete está en viaje a FRAY BENTOS",
-    "updated_at": "2026-09-07T23:56:50"
+    "status": "Tu paquete se encuentra en FRAY BENTOS",
+    "updated_at": "2026-09-08T12:58:33"
   },
   "8821496233445": {
     "destinatario": "YANINA PEREZ",
     "phone": "091949332",
     "status": "El remitente hizo el despacho virtual y DAC está esperando tu paquete",
     "updated_at": "2026-09-07T21:41:00"
+  },
+  "8821497643077": {
+    "destinatario": "FABRICIO MICHAEL DE CUADRO MARTÍNEZ",
+    "phone": "098912320",
+    "status": "El remitente hizo el despacho virtual y DAC está esperando tu paquete",
+    "updated_at": "2026-09-08T12:58:34"
   }
 }
