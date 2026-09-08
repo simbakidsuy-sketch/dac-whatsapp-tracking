@@ -380,14 +380,14 @@
   "8821493477047": {
     "destinatario": "YANINA PÉREZ",
     "phone": "091949332",
-    "status": "Tu paquete está en viaje a EL PINAR",
-    "updated_at": "2026-09-07T23:56:50"
+    "status": "Tu paquete se encuentra en CENTRO DE DISTRIBUCION",
+    "updated_at": "2026-09-08T17:10:54"
   },
   "8821493563481": {
     "destinatario": "SILVANA VILLALBA",
     "phone": "098325137",
-    "status": "Tu paquete se encuentra en FRAY BENTOS",
-    "updated_at": "2026-09-08T12:58:33"
+    "status": "Tu paquete fue entregado",
+    "updated_at": "2026-09-08T17:10:54"
   },
   "8821496233445": {
     "destinatario": "YANINA PEREZ",
@@ -400,5 +400,11 @@
     "phone": "098912320",
     "status": "El remitente hizo el despacho virtual y DAC está esperando tu paquete",
     "updated_at": "2026-09-08T12:58:34"
+  },
+  "8821498728982": {
+    "destinatario": "MACARENA JUAREZ",
+    "phone": "098040958",
+    "status": "El remitente hizo el despacho virtual y DAC está esperando tu paquete",
+    "updated_at": "2026-09-08T17:10:54"
   }
 }
