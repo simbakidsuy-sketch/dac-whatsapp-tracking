@@ -374,14 +374,14 @@
   "8821493451396": {
     "destinatario": "PAULA SAMBUCETTI",
     "phone": "091495478",
-    "status": "Tu paquete está en viaje a MELO",
-    "updated_at": "2026-09-08T22:52:16"
+    "status": "Tu paquete se encuentra en MELO",
+    "updated_at": "2026-09-09T15:51:43"
   },
   "8821493477047": {
     "destinatario": "YANINA PÉREZ",
     "phone": "091949332",
-    "status": "Tu paquete se encuentra en EL PINAR",
-    "updated_at": "2026-09-09T11:40:48"
+    "status": "Tu paquete está en reparto (9 a 20hs)",
+    "updated_at": "2026-09-09T15:51:43"
   },
   "8821493563481": {
     "destinatario": "SILVANA VILLALBA",
@@ -392,8 +392,8 @@
   "8821496233445": {
     "destinatario": "YANINA PEREZ",
     "phone": "091949332",
-    "status": "Tu paquete se encuentra en EL PINAR",
-    "updated_at": "2026-09-09T11:40:48"
+    "status": "Tu paquete está en reparto (9 a 20hs)",
+    "updated_at": "2026-09-09T15:51:44"
   },
   "8821497643077": {
     "destinatario": "FABRICIO MICHAEL DE CUADRO MARTÍNEZ",
@@ -404,8 +404,8 @@
   "8821498728982": {
     "destinatario": "MACARENA JUAREZ",
     "phone": "098040958",
-    "status": "Tu paquete está en viaje a MALDONADO",
-    "updated_at": "2026-09-08T22:52:17"
+    "status": "Tu paquete fue entregado",
+    "updated_at": "2026-09-09T15:51:44"
   },
   "8821500278968": {
     "destinatario": "HELENA FLORES",
