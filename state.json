@@ -410,13 +410,19 @@
   "8821500278968": {
     "destinatario": "HELENA FLORES",
     "phone": "096483167",
-    "status": "Tu paquete está en viaje a COLONIA SHOPPING",
-    "updated_at": "2026-09-09T23:47:58"
+    "status": "Tu paquete está en reparto (9 a 20hs)",
+    "updated_at": "2026-09-10T12:40:48"
   },
   "8821502657961": {
     "destinatario": "MICAELA SIMONCELLI",
     "phone": "099292890",
-    "status": "Tu paquete está en viaje a DEPOSITO MERCEDES",
-    "updated_at": "2026-09-09T23:47:59"
+    "status": "Tu paquete se encuentra en DEPOSITO MERCEDES",
+    "updated_at": "2026-09-10T12:40:48"
+  },
+  "8821505174281": {
+    "destinatario": "ESTRELLA ALFARO",
+    "phone": "094241906",
+    "status": "El remitente hizo el despacho virtual y DAC está esperando tu paquete",
+    "updated_at": "2026-09-10T12:40:48"
   }
 }
