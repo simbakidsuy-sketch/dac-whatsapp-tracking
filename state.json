@@ -416,8 +416,8 @@
   "8821502657961": {
     "destinatario": "MICAELA SIMONCELLI",
     "phone": "099292890",
-    "status": "Tu paquete se encuentra en DEPOSITO MERCEDES",
-    "updated_at": "2026-09-10T12:40:48"
+    "status": "Tu paquete fue entregado",
+    "updated_at": "2026-09-11T16:52:48"
   },
   "8821505174281": {
     "destinatario": "ESTRELLA ALFARO",
@@ -436,5 +436,17 @@
     "phone": "099105836",
     "status": "El remitente hizo el despacho virtual y DAC está esperando tu paquete",
     "updated_at": "2026-09-10T21:45:30"
+  },
+  "8821509069824": {
+    "destinatario": "ROMINA GONZALEZ",
+    "phone": "092448078",
+    "status": "El remitente hizo el despacho virtual y DAC está esperando tu paquete",
+    "updated_at": "2026-09-11T16:52:48"
+  },
+  "8821509770595": {
+    "destinatario": "SABRINA ARAUJO",
+    "phone": null,
+    "status": "El remitente hizo el despacho virtual y DAC está esperando tu paquete",
+    "updated_at": "2026-09-11T16:52:48"
   }
 }
