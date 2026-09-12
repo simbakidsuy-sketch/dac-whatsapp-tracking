@@ -422,8 +422,8 @@
   "8821505174281": {
     "destinatario": "ESTRELLA ALFARO",
     "phone": "094241906",
-    "status": "Tu paquete se encuentra en TRES CRUCES",
-    "updated_at": "2026-09-12T11:57:09"
+    "status": "Tu paquete fue entregado",
+    "updated_at": "2026-09-12T15:11:23"
   },
   "8821507239180": {
     "destinatario": "SANTIAGO FIERRO",
@@ -434,14 +434,14 @@
   "8821507880931": {
     "destinatario": "MARIA GIMENA SILVA",
     "phone": "099105836",
-    "status": "Tu paquete está en viaje a SAN CARLOS DAC",
-    "updated_at": "2026-09-11T23:51:10"
+    "status": "Tu paquete se encuentra en SAN CARLOS DAC",
+    "updated_at": "2026-09-12T15:11:24"
   },
   "8821509069824": {
     "destinatario": "ROMINA GONZALEZ",
     "phone": "092448078",
-    "status": "Tu paquete está en viaje a FRAY BENTOS",
-    "updated_at": "2026-09-11T23:51:11"
+    "status": "Tu paquete fue entregado",
+    "updated_at": "2026-09-12T15:11:24"
   },
   "8821509770595": {
     "destinatario": "SABRINA ARAUJO",
@@ -452,7 +452,7 @@
   "8821510518314": {
     "destinatario": "CANDELA REINA",
     "phone": "095531873",
-    "status": "Tu paquete está en viaje a DEPOSITO MERCEDES",
-    "updated_at": "2026-09-11T23:51:11"
+    "status": "En espera para salir a reparto en DEPOSITO MERCEDES",
+    "updated_at": "2026-09-12T15:11:24"
   }
 }
