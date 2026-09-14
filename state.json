@@ -454,5 +454,17 @@
     "phone": "095531873",
     "status": "En espera para salir a reparto en DEPOSITO MERCEDES",
     "updated_at": "2026-09-12T15:11:24"
+  },
+  "8821514985325": {
+    "destinatario": "GABRIELA PÉREZ",
+    "phone": "097610818",
+    "status": "El remitente hizo el despacho virtual y DAC está esperando tu paquete",
+    "updated_at": "2026-09-14T11:42:23"
+  },
+  "8821515004056": {
+    "destinatario": "CATALINA MENESES",
+    "phone": "095017874",
+    "status": "El remitente hizo el despacho virtual y DAC está esperando tu paquete",
+    "updated_at": "2026-09-14T11:42:24"
   }
 }
