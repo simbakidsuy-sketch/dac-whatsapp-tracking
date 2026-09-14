@@ -446,25 +446,49 @@
   "8821509770595": {
     "destinatario": "SABRINA ARAUJO",
     "phone": null,
-    "status": "Tu paquete está en viaje a ARTIGAS",
-    "updated_at": "2026-09-11T23:51:11"
+    "status": "Tu paquete se encuentra en ARTIGAS",
+    "updated_at": "2026-09-14T17:36:09"
   },
   "8821510518314": {
     "destinatario": "CANDELA REINA",
     "phone": "095531873",
-    "status": "En espera para salir a reparto en DEPOSITO MERCEDES",
-    "updated_at": "2026-09-12T15:11:24"
+    "status": "Tu paquete fue entregado",
+    "updated_at": "2026-09-14T17:36:10"
   },
   "8821514985325": {
     "destinatario": "GABRIELA PÉREZ",
     "phone": "097610818",
-    "status": "El remitente hizo el despacho virtual y DAC está esperando tu paquete",
-    "updated_at": "2026-09-14T11:42:23"
+    "status": "Tu paquete fue recibido por DAC en: RONDEAU",
+    "updated_at": "2026-09-14T17:36:10"
   },
   "8821515004056": {
     "destinatario": "CATALINA MENESES",
     "phone": "095017874",
-    "status": "El remitente hizo el despacho virtual y DAC está esperando tu paquete",
-    "updated_at": "2026-09-14T11:42:24"
+    "status": "Tu paquete fue recibido por DAC en: RONDEAU",
+    "updated_at": "2026-09-14T17:36:10"
+  },
+  "8821515018214": {
+    "destinatario": "MAGALÍ RIVERA",
+    "phone": "097964258",
+    "status": "Tu paquete fue recibido por DAC en: RONDEAU",
+    "updated_at": "2026-09-14T17:36:11"
+  },
+  "8821515056321": {
+    "destinatario": "SOFÍA VIGGIANO",
+    "phone": "098868276",
+    "status": "Tu paquete fue recibido por DAC en: RONDEAU",
+    "updated_at": "2026-09-14T17:36:11"
+  },
+  "8821516169398": {
+    "destinatario": "CAROLINA KAUTZ",
+    "phone": "099829421",
+    "status": "Tu paquete fue recibido por DAC en: RONDEAU",
+    "updated_at": "2026-09-14T17:36:11"
+  },
+  "8821516345252": {
+    "destinatario": "NATALIA LESSA",
+    "phone": "099180982",
+    "status": "Tu paquete fue recibido por DAC en: RONDEAU",
+    "updated_at": "2026-09-14T17:36:11"
   }
 }
