@@ -446,8 +446,8 @@
   "8821509770595": {
     "destinatario": "SABRINA ARAUJO",
     "phone": null,
-    "status": "Tu paquete está en reparto (9 a 20hs)",
-    "updated_at": "2026-09-15T14:23:53"
+    "status": "Tu paquete fue entregado",
+    "updated_at": "2026-09-15T18:21:43"
   },
   "8821510518314": {
     "destinatario": "CANDELA REINA",
@@ -458,20 +458,20 @@
   "8821514985325": {
     "destinatario": "GABRIELA PÉREZ",
     "phone": "097610818",
-    "status": "Tu paquete se encuentra en CENTRO OPERACIONES MVD",
-    "updated_at": "2026-09-15T14:23:53"
+    "status": "Tu paquete se encuentra en FRAY MARCOS",
+    "updated_at": "2026-09-15T18:21:43"
   },
   "8821515004056": {
     "destinatario": "CATALINA MENESES",
     "phone": "095017874",
-    "status": "Tu paquete se encuentra en TRES CRUCES",
-    "updated_at": "2026-09-14T21:24:45"
+    "status": "Tu paquete se encuentra en SALINAS",
+    "updated_at": "2026-09-15T18:21:43"
   },
   "8821515018214": {
     "destinatario": "MAGALÍ RIVERA",
     "phone": "097964258",
-    "status": "Tu paquete está en reparto (9 a 20hs)",
-    "updated_at": "2026-09-15T14:23:54"
+    "status": "Tu paquete fue entregado",
+    "updated_at": "2026-09-15T18:21:44"
   },
   "8821515056321": {
     "destinatario": "SOFÍA VIGGIANO",
@@ -482,31 +482,31 @@
   "8821516169398": {
     "destinatario": "CAROLINA KAUTZ",
     "phone": "099829421",
-    "status": "Tu paquete está en reparto (9 a 20hs)",
-    "updated_at": "2026-09-15T14:23:54"
+    "status": "Tu paquete fue entregado",
+    "updated_at": "2026-09-15T18:21:44"
   },
   "8821516345252": {
     "destinatario": "NATALIA LESSA",
     "phone": "099180982",
-    "status": "Tu paquete se encuentra en TRES CRUCES",
-    "updated_at": "2026-09-14T21:24:46"
+    "status": "Tu paquete está en viaje a EL PINAR",
+    "updated_at": "2026-09-15T18:21:44"
   },
   "8821517799085": {
     "destinatario": "SANDRA TAPIA",
     "phone": "099919214",
-    "status": "El remitente hizo el despacho virtual y DAC está esperando tu paquete",
-    "updated_at": "2026-09-14T21:24:46"
+    "status": "Tu paquete fue recibido por DAC en: RONDEAU",
+    "updated_at": "2026-09-15T18:21:44"
   },
   "8821518329746": {
     "destinatario": "TATIANE CORREA",
     "phone": "099655653",
-    "status": "El remitente hizo el despacho virtual y DAC está esperando tu paquete",
-    "updated_at": "2026-09-14T23:56:07"
+    "status": "Tu paquete fue recibido por DAC en: RONDEAU",
+    "updated_at": "2026-09-15T18:21:45"
   },
   "8821518375713": {
     "destinatario": "YANI CABRERA",
     "phone": "091384113",
-    "status": "El remitente hizo el despacho virtual y DAC está esperando tu paquete",
-    "updated_at": "2026-09-14T23:56:08"
+    "status": "Tu paquete está en viaje a LIBERTAD",
+    "updated_at": "2026-09-15T18:21:45"
   }
 }
