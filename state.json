@@ -512,7 +512,13 @@
   "8821526802461": {
     "destinatario": "MACARENA EIRIN",
     "phone": "099353696",
-    "status": "El remitente hizo el despacho virtual y DAC está esperando tu paquete",
-    "updated_at": "2026-09-17T15:09:39"
+    "status": "Tu paquete fue recibido por DAC en: LA COMERCIAL",
+    "updated_at": "2026-09-17T19:09:59"
+  },
+  "8821527794795": {
+    "destinatario": "RAQUEL RUGGIERO",
+    "phone": "099575952",
+    "status": "Tu paquete fue recibido por DAC en: LA COMERCIAL",
+    "updated_at": "2026-09-17T19:09:59"
   }
 }
