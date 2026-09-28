@@ -524,14 +524,14 @@
   "8821551201844": {
     "destinatario": "VANESSA CASTIGLIONI",
     "phone": "092174413",
-    "status": "Tu paquete se encuentra en EL PINAR",
-    "updated_at": "2026-09-26T11:38:56"
+    "status": "Tu paquete fue entregado",
+    "updated_at": "2026-09-28T15:44:13"
   },
   "8821551214769": {
     "destinatario": "FEDE BARRERO",
     "phone": "099981814",
-    "status": "Tu paquete fue validado en nuestro centro de distribución",
-    "updated_at": "2026-09-26T11:38:56"
+    "status": "Tu paquete fue entregado",
+    "updated_at": "2026-09-28T15:44:13"
   },
   "8821551259911": {
     "destinatario": "JONATHAN LARA",
@@ -544,5 +544,11 @@
     "phone": "091231247",
     "status": "Tu paquete fue entregado",
     "updated_at": "2026-09-26T18:57:49"
+  },
+  "8821556802633": {
+    "destinatario": "VIVIANA DOMÍNGUEZ",
+    "phone": "099214873",
+    "status": "El remitente hizo el despacho virtual y DAC está esperando tu paquete",
+    "updated_at": "2026-09-28T15:44:14"
   }
 }
