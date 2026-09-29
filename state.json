@@ -548,19 +548,19 @@
   "8821556802633": {
     "destinatario": "VIVIANA DOMÍNGUEZ",
     "phone": "099214873",
-    "status": "Tu paquete se encuentra en PROGRESO",
-    "updated_at": "2026-09-29T14:12:34"
+    "status": "Tu paquete fue entregado",
+    "updated_at": "2026-09-29T23:24:32"
   },
   "8821559632569": {
     "destinatario": "VICTORIA ECHARTE",
     "phone": "091049356",
-    "status": "Tu paquete fue recibido por DAC en: RONDEAU",
-    "updated_at": "2026-09-29T19:32:34"
+    "status": "Tu paquete se encuentra en TRES CRUCES",
+    "updated_at": "2026-09-29T23:24:32"
   },
   "8821562179158": {
     "destinatario": "DANIEL VIDIELLA",
     "phone": "091898842",
-    "status": "Tu paquete fue recibido por DAC en: RONDEAU",
-    "updated_at": "2026-09-29T19:32:34"
+    "status": "Tu paquete se encuentra en TRES CRUCES",
+    "updated_at": "2026-09-29T23:24:32"
   }
 }
