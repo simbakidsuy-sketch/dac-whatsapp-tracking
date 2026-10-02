@@ -566,13 +566,13 @@
   "8821566548265": {
     "destinatario": "CAMILA GONZÁLEZ",
     "phone": "099451940",
-    "status": "Tu paquete se encuentra en SAN JACINTO",
-    "updated_at": "2026-10-02T15:19:37"
+    "status": "Tu paquete fue entregado",
+    "updated_at": "2026-10-02T23:55:39"
   },
   "8821573575058": {
     "destinatario": "VIVIANA PLAVAN",
     "phone": "098763530",
-    "status": "Tu paquete fue recibido por DAC en: LA COMERCIAL",
-    "updated_at": "2026-10-02T20:03:41"
+    "status": "Tu paquete está en viaje a COLONIA VALDENSE",
+    "updated_at": "2026-10-02T23:55:39"
   }
 }
