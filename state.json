@@ -566,7 +566,13 @@
   "8821566548265": {
     "destinatario": "CAMILA GONZÁLEZ",
     "phone": "099451940",
-    "status": "Tu paquete fue recibido por DAC en: LA COMERCIAL",
-    "updated_at": "2026-10-01T19:14:36"
+    "status": "Tu paquete se encuentra en SAN JACINTO",
+    "updated_at": "2026-10-02T15:19:37"
+  },
+  "8821573575058": {
+    "destinatario": "VIVIANA PLAVAN",
+    "phone": "098763530",
+    "status": "El remitente hizo el despacho virtual y DAC está esperando tu paquete",
+    "updated_at": "2026-10-02T15:19:37"
   }
 }
