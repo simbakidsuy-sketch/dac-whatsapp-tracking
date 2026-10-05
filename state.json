@@ -574,5 +574,11 @@
     "phone": "098763530",
     "status": "Tu paquete fue entregado",
     "updated_at": "2026-10-03T18:31:02"
+  },
+  "8821579762231": {
+    "destinatario": "MIKAELA ALONSO FRANQUEZ",
+    "phone": "091781089",
+    "status": "Tu paquete fue recibido por DAC en: LA COMERCIAL",
+    "updated_at": "2026-10-05T18:43:01"
   }
 }
