@@ -580,5 +580,23 @@
     "phone": "091781089",
     "status": "Tu paquete fue entregado",
     "updated_at": "2026-10-06T19:40:17"
+  },
+  "8821604315432": {
+    "destinatario": "BRESCIA VEGA",
+    "phone": "098159459",
+    "status": "Tu paquete fue recibido por DAC en: LA COMERCIAL",
+    "updated_at": "2026-10-12T18:32:42"
+  },
+  "8821604544679": {
+    "destinatario": "VERONICA CHIPARELLI",
+    "phone": "099298118",
+    "status": "Tu paquete fue recibido por DAC en: LA COMERCIAL",
+    "updated_at": "2026-10-12T18:32:43"
+  },
+  "8821604714941": {
+    "destinatario": "VALENTINA MOULIA",
+    "phone": "099818534",
+    "status": "Tu paquete fue recibido por DAC en: LA COMERCIAL",
+    "updated_at": "2026-10-12T18:32:43"
   }
 }
