@@ -584,19 +584,25 @@
   "8821604315432": {
     "destinatario": "BRESCIA VEGA",
     "phone": "098159459",
-    "status": "Tu paquete fue recibido por DAC en: LA COMERCIAL",
-    "updated_at": "2026-10-12T18:32:42"
+    "status": "Tu paquete fue entregado",
+    "updated_at": "2026-10-13T16:13:18"
   },
   "8821604544679": {
     "destinatario": "VERONICA CHIPARELLI",
     "phone": "099298118",
-    "status": "Tu paquete fue recibido por DAC en: LA COMERCIAL",
-    "updated_at": "2026-10-12T18:32:43"
+    "status": "Tu paquete se encuentra en EL PINAR",
+    "updated_at": "2026-10-13T16:13:18"
   },
   "8821604714941": {
     "destinatario": "VALENTINA MOULIA",
     "phone": "099818534",
-    "status": "Tu paquete fue recibido por DAC en: LA COMERCIAL",
-    "updated_at": "2026-10-12T18:32:43"
+    "status": "Tu paquete se encuentra en PIRIAPOLIS",
+    "updated_at": "2026-10-13T16:13:19"
+  },
+  "8821608504251": {
+    "destinatario": "XIMENA ROCCA",
+    "phone": "098859227",
+    "status": "El remitente hizo el despacho virtual y DAC está esperando tu paquete",
+    "updated_at": "2026-10-13T16:13:19"
   }
 }
