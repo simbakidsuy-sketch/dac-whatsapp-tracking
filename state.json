@@ -596,13 +596,19 @@
   "8821604714941": {
     "destinatario": "VALENTINA MOULIA",
     "phone": "099818534",
-    "status": "Tu paquete se encuentra en PIRIAPOLIS",
-    "updated_at": "2026-10-13T16:13:19"
+    "status": "Tu paquete fue entregado",
+    "updated_at": "2026-10-14T15:20:15"
   },
   "8821608504251": {
     "destinatario": "XIMENA ROCCA",
     "phone": "098859227",
-    "status": "Tu paquete se encuentra en TRES CRUCES",
-    "updated_at": "2026-10-13T21:24:00"
+    "status": "Tu paquete fue entregado",
+    "updated_at": "2026-10-14T15:20:15"
+  },
+  "8821612840058": {
+    "destinatario": "LIGIA RUOPPOLO",
+    "phone": "099761137",
+    "status": "El remitente hizo el despacho virtual y DAC está esperando tu paquete",
+    "updated_at": "2026-10-14T15:20:18"
   }
 }
