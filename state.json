@@ -610,5 +610,11 @@
     "phone": "099761137",
     "status": "Tu paquete fue entregado",
     "updated_at": "2026-10-15T19:57:41"
+  },
+  "8821619213986": {
+    "destinatario": "KAREN ROJAS",
+    "phone": "094148739",
+    "status": "El remitente hizo el despacho virtual y DAC está esperando tu paquete",
+    "updated_at": "2026-10-15T22:56:34"
   }
 }
