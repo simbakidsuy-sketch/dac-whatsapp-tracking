@@ -616,5 +616,17 @@
     "phone": "094148739",
     "status": "Tu paquete fue entregado",
     "updated_at": "2026-10-17T13:26:07"
+  },
+  "8821625844380": {
+    "destinatario": "RAQUEL RUGGIERO",
+    "phone": "099575952",
+    "status": "Tu paquete fue recibido por DAC en: LA COMERCIAL",
+    "updated_at": "2026-10-19T18:47:06"
+  },
+  "8821625930018": {
+    "destinatario": "SOFÍA IRULEGUY",
+    "phone": "097530485",
+    "status": "Tu paquete fue recibido por DAC en: LA COMERCIAL",
+    "updated_at": "2026-10-19T18:47:07"
   }
 }
