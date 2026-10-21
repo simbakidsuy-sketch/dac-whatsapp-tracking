@@ -632,7 +632,13 @@
   "8821629158542": {
     "destinatario": "MERCEDES BELLINI",
     "phone": "091982108",
-    "status": "Tu paquete fue recibido por DAC en: LA COMERCIAL",
-    "updated_at": "2026-10-20T21:12:21"
+    "status": "Tu paquete se encuentra en MALDONADO CALLE LUSSICH",
+    "updated_at": "2026-10-21T15:28:25"
+  },
+  "8821634627717": {
+    "destinatario": "CANDELA REINA",
+    "phone": "095531873",
+    "status": "El remitente hizo el despacho virtual y DAC está esperando tu paquete",
+    "updated_at": "2026-10-21T15:28:25"
   }
 }
