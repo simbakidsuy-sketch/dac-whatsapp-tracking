@@ -131,6 +131,48 @@
     "status": "El remitente hizo el despacho virtual y DAC está esperando tu paquete",
     "updated_at": "2026-10-22T20:43:22"
   },
+  "8001640413895": {
+    "destinatario": "VICTORIA BONJOUR VERDE",
+    "phone": "098057573",
+    "status": "El remitente hizo el despacho virtual y DAC está esperando tu paquete",
+    "updated_at": "2026-10-23T14:02:18"
+  },
+  "8001640420178": {
+    "destinatario": "LUCÍA MUSSI",
+    "phone": "092731300",
+    "status": "El remitente hizo el despacho virtual y DAC está esperando tu paquete",
+    "updated_at": "2026-10-23T14:02:19"
+  },
+  "8001640436439": {
+    "destinatario": "MILAGROS MÁRQUEZ",
+    "phone": "091915338",
+    "status": "El remitente hizo el despacho virtual y DAC está esperando tu paquete",
+    "updated_at": "2026-10-23T14:02:19"
+  },
+  "8001640436534": {
+    "destinatario": "CAROLINA ALCORTA",
+    "phone": "099233816",
+    "status": "El remitente hizo el despacho virtual y DAC está esperando tu paquete",
+    "updated_at": "2026-10-23T14:02:19"
+  },
+  "8001640436723": {
+    "destinatario": "ALVARO LORETO",
+    "phone": "097474670",
+    "status": "El remitente hizo el despacho virtual y DAC está esperando tu paquete",
+    "updated_at": "2026-10-23T14:02:20"
+  },
+  "8001640436875": {
+    "destinatario": "FÁTIMA RODRÍGUEZ",
+    "phone": "091954549",
+    "status": "El remitente hizo el despacho virtual y DAC está esperando tu paquete",
+    "updated_at": "2026-10-23T14:02:20"
+  },
+  "8001640436949": {
+    "destinatario": "ELISA MELGAREJO",
+    "phone": "092490256",
+    "status": "El remitente hizo el despacho virtual y DAC está esperando tu paquete",
+    "updated_at": "2026-10-23T14:02:20"
+  },
   "8821381103186": {
     "destinatario": "JURI SILVA",
     "phone": null,
@@ -758,50 +800,50 @@
   "8821634627717": {
     "destinatario": "CANDELA REINA",
     "phone": "095531873",
-    "status": "Tu paquete está en viaje a DEPOSITO MERCEDES",
-    "updated_at": "2026-10-22T23:51:56"
+    "status": "Tu paquete fue entregado",
+    "updated_at": "2026-10-23T14:02:14"
   },
   "8821635595149": {
     "destinatario": "NATALIA CABRERA",
     "phone": "095172188",
-    "status": "Tu paquete está en viaje a TARARIRAS",
-    "updated_at": "2026-10-22T23:51:57"
+    "status": "Tu paquete está en reparto (9 a 20hs)",
+    "updated_at": "2026-10-23T14:02:15"
   },
   "8821635665115": {
     "destinatario": "YAMILA PEREIRA",
     "phone": "092788834",
-    "status": "Tu paquete fue recibido por DAC en: LA COMERCIAL",
-    "updated_at": "2026-10-22T17:27:45"
+    "status": "Tu paquete está en reparto (9 a 20hs)",
+    "updated_at": "2026-10-23T14:02:15"
   },
   "8821635752666": {
     "destinatario": "LUCILA LIMA",
     "phone": "099721522",
-    "status": "Tu paquete está en viaje a SARANDI DEL YI",
-    "updated_at": "2026-10-22T23:51:57"
+    "status": "Tu paquete está en reparto (9 a 20hs)",
+    "updated_at": "2026-10-23T14:02:17"
   },
   "8821635772921": {
     "destinatario": "OLGA DEL PUERTO",
     "phone": "098874644",
-    "status": "Tu paquete está en viaje a AIGUA",
-    "updated_at": "2026-10-22T23:51:57"
+    "status": "Tu paquete se encuentra en AIGUA",
+    "updated_at": "2026-10-23T14:02:17"
   },
   "8821635805025": {
     "destinatario": "MANUELA GARCIA.",
     "phone": "092799535",
-    "status": "Tu paquete fue recibido por DAC en: LA COMERCIAL",
-    "updated_at": "2026-10-22T17:27:46"
+    "status": "Tu paquete está en reparto (9 a 20hs)",
+    "updated_at": "2026-10-23T14:02:17"
   },
   "8821635819710": {
     "destinatario": "JORGELINA MOREIRA",
     "phone": "099714540",
-    "status": "Tu paquete está en viaje a FRAY MARCOS",
-    "updated_at": "2026-10-22T23:51:57"
+    "status": "Tu paquete se encuentra en TRES CRUCES",
+    "updated_at": "2026-10-23T14:02:18"
   },
   "8821635831745": {
     "destinatario": "NOELIA MESA",
     "phone": "091646797",
-    "status": "Tu paquete está en viaje a ROCHA DAC",
-    "updated_at": "2026-10-22T23:51:58"
+    "status": "Tu paquete se encuentra en ROCHA DAC",
+    "updated_at": "2026-10-23T14:02:18"
   },
   "8821638769210": {
     "destinatario": "VICTORIA BONJOUR VERDE",
