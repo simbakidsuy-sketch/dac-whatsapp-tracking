@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Promos de Setiembre | SIMBA Kids UY</title>
+<link rel="icon" type="image/png" href="https://cdn.shopify.com/s/files/1/0930/9575/6095/files/Diseno_sin_titulo_2.png?v=1742408340">
+<meta property="og:type" content="website">
+<meta property="og:title" content="🔥 Liquidación Final DryFit Café | SIMBA Kids UY">
+<meta property="og:description" content="Hasta 35% OFF, solo por setiembre y hasta agotar stock. Elegí tu promo y tus diseños.">
+<meta property="og:image" content="https://cdn.shopify.com/s/files/1/0930/9575/6095/files/foto_portada_para_las_landing_panales_ecologicos_simba.jpg?v=1788392374">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="🔥 Liquidación Final DryFit Café | SIMBA Kids UY">
+<meta name="twitter:description" content="Hasta 35% OFF, solo por setiembre y hasta agotar stock. Elegí tu promo y tus diseños.">
+<meta name="twitter:image" content="https://cdn.shopify.com/s/files/1/0930/9575/6095/files/foto_portada_para_las_landing_panales_ecologicos_simba.jpg?v=1788392374">
+<link rel="stylesheet" href="assets/css/styles.css">
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '511844655087071');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=511844655087071&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+</head>
+<body>
+  <div class="topbar">
+    <span class="brand">SIMBA</span>
+    <span class="tagline">Promos de Setiembre</span>
+  </div>
+
+  <div class="container">
+    <div class="hero">
+      <span class="discount-badge hero-badge">HASTA 35% OFF</span>
+      <h1>🔥 Liquidación Final DryFit Café</h1>
+      <p>Solo por setiembre y hasta agotar stock. Elegí tu promo, tus diseños, y coordinamos todo por WhatsApp.</p>
+    </div>
+
+    <div id="promo-section">
+      <div class="pack-grid" id="grid-promo"></div>
+    </div>
+  </div>
+
+  <footer class="site-footer">SIMBA Kids UY · Promo válida durante setiembre</footer>
+
+  <script src="assets/js/config.js"></script>
+  <script src="data/products.js"></script>
+  <script src="data/packs.js"></script>
+  <script src="assets/js/data-source.js"></script>
+  <script>
+    function discountPercent(original, promo) {
+      return Math.round((1 - promo / original) * 100);
+    }
+
+    function cardPriceHTML(pack) {
+      const promo = pack.mode === "individual" ? pack.unitPrice : pack.price;
+      const suffix = pack.mode === "individual" ? " c/u" : "";
+      const pct = discountPercent(pack.originalPrice, promo);
+      return `
+        <div class="price-tag">
+          <span class="original-price">$U ${pack.originalPrice.toLocaleString("es-UY")}${suffix}</span>
+          <span class="promo-price">$U ${promo.toLocaleString("es-UY")}${suffix}</span>
+          <span class="discount-badge">${pct}% OFF</span>
+        </div>`;
+    }
+
+    function cardHTML(pack) {
+      const badge = pack.badge ? `<span class="badge">${pack.badge}</span>` : "";
+      return `
+        <a class="pack-card" href="pack.html?slug=${pack.slug}">
+          ${badge}
+          <img src="${pack.image}" alt="${pack.name}" loading="lazy">
+          <div class="info">
+            <div class="name">${pack.name}</div>
+            <div class="subtitle">${pack.subtitle}</div>
+            ${cardPriceHTML(pack)}
+          </div>
+        </a>`;
+    }
+
+    getPacks().then(packs => {
+      const visible = packs.filter(p => p.active !== false);
+
+      if (visible.length === 0) {
+        const badge = document.querySelector(".hero-badge");
+        if (badge) badge.style.display = "none";
+        document.querySelector(".hero h1").textContent = "Promo finalizada";
+        document.querySelector(".hero p").textContent = "Agotamos el stock de la promo — ¡gracias por la increíble respuesta! Seguinos en Instagram para enterarte de las próximas.";
+        document.getElementById("grid-promo").innerHTML = "";
+        return;
+      }
+
+      document.getElementById("grid-promo").innerHTML = visible.map(cardHTML).join("");
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Preventa Exclusiva | SIMBA Kids UY</title>
+<link rel="icon" type="image/png" href="https://cdn.shopify.com/s/files/1/0930/9575/6095/files/Diseno_sin_titulo_2.png?v=1742408340">
+<meta property="og:type" content="website">
+<meta property="og:title" content="🎁 Preventa Exclusiva | SIMBA Kids UY">
+<meta property="og:description" content="Comprá uno de estos packs en preventa y con regalos exclusivos. Válida hasta el domingo 18 de octubre. Entrega dentro de los primeros 10 días de noviembre.">
+<meta property="og:image" content="https://cdn.shopify.com/s/files/1/0930/9575/6095/files/foto_portada_para_las_landing_panales_ecologicos_simba.jpg?v=1788392374">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="🎁 Preventa Exclusiva | SIMBA Kids UY">
+<meta name="twitter:description" content="Comprá uno de estos packs en preventa y con regalos exclusivos. Válida hasta el domingo 18 de octubre. Entrega dentro de los primeros 10 días de noviembre.">
+<meta name="twitter:image" content="https://cdn.shopify.com/s/files/1/0930/9575/6095/files/foto_portada_para_las_landing_panales_ecologicos_simba.jpg?v=1788392374">
+<link rel="stylesheet" href="assets/css/styles.css">
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '511844655087071');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=511844655087071&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+</head>
+<body>
+  <div class="topbar">
+    <span class="brand">SIMBA</span>
+    <span class="tagline">Preventa Exclusiva</span>
+  </div>
+
+  <div class="container">
+    <div class="hero">
+      <span class="discount-badge hero-badge">🎁 PREVENTA EXCLUSIVA</span>
+      <h1>Preventa Exclusiva — con regalo incluido</h1>
+      <p>Comprá uno de estos packs en preventa y llevate un regalo exclusivo de pañales para el agua (¡vos elegís el diseño!). Válida por tiempo limitado, hasta el <strong>domingo 18 de octubre</strong>. Elegí tu pack, tus diseños, y coordinamos todo por WhatsApp.</p>
+      <p class="delivery-info">📦 La entrega de todos los pedidos de esta preventa se realiza dentro de los primeros 10 días de noviembre.</p>
+    </div>
+
+    <div id="preventa-section">
+      <div class="pack-grid" id="grid-preventa"></div>
+    </div>
+  </div>
+
+  <footer class="site-footer">SIMBA Kids UY · Preventa válida hasta el domingo 18 de octubre de 2026 o hasta agotar cupos</footer>
+
+  <script src="assets/js/config.js"></script>
+  <script src="data/products.js"></script>
+  <script src="data/packs.js"></script>
+  <script src="assets/js/data-source.js"></script>
+  <script>
+    // Fin de la preventa: domingo 18/10/2026 a las 23:59:59 hora Uruguay (UTC-3).
+    const PREVENTA_DEADLINE = new Date("2026-10-19T00:00:00-03:00");
+
+    function preventaActiva() {
+      return new Date() < PREVENTA_DEADLINE;
+    }
+
+    function cardHTML(pack) {
+      const badge = pack.badge ? `<span class="badge">${pack.badge}</span>` : "";
+      return `
+        <a class="pack-card" href="pack.html?slug=${pack.slug}">
+          <div class="card-image-wrap">
+            <img src="${pack.image}" alt="${pack.name}" loading="lazy">
+            ${badge}
+          </div>
+          <div class="info">
+            <div class="name">${pack.name}</div>
+            <div class="subtitle">${pack.subtitle}</div>
+          </div>
+        </a>`;
+    }
+
+    getPacks().then(packs => {
+      if (!preventaActiva()) {
+        const badge = document.querySelector(".hero-badge");
+        if (badge) badge.style.display = "none";
+        document.querySelector(".hero h1").textContent = "Preventa finalizada";
+        document.querySelector(".hero p").textContent = "La preventa exclusiva con regalo ya terminó — ¡gracias por la increíble respuesta! Seguinos en Instagram para enterarte de las próximas.";
+        document.getElementById("grid-preventa").innerHTML = "";
+        return;
+      }
+
+      const visible = packs.filter(p => p.active !== false);
+      document.getElementById("grid-preventa").innerHTML = visible.map(cardHTML).join("");
+    });
+  </script>
+</body>
+</html>

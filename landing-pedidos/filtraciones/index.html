@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cuestionario de Filtraciones | SIMBA Kids UY</title>
+<link rel="icon" type="image/png" href="https://cdn.shopify.com/s/files/1/0930/9575/6095/files/Diseno_sin_titulo_2.png?v=1742408340">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Cuestionario de Filtraciones | SIMBA Kids UY">
+<meta property="og:description" content="Contanos qué está pasando y te ayudamos a solucionar la filtración lo antes posible.">
+<meta property="og:image" content="https://cdn.shopify.com/s/files/1/0930/9575/6095/files/foto_portada_para_las_landing_panales_ecologicos_simba.jpg?v=1788392374">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Cuestionario de Filtraciones | SIMBA Kids UY">
+<meta name="twitter:description" content="Contanos qué está pasando y te ayudamos a solucionar la filtración lo antes posible.">
+<meta name="twitter:image" content="https://cdn.shopify.com/s/files/1/0930/9575/6095/files/foto_portada_para_las_landing_panales_ecologicos_simba.jpg?v=1788392374">
+<link rel="stylesheet" href="assets/css/styles.css">
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '511844655087071');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=511844655087071&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+</head>
+<body>
+  <div class="topbar">
+    <span class="brand">SIMBA</span>
+    <span class="tagline">Cuestionario de Filtraciones</span>
+  </div>
+
+  <div class="container">
+    <div class="hero">
+      <h1>💧 ¿Se filtró el pañal?</h1>
+      <p>Las filtraciones pueden darse por varios motivos — completá estas preguntas rápidas y nos ayudás a juntar toda la info de una sola vez, así te podemos orientar mejor y más rápido. Es importante que respondas las 8 preguntas: así tenemos toda la información completa y te podemos dar una solución más precisa ✅</p>
+    </div>
+
+    <div class="note-box">
+      📸 <strong>Un dato importante:</strong> si podés, mandanos por WhatsApp fotos y videos de cómo le ajustás el pañal — así vemos más detalles y te podemos ayudar mejor a solucionar la filtración. Es un complemento a esta info, no un reemplazo.
+    </div>
+
+    <div id="form-root">
+
+      <div class="component-block" id="q-nombre" style="margin-top:0; padding-top:0; border-top:none;">
+        <h3>Nombre del bebé <span style="font-weight:400; color:var(--text-muted);">(opcional, para identificar el caso)</span></h3>
+        <div class="field-group">
+          <input type="text" id="input-nombre" placeholder="Ej: Mateo">
+        </div>
+      </div>
+
+      <div class="component-block" id="q-edad">
+        <h3><span class="question-number">1</span>¿Qué edad tiene?</h3>
+        <div class="field-group">
+          <input type="text" id="input-edad" placeholder="Ej: 8 meses">
+        </div>
+        <div class="section-error" id="err-edad"></div>
+      </div>
+
+      <div class="component-block" id="q-sexo">
+        <h3><span class="question-number">2</span>¿Es nena o varón?</h3>
+        <div class="option-list" id="list-sexo">
+          <label class="option-card" data-value="nena">
+            <input type="radio" name="sexo" value="nena">
+            <div class="option-text"><strong>Nena</strong></div>
+          </label>
+          <label class="option-card" data-value="varon">
+            <input type="radio" name="sexo" value="varon">
+            <div class="option-text"><strong>Varón</strong></div>
+          </label>
+        </div>
+        <div class="section-error" id="err-sexo"></div>
+      </div>
+
+      <div class="component-block" id="q-absorbentes">
+        <h3><span class="question-number">3</span>¿Cuántos absorbentes le estás poniendo durante el <u>DÍA</u> a cada pañal?</h3>
+        <div class="option-list" id="list-absorbentes">
+          <label class="option-card" data-value="1">
+            <input type="radio" name="absorbentes" value="1">
+            <div class="option-text"><strong>1 absorbente</strong></div>
+          </label>
+          <label class="option-card" data-value="2">
+            <input type="radio" name="absorbentes" value="2">
+            <div class="option-text"><strong>2 absorbentes</strong></div>
+          </label>
+          <label class="option-card" data-value="3">
+            <input type="radio" name="absorbentes" value="3">
+            <div class="option-text"><strong>3 absorbentes</strong></div>
+          </label>
+        </div>
+        <div class="section-error" id="err-absorbentes"></div>
+      </div>
+
+      <div class="component-block" id="q-hace-cuanto">
+        <h3><span class="question-number">4</span>¿Hace cuánto empezó a filtrarse?</h3>
+        <div class="field-group">
+          <input type="text" id="input-hace-cuanto" placeholder="Ej: hace 3 días">
+        </div>
+        <div class="section-error" id="err-hace-cuanto"></div>
+      </div>
+
+      <div class="component-block" id="q-recurrencia" style="margin-top:16px; padding-top:0; border-top:none;">
+        <h3>¿Fue una sola vez o es recurrente?</h3>
+        <div class="option-list" id="list-recurrencia">
+          <label class="option-card" data-value="unica">
+            <input type="radio" name="recurrencia" value="unica">
+            <div class="option-text"><strong>Fue una sola vez</strong></div>
+          </label>
+          <label class="option-card" data-value="recurrente">
+            <input type="radio" name="recurrencia" value="recurrente">
+            <div class="option-text"><strong>Es recurrente</strong></div>
+          </label>
+        </div>
+        <div class="section-error" id="err-recurrencia"></div>
+      </div>
+
+      <div class="component-block" id="q-zonas">
+        <h3><span class="question-number">5</span>¿Por dónde se filtra?</h3>
+        <div class="hint">Podés marcar más de una opción.</div>
+        <div class="option-list" id="list-zonas">
+          <label class="option-card" data-value="piernitas">
+            <input type="checkbox" name="zonas" value="piernitas">
+            <div class="option-text"><strong>Piernitas</strong></div>
+          </label>
+          <label class="option-card" data-value="espalda">
+            <input type="checkbox" name="zonas" value="espalda">
+            <div class="option-text"><strong>Espalda</strong></div>
+          </label>
+          <label class="option-card" data-value="cintura">
+            <input type="checkbox" name="zonas" value="cintura">
+            <div class="option-text"><strong>Cintura</strong></div>
+          </label>
+          <label class="option-card" data-value="pancita">
+            <input type="checkbox" name="zonas" value="pancita">
+            <div class="option-text"><strong>Pancita</strong></div>
+          </label>
+          <input type="text" class="other-input" id="input-zona-otro" placeholder="Otro. Ej: por arriba de la cintura">
+        </div>
+        <div class="section-error" id="err-zonas"></div>
+      </div>
+
+      <div class="component-block" id="q-cada-cuanto">
+        <h3><span class="question-number">6</span>¿Cada cuánto le cambia el pañal aproximadamente?</h3>
+        <div class="field-group">
+          <input type="text" id="input-cada-cuanto" placeholder="Ej: cada 3 horas">
+        </div>
+        <div class="section-error" id="err-cada-cuanto"></div>
+      </div>
+
+      <div class="component-block" id="q-estado">
+        <h3><span class="question-number">7</span>Cuando le cambiás el pañal, el absorbente...</h3>
+        <div class="option-list" id="list-estado">
+          <label class="option-card" data-value="completo">
+            <input type="radio" name="estado" value="completo">
+            <div class="option-text"><strong>Ya está completo, no absorbe más</strong></div>
+          </label>
+          <label class="option-card" data-value="parcial">
+            <input type="radio" name="estado" value="parcial">
+            <div class="option-text"><strong>Hay partes que todavía no absorbieron pis</strong></div>
+          </label>
+          <input type="text" class="other-input" id="input-estado-otro" placeholder="Otro. Ej: no estoy segura">
+        </div>
+        <div class="section-error" id="err-estado"></div>
+      </div>
+
+      <div class="component-block" id="q-cuando">
+        <h3><span class="question-number">8</span>¿La filtración pasa más de noche/en siestas largas, o también durante el día con cambios frecuentes?</h3>
+        <div class="option-list" id="list-cuando">
+          <label class="option-card" data-value="noche">
+            <input type="radio" name="cuando" value="noche">
+            <div class="option-text"><strong>Durante la noche o siesta</strong></div>
+          </label>
+          <label class="option-card" data-value="dia">
+            <input type="radio" name="cuando" value="dia">
+            <div class="option-text"><strong>Durante el día</strong></div>
+          </label>
+          <label class="option-card" data-value="ambos">
+            <input type="radio" name="cuando" value="ambos">
+            <div class="option-text"><strong>Ambos casos</strong></div>
+          </label>
+        </div>
+        <div class="section-error" id="err-cuando"></div>
+      </div>
+
+      <div class="send-bar">
+        <button class="send-btn" id="send-btn">Enviar cuestionario por WhatsApp</button>
+        <div class="send-progress" id="send-progress"></div>
+      </div>
+
+    </div>
+  </div>
+
+  <footer class="site-footer">SIMBA Kids UY · Te ayudamos a solucionar la filtración cuanto antes</footer>
+
+  <script src="assets/js/config.js"></script>
+  <script>
+    const state = {
+      edad: "",
+      sexo: null,
+      absorbentes: null,
+      haceCuanto: "",
+      recurrencia: null,
+      zonas: new Set(),
+      zonaOtro: "",
+      cadaCuanto: "",
+      estadoAbsorbente: null,
+      estadoOtro: "",
+      cuando: null,
+      nombreBebe: ""
+    };
+
+    function bindText(inputId, stateKey) {
+      document.getElementById(inputId).addEventListener("input", e => {
+        state[stateKey] = e.target.value;
+        updateSendState();
+      });
+    }
+
+    function bindRadioGroup(listId, name, stateKey, onChange) {
+      const list = document.getElementById(listId);
+      list.querySelectorAll(`input[name="${name}"]`).forEach(radio => {
+        radio.addEventListener("change", e => {
+          state[stateKey] = e.target.value;
+          list.querySelectorAll(".option-card").forEach(card => {
+            card.classList.toggle("selected", card.dataset.value === e.target.value);
+          });
+          if (onChange) onChange(e.target.value);
+          updateSendState();
+        });
+      });
+    }
+
+    bindText("input-edad", "edad");
+    bindText("input-hace-cuanto", "haceCuanto");
+    bindText("input-cada-cuanto", "cadaCuanto");
+    bindText("input-nombre", "nombreBebe");
+
+    bindRadioGroup("list-sexo", "sexo", "sexo");
+    bindRadioGroup("list-absorbentes", "absorbentes", "absorbentes");
+    bindRadioGroup("list-recurrencia", "recurrencia", "recurrencia");
+    bindRadioGroup("list-cuando", "cuando", "cuando");
+    bindRadioGroup("list-estado", "estado", "estadoAbsorbente", () => {
+      const otroInput = document.getElementById("input-estado-otro");
+      otroInput.value = "";
+      otroInput.classList.remove("filled");
+      state.estadoOtro = "";
+    });
+
+    document.querySelectorAll('#list-zonas input[name="zonas"]').forEach(checkbox => {
+      checkbox.addEventListener("change", e => {
+        const card = e.target.closest(".option-card");
+        if (e.target.checked) {
+          state.zonas.add(e.target.value);
+          card.classList.add("selected");
+        } else {
+          state.zonas.delete(e.target.value);
+          card.classList.remove("selected");
+        }
+        updateSendState();
+      });
+    });
+
+    document.getElementById("input-zona-otro").addEventListener("input", e => {
+      state.zonaOtro = e.target.value;
+      e.target.classList.toggle("filled", e.target.value.trim().length > 0);
+      updateSendState();
+    });
+
+    document.getElementById("input-estado-otro").addEventListener("input", e => {
+      state.estadoOtro = e.target.value;
+      e.target.classList.toggle("filled", e.target.value.trim().length > 0);
+      if (e.target.value.trim().length > 0) {
+        state.estadoAbsorbente = "otro";
+        document.querySelectorAll('#list-estado input[name="estado"]').forEach(r => { r.checked = false; });
+        document.querySelectorAll("#list-estado .option-card").forEach(c => c.classList.remove("selected"));
+      } else if (state.estadoAbsorbente === "otro") {
+        state.estadoAbsorbente = null;
+      }
+      updateSendState();
+    });
+
+    function setError(id, msg) {
+      const el = document.getElementById(id);
+      if (el) el.textContent = msg;
+    }
+
+    function clearErrors() {
+      document.querySelectorAll(".section-error").forEach(el => { el.textContent = ""; });
+    }
+
+    function checks() {
+      return [
+        { ok: state.edad.trim().length > 0, target: "q-edad", err: "err-edad", msg: "Contanos la edad" },
+        { ok: !!state.sexo, target: "q-sexo", err: "err-sexo", msg: "Elegí una opción" },
+        { ok: !!state.absorbentes, target: "q-absorbentes", err: "err-absorbentes", msg: "Elegí una opción" },
+        { ok: state.haceCuanto.trim().length > 0, target: "q-hace-cuanto", err: "err-hace-cuanto", msg: "Contanos hace cuánto empezó" },
+        { ok: !!state.recurrencia, target: "q-recurrencia", err: "err-recurrencia", msg: "Elegí una opción" },
+        { ok: state.zonas.size > 0 || state.zonaOtro.trim().length > 0, target: "q-zonas", err: "err-zonas", msg: "Elegí al menos una opción" },
+        { ok: state.cadaCuanto.trim().length > 0, target: "q-cada-cuanto", err: "err-cada-cuanto", msg: "Contanos cada cuánto le cambia el pañal" },
+        { ok: !!state.estadoAbsorbente, target: "q-estado", err: "err-estado", msg: "Elegí una opción" },
+        { ok: !!state.cuando, target: "q-cuando", err: "err-cuando", msg: "Elegí una opción" }
+      ];
+    }
+
+    // Las 8 preguntas numeradas en la landing (la 4 agrupa "hace cuánto" + "recurrencia").
+    function questionsAnswered() {
+      let count = 0;
+      if (state.edad.trim()) count++;
+      if (state.sexo) count++;
+      if (state.absorbentes) count++;
+      if (state.haceCuanto.trim() && state.recurrencia) count++;
+      if (state.zonas.size > 0 || state.zonaOtro.trim()) count++;
+      if (state.cadaCuanto.trim()) count++;
+      if (state.estadoAbsorbente) count++;
+      if (state.cuando) count++;
+      return count;
+    }
+
+    function updateSendState() {
+      const progress = document.getElementById("send-progress");
+      const btn = document.getElementById("send-btn");
+      const answered = questionsAnswered();
+
+      const failed = checks().find(c => !c.ok);
+      clearErrors();
+      btn.classList.toggle("send-btn--incomplete", !!failed);
+      progress.textContent = `${answered}/8 preguntas respondidas`;
+    }
+
+    const ZONA_LABELS = { piernitas: "Piernitas", espalda: "Espalda", cintura: "Cintura", pancita: "Pancita" };
+    const ESTADO_LABELS = {
+      completo: "Ya está completo, no absorbe más",
+      parcial: "Hay partes que todavía no absorbieron pis"
+    };
+    const CUANDO_LABELS = { noche: "Durante la noche o siesta", dia: "Durante el día", ambos: "Ambos casos" };
+
+    function buildWhatsAppLink() {
+      const zonasArr = [...state.zonas].map(z => ZONA_LABELS[z]);
+      if (state.zonaOtro.trim()) zonasArr.push(state.zonaOtro.trim());
+
+      const sexoLabel = state.sexo === "nena" ? "Nena" : "Varón";
+      const recurrenciaLabel = state.recurrencia === "unica" ? "Fue una sola vez" : "Es recurrente";
+      const estadoLabel = state.estadoAbsorbente === "otro"
+        ? (state.estadoOtro.trim() || "Otro")
+        : ESTADO_LABELS[state.estadoAbsorbente];
+
+      const lines = ["Hola! Les completo el cuestionario de filtraciones:", ""];
+      if (state.nombreBebe.trim()) lines.push(`👶 Nombre del bebé: ${state.nombreBebe.trim()}`);
+      lines.push(`🎂 Edad: ${state.edad.trim()}`);
+      lines.push(`Es: ${sexoLabel}`);
+      lines.push(`🧻 Absorbentes por pañal: ${state.absorbentes}`);
+      lines.push(`⏳ Hace cuánto empezó: ${state.haceCuanto.trim()} (${recurrenciaLabel})`);
+      lines.push(`📍 Por dónde se filtra: ${zonasArr.join(", ")}`);
+      lines.push(`🔁 Cada cuánto le cambia el pañal: ${state.cadaCuanto.trim()}`);
+      lines.push(`💧 Estado del absorbente al cambiar: ${estadoLabel}`);
+      lines.push(`🌙 Cuándo pasa: ${CUANDO_LABELS[state.cuando]}`);
+      lines.push("");
+      lines.push("📸 Les mando fotos/videos del ajuste del pañal acá mismo.");
+
+      const text = encodeURIComponent(lines.join("\n"));
+      return `https://wa.me/${window.SIMBA_CONFIG.whatsappNumber}?text=${text}`;
+    }
+
+    document.getElementById("send-btn").addEventListener("click", () => {
+      const failed = checks().find(c => !c.ok);
+      if (failed) {
+        setError(failed.err, failed.msg);
+        document.getElementById(failed.target).scrollIntoView({ behavior: "smooth", block: "center" });
+        return;
+      }
+      if (typeof fbq === "function") fbq("track", "Contact");
+      window.open(buildWhatsAppLink(), "_blank");
+    });
+
+    updateSendState();
+  </script>
+</body>
+</html>

@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title id="page-title">Elegí tus diseños | SIMBA Kids UY</title>
+<link rel="icon" type="image/png" href="https://cdn.shopify.com/s/files/1/0930/9575/6095/files/Diseno_sin_titulo_2.png?v=1742408340">
+<meta property="og:type" content="website">
+<meta property="og:title" content="SIMBA Kids UY - Elegí tus diseños">
+<meta property="og:description" content="Elegí tu pack, mirá los diseños disponibles, seleccioná los tuyos y enviámelos por WhatsApp.">
+<meta property="og:image" content="https://cdn.shopify.com/s/files/1/0930/9575/6095/files/foto_portada_para_las_landing_panales_ecologicos_simba.jpg?v=1788392374">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="SIMBA Kids UY - Elegí tus diseños">
+<meta name="twitter:description" content="Elegí tu pack, mirá los diseños disponibles, seleccioná los tuyos y enviámelos por WhatsApp.">
+<meta name="twitter:image" content="https://cdn.shopify.com/s/files/1/0930/9575/6095/files/foto_portada_para_las_landing_panales_ecologicos_simba.jpg?v=1788392374">
+<link rel="stylesheet" href="assets/css/styles.css">
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '511844655087071');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=511844655087071&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+</head>
+<body>
+  <div class="topbar">
+    <span class="brand">SIMBA</span>
+    <span class="tagline">Elegí los diseños de tu pedido</span>
+  </div>
+
+  <div class="container">
+    <a class="back-link" href="index.html">&larr; Volver a todos los packs</a>
+
+    <div id="pack-root">Cargando...</div>
+  </div>
+
+  <script src="assets/js/config.js"></script>
+  <script src="data/products.js"></script>
+  <script src="data/packs.js"></script>
+  <script src="assets/js/data-source.js"></script>
+  <script>
+    const params = new URLSearchParams(location.search);
+    const slug = params.get("slug");
+    const root = document.getElementById("pack-root");
+
+    const SHIPPING_OPTIONS = {
+      pickup: {
+        title: "Retiro en Aguada",
+        detail: "A una cuadra del Palacio Legislativo. Coordinamos el retiro luego de confirmada la venta.",
+        message: "Retiro en Aguada",
+        cost: 0
+      },
+      montevideo: {
+        title: "Envío en Montevideo — $U 200",
+        detail: "Se suma al total del pedido.",
+        message: "Envío en Montevideo",
+        cost: 200
+      },
+      interior: {
+        title: "Envío al resto del país (DAC)",
+        detail: "El costo del envío se abona al recibir el pedido.",
+        message: "Envío por DAC",
+        cost: 0
+      }
+    };
+
+    const FREE_SHIPPING_THRESHOLD = 3500;
+
+    const PAYMENT_OPTIONS = {
+      transferencia: {
+        title: "Transferencia bancaria o depósito",
+        detail: "Redes de cobranza (Abitab, Redpagos, etc.)",
+        message: "Voy a abonar por transferencia bancaria o depósito en redes de cobranza, ¿me pasás el número de cuenta?"
+      },
+      tarjeta: {
+        title: "Link de pago con tarjeta",
+        detail: "Hasta 12 cuotas sin recargo.",
+        message: "Voy a abonar con tarjeta, ¿podrías enviarme el link de pago?"
+      }
+    };
+
+    const SHIPPING_FIELD_LABELS = {
+      nombre: "Nombre y apellido",
+      direccion: "Dirección de entrega",
+      localidad: "Localidad y departamento",
+      celular: "Celular de contacto"
+    };
+
+    function shippingFieldKeys() {
+      if (selectedShipping === "pickup") return ["nombre"];
+      if (selectedShipping === "montevideo") return ["nombre", "direccion", "celular"];
+      if (selectedShipping === "interior") {
+        if (dacMode === "agencia") return ["nombre", "localidad", "celular"];
+        if (dacMode === "domicilio") return ["nombre", "direccion", "localidad", "celular"];
+        return null;
+      }
+      return [];
+    }
+
+    function shippingFieldsHTML(keys) {
+      if (!keys || keys.length === 0) return "";
+      return `<div class="shipping-fields">` + keys.map(k => `
+        <div class="field-group">
+          <label>${SHIPPING_FIELD_LABELS[k]}</label>
+          <input type="text" class="field-input" data-key="${k}" value="${(shippingFields[k] || "").replace(/"/g, "&quot;")}" placeholder="${SHIPPING_FIELD_LABELS[k]}">
+        </div>`).join("") + `</div>`;
+    }
+
+    function shippingOptionsHTML() {
+      return Object.entries(SHIPPING_OPTIONS).map(([value, opt]) => `
+        <div class="option-card-wrap" data-group="shipping" data-value="${value}">
+          <label class="option-card">
+            <input type="radio" name="shipping" value="${value}">
+            <div class="option-text">
+              <strong>${opt.title}</strong>
+              <span>${opt.detail}</span>
+            </div>
+          </label>
+          <div class="option-inline-extra" id="extra-${value}"></div>
+        </div>`).join("");
+    }
+
+    function renderShippingDetails(pack) {
+      Object.keys(SHIPPING_OPTIONS).forEach(v => {
+        const el = document.getElementById(`extra-${v}`);
+        if (el) el.innerHTML = "";
+      });
+      const container = document.getElementById(`extra-${selectedShipping}`);
+      if (!container) return;
+
+      if (selectedShipping === "interior") {
+        const dacOption = (value, label) => `
+          <label class="option-card ${dacMode === value ? "selected" : ""}">
+            <input type="radio" name="dac-mode" value="${value}" ${dacMode === value ? "checked" : ""}>
+            <div class="option-text"><strong>${label}</strong></div>
+          </label>`;
+        container.innerHTML =
+          `<div class="option-list dac-mode-list">${dacOption("agencia", "Retiro en agencia")}${dacOption("domicilio", "Enviar a mi domicilio")}</div>` +
+          shippingFieldsHTML(shippingFieldKeys());
+
+        container.querySelectorAll('input[name="dac-mode"]').forEach(r => {
+          r.addEventListener("change", e => {
+            dacMode = e.target.value;
+            renderShippingDetails(pack);
+            updateSendState(pack);
+          });
+        });
+      } else {
+        container.innerHTML = shippingFieldsHTML(shippingFieldKeys());
+      }
+
+      container.querySelectorAll(".field-input").forEach(input => {
+        input.addEventListener("input", e => {
+          shippingFields[e.target.dataset.key] = e.target.value;
+          updateSendState(pack);
+        });
+      });
+    }
+
+    function formatMoney(n) {
+      return "$U " + n.toLocaleString("es-UY");
+    }
+
+    function sortedVariants(variants) {
+      return variants.slice().sort((a, b) => a.title.localeCompare(b.title, "es"));
+    }
+
+    function galleryHTML(variants, ci) {
+      return sortedVariants(variants).map(v => {
+        const out = v.stock <= 0;
+        const low = !out && v.stock <= 3;
+        return `
+        <div class="thumb-wrap ${out ? "out" : ""}" data-ci="${ci}" data-title="${v.title}">
+          <div class="thumb ${out ? "out" : ""}">
+            <img src="${v.image}" alt="${v.title}" loading="lazy">
+            ${low ? '<div class="low-badge">🔥 ¡ÚLTIMAS UNIDADES!</div>' : ""}
+            ${out ? '<div class="out-label">SIN STOCK</div>' : ""}
+            <div class="count-badge"></div>
+          </div>
+          <div class="thumb-name">${v.title}</div>
+        </div>`;
+      }).join("");
+    }
+
+    function sizeChartHTML(url) {
+      return `
+        <a class="size-chart" href="${url}" target="_blank" rel="noopener">
+          <div class="size-chart-title">📏 Tabla de talles</div>
+          <img src="${url}" alt="Tabla de talles" loading="lazy">
+          <span>Tocá la imagen para verla en grande</span>
+        </a>`;
+    }
+
+    function compProgressText(comp, total) {
+      if (comp.qty === null) {
+        return total > 0 ? `Elegiste ${total} diseño${total > 1 ? "s" : ""}` : "Elegí los que quieras";
+      }
+      return total >= comp.qty ? `✅ Elegiste tus ${comp.qty} diseño${comp.qty > 1 ? "s" : ""}` : `Elegiste ${total} de ${comp.qty}`;
+    }
+
+    function componentSatisfied(comp, total) {
+      return comp.qty === null ? total >= 1 : total >= comp.qty;
+    }
+
+    function renderBadges(pack, ci) {
+      const comp = pack.components[ci];
+      const galleryEl = document.getElementById(`gallery-${ci}`);
+      galleryEl.querySelectorAll(".thumb-wrap").forEach(wrap => {
+        const count = selections[ci][wrap.dataset.title] || 0;
+        const thumb = wrap.querySelector(".thumb");
+        const badge = wrap.querySelector(".count-badge");
+        thumb.classList.toggle("selected", count > 0);
+        badge.textContent = count > 0 ? String(count) : "";
+      });
+
+      const total = countFor(ci);
+      document.getElementById(`comp-progress-${ci}`).textContent = compProgressText(comp, total);
+      document.getElementById(`clear-${ci}`).style.display = total > 0 ? "inline-flex" : "none";
+    }
+
+    let selections = {};
+    let variantStock = {};
+    let selectedShipping = "";
+    let selectedPayment = "";
+    let selectedUpsell = null;
+    let dacMode = "";
+    let shippingFields = {};
+    let addonSelections = {};
+    let addonStock = {};
+    let addonOpen = false;
+
+    function countFor(ci) {
+      return Object.values(selections[ci] || {}).reduce((a, b) => a + b, 0);
+    }
+
+    function addonCount() {
+      return Object.values(addonSelections).reduce((a, b) => a + b, 0);
+    }
+
+    function addonPrice(pack) {
+      return Math.round(pack.addon.basePrice * (1 - pack.addon.discount / 100));
+    }
+
+    // Unidades ya elegidas de un mismo producto (en los componentes del pack y en el extra),
+    // para no pasarse del stock si el cliente elige el mismo diseño en los dos lugares.
+    function unitsUsed(pack, productKey, title) {
+      let n = 0;
+      pack.components.forEach((c, ci) => {
+        if (c.product === productKey) n += (selections[ci][title] || 0);
+      });
+      if (pack.addon && pack.addon.product === productKey) n += (addonSelections[title] || 0);
+      return n;
+    }
+
+    function addonHTML(pack, prod) {
+      const a = pack.addon;
+      return `
+        <div class="addon-block">
+          <div class="addon-question">¿Querés sumar ${a.noun} con ${a.discount}% de descuento?</div>
+          <div class="addon-price">Con el descuento: <strong>${formatMoney(addonPrice(pack))} c/u</strong> <s>${formatMoney(a.basePrice)}</s></div>
+          <button type="button" class="addon-btn" id="addon-btn">Sí, quiero</button>
+          <div class="addon-panel" id="addon-panel" hidden>
+            <div class="hint">Tocá una foto para elegirla. Podés sumar todas las que quieras: si querés el mismo diseño más de una vez, tocala de nuevo.</div>
+            ${a.sizeChart ? sizeChartHTML(a.sizeChart) : ""}
+            <div class="gallery" id="gallery-addon">${galleryHTML(prod.variants, "addon")}</div>
+            <div class="comp-footer">
+              <span class="comp-progress" id="comp-progress-addon">Elegí los que quieras</span>
+              <button type="button" class="clear-btn" id="clear-addon" style="display:none">Limpiar selección</button>
+            </div>
+          </div>
+        </div>`;
+    }
+
+    function renderAddonBadges() {
+      document.querySelectorAll("#gallery-addon .thumb-wrap").forEach(wrap => {
+        const count = addonSelections[wrap.dataset.title] || 0;
+        wrap.querySelector(".thumb").classList.toggle("selected", count > 0);
+        wrap.querySelector(".count-badge").textContent = count > 0 ? String(count) : "";
+      });
+      const total = addonCount();
+      document.getElementById("comp-progress-addon").textContent =
+        total > 0 ? `Elegiste ${total} diseño${total > 1 ? "s" : ""}` : "Elegí los que quieras";
+      document.getElementById("clear-addon").style.display = total > 0 ? "inline-flex" : "none";
+    }
+
+    function selectedUpsellOption(pack) {
+      if (!pack.upsell || !selectedUpsell) return null;
+      return pack.upsell.options.find(o => o.id === selectedUpsell) || null;
+    }
+
+    // Precio interno del pedido (no se muestra en la landing, solo se calcula
+    // para incluirlo en el mensaje final de WhatsApp).
+    function orderSubtotal(pack) {
+      const base = pack.mode === "individual"
+        ? pack.unitPrice * pack.components.reduce((sum, c, ci) => sum + countFor(ci), 0)
+        : pack.price;
+      const upsellOpt = selectedUpsellOption(pack);
+      const addon = pack.addon ? addonCount() * addonPrice(pack) : 0;
+      return base + (upsellOpt ? upsellOpt.price : 0) + addon;
+    }
+
+    function setSectionError(errId, listId, msg) {
+      const errEl = document.getElementById(errId);
+      if (errEl) errEl.textContent = msg;
+      if (listId) {
+        const list = document.getElementById(listId);
+        if (list) list.classList.add("has-error");
+      }
+    }
+
+    function clearSectionError(errId, listId) {
+      const errEl = document.getElementById(errId);
+      if (errEl) errEl.textContent = "";
+      if (listId) {
+        const list = document.getElementById(listId);
+        if (list) list.classList.remove("has-error");
+      }
+    }
+
+    // Devuelve la primera sección incompleta (para el scroll + cartel al tocar "Enviar"), o null si está todo listo.
+    function firstUnmetTarget(pack) {
+      for (let ci = 0; ci < pack.components.length; ci++) {
+        const comp = pack.components[ci];
+        if (!componentSatisfied(comp, countFor(ci))) {
+          return {
+            el: document.getElementById(`gallery-${ci}`),
+            show: () => setSectionError(`comp-error-${ci}`, null,
+              comp.qty === null
+                ? "Elegí al menos un diseño"
+                : `Te faltan diseños: elegiste ${countFor(ci)} de ${comp.qty}`)
+          };
+        }
+      }
+      if (!selectedShipping) {
+        return { el: document.getElementById("shipping-options"),
+          show: () => setSectionError("shipping-error", "shipping-options", "Elegí una opción de envío o retiro") };
+      }
+      if (selectedShipping === "interior" && !dacMode) {
+        return { el: document.getElementById("shipping-options"),
+          show: () => setSectionError("shipping-error", "shipping-options", "Elegí retiro en agencia o envío a domicilio") };
+      }
+      if (!selectedPayment) {
+        return { el: document.getElementById("payment-options"),
+          show: () => setSectionError("payment-error", "payment-options", "Elegí un medio de pago") };
+      }
+      return null;
+    }
+
+    function updateSendState(pack) {
+      const btn = document.getElementById("send-btn");
+      const progress = document.getElementById("send-progress");
+      const unmetIndex = pack.components.findIndex((c, ci) => !componentSatisfied(c, countFor(ci)));
+
+      // Limpiar los carteles de error de las secciones que ya se completaron.
+      pack.components.forEach((c, ci) => {
+        if (componentSatisfied(c, countFor(ci))) clearSectionError(`comp-error-${ci}`);
+      });
+      if (selectedShipping && !(selectedShipping === "interior" && !dacMode)) clearSectionError("shipping-error", "shipping-options");
+      if (selectedPayment) clearSectionError("payment-error", "payment-options");
+
+      let blocking = null;
+      if (unmetIndex !== -1) {
+        const comp = pack.components[unmetIndex];
+        blocking = comp.qty === null
+          ? "Elegí al menos un diseño"
+          : `Elegiste ${countFor(unmetIndex)} de ${comp.qty} diseños`;
+      } else if (!selectedShipping) {
+        blocking = "Elegí el envío o retiro";
+      } else if (selectedShipping === "interior" && !dacMode) {
+        blocking = "Elegí retiro en agencia o envío a domicilio";
+      }
+
+      if (!blocking && !selectedPayment) blocking = "Elegí el medio de pago";
+
+      btn.classList.toggle("send-btn--incomplete", !!blocking);
+      progress.textContent = blocking || "¡Listo! Todo elegido.";
+    }
+
+    function buildWhatsAppLink(pack) {
+      const payment = PAYMENT_OPTIONS[selectedPayment];
+
+      const lines = ["Hola, quiero hacer un pedido:"];
+
+      if (pack.components.length > 0) {
+        lines.push("");
+        lines.push(`Quiero encargar: *${pack.name}*`);
+        lines.push("");
+        lines.push("Ya vi los diseños, me gustarían estos:");
+        pack.components.forEach((comp, ci) => {
+          Object.entries(selections[ci]).forEach(([title, count]) => {
+            if (count <= 0) return;
+            lines.push(`- ${comp.label}: ${title}${count > 1 ? ` (x${count})` : ""}`);
+          });
+        });
+        const upsellOpt = selectedUpsellOption(pack);
+        if (upsellOpt) {
+          lines.push("");
+          lines.push(`Además, quiero sumar: ${upsellOpt.message}`);
+        }
+        if (pack.addon && addonCount() > 0) {
+          lines.push("");
+          lines.push(`Además, quiero sumar con ${pack.addon.discount}% de descuento (${formatMoney(addonPrice(pack))} c/u):`);
+          Object.entries(addonSelections).forEach(([title, count]) => {
+            if (count <= 0) return;
+            lines.push(`- ${pack.addon.label}: ${title}${count > 1 ? ` (x${count})` : ""}`);
+          });
+        }
+      }
+
+      // Solo se usan los datos del tipo de envío elegido (puede haber quedado texto de otra opción).
+      const keys = shippingFieldKeys() || [];
+      const val = k => (keys.includes(k) ? (shippingFields[k] || "").trim() : "");
+
+      lines.push("");
+      if (val("nombre")) lines.push(`Mi nombre es ${val("nombre")}.`);
+      if (selectedShipping === "pickup") {
+        lines.push("Cuando el pedido esté listo, lo voy a retirar en su Pick-up de Aguada.");
+      } else if (selectedShipping === "montevideo") {
+        lines.push(`Quiero que me lo envíen en Montevideo${val("direccion") ? ` a ${val("direccion")}` : ""}.`);
+      } else if (selectedShipping === "interior") {
+        if (dacMode === "agencia") {
+          lines.push(`Quiero que me lo envíen por DAC, para retirarlo en la agencia${val("localidad") ? ` de ${val("localidad")}` : ""}.`);
+        } else {
+          const donde = [val("direccion"), val("localidad")].filter(Boolean).join(", ");
+          lines.push(`Quiero que me lo envíen por DAC a mi domicilio${donde ? ` en ${donde}` : ""}.`);
+        }
+      }
+      if (val("celular")) lines.push(`Mi celular es ${val("celular")}.`);
+
+      lines.push("");
+      lines.push(payment.message);
+
+      if (pack.components.length > 0) {
+        const subtotal = orderSubtotal(pack);
+        lines.push("");
+        if (selectedShipping === "montevideo") {
+          if (subtotal >= FREE_SHIPPING_THRESHOLD) {
+            lines.push(`Total del pedido: ${formatMoney(subtotal)}`);
+            lines.push("Envío: GRATIS");
+          } else {
+            lines.push(`Sub-total del pedido: ${formatMoney(subtotal)}`);
+            lines.push(`Envío: ${formatMoney(SHIPPING_OPTIONS.montevideo.cost)}`);
+            lines.push(`Total: ${formatMoney(subtotal + SHIPPING_OPTIONS.montevideo.cost)}`);
+          }
+        } else if (selectedShipping === "interior" && subtotal >= FREE_SHIPPING_THRESHOLD) {
+          lines.push(`Total del pedido: ${formatMoney(subtotal)}`);
+          lines.push("Envío: GRATIS");
+        } else {
+          lines.push(`Total del pedido: ${formatMoney(subtotal)}`);
+        }
+      }
+
+      const text = encodeURIComponent(lines.join("\n"));
+      return `https://wa.me/${window.SIMBA_CONFIG.whatsappNumber}?text=${text}`;
+    }
+
+    function upsellHTML(pack) {
+      if (!pack.upsell) return "";
+      const u = pack.upsell;
+      const optionsHTML = u.options.map(o => `
+        <div class="upsell-option" data-id="${o.id}">
+          <strong>${o.label}</strong>
+          <span>${formatMoney(o.price)}</span>
+        </div>`).join("");
+      const media = u.mediaType === "video"
+        ? `<video class="upsell-media" src="${u.media}" autoplay loop muted playsinline></video>`
+        : `<img class="upsell-media" src="${u.media}" alt="${u.title}" loading="lazy">`;
+      return `
+        <div class="upsell-block">
+          <h3>${u.title}</h3>
+          ${media}
+          <p class="upsell-desc">${u.description}</p>
+          <div class="upsell-options">${optionsHTML}</div>
+        </div>`;
+    }
+
+    function optionCardsHTML(groupName, options) {
+      return Object.entries(options).map(([value, opt]) => `
+        <label class="option-card" data-group="${groupName}">
+          <input type="radio" name="${groupName}" value="${value}">
+          <div class="option-text">
+            <strong>${opt.title}</strong>
+            <span>${opt.detail}</span>
+          </div>
+        </label>`).join("");
+    }
+
+    async function init() {
+      const [packs, products] = await Promise.all([getPacks(), getProducts()]);
+      const pack = packs.find(p => p.slug === slug);
+
+      if (!pack) {
+        root.innerHTML = "<p>No encontramos ese pack. <a href='index.html'>Volver</a></p>";
+        return;
+      }
+
+      document.getElementById("page-title").textContent = `${pack.name} | SIMBA Kids UY`;
+
+      selections = {};
+      variantStock = {};
+      selectedUpsell = null;
+      addonSelections = {};
+      addonOpen = false;
+      addonStock = {};
+      if (pack.addon) products[pack.addon.product].variants.forEach(v => { addonStock[v.title] = v.stock; });
+      pack.components.forEach((c, i) => { selections[i] = {}; });
+
+      const componentBlocks = pack.components.map((comp, ci) => {
+        const prod = products[comp.product];
+        variantStock[ci] = {};
+        prod.variants.forEach(v => { variantStock[ci][v.title] = v.stock; });
+        const qtyLabel = comp.qty === null ? " (elegí los que quieras)" : ` (elegí ${comp.qty})`;
+        const hint = (comp.qty === null || comp.qty > 1)
+          ? "Tocá una foto para elegirla. Si querés el mismo diseño más de una vez, tocala de nuevo."
+          : "Tocá una foto para elegirla.";
+        return `
+          <div class="component-block">
+            <h3>${comp.label}${qtyLabel}</h3>
+            <div class="hint">${hint}</div>
+            ${comp.sizeChart ? sizeChartHTML(comp.sizeChart) : ""}
+            <div class="gallery" id="gallery-${ci}">${galleryHTML(prod.variants, ci)}</div>
+            <div class="comp-footer">
+              <span class="comp-progress" id="comp-progress-${ci}">${compProgressText(comp, 0)}</span>
+              <button type="button" class="clear-btn" id="clear-${ci}" style="display:none">Limpiar selección</button>
+            </div>
+            <div class="section-error" id="comp-error-${ci}"></div>
+          </div>`;
+      }).join("");
+
+      root.innerHTML = `
+        <div class="pack-header">
+          <img src="${pack.image}" alt="${pack.name}" class="${pack.imageStyle === "logo" ? "logo-image" : ""}">
+          <div class="meta">
+            <h1>${pack.name}</h1>
+            <div class="subtitle">${pack.subtitle}</div>
+          </div>
+        </div>
+        ${componentBlocks}
+        ${upsellHTML(pack)}
+        ${pack.addon ? addonHTML(pack, products[pack.addon.product]) : ""}
+        <div class="component-block">
+          <h3>Retiro o Envío (gratis para compras mayores a $3.500)</h3>
+          <div class="option-list" id="shipping-options">
+            ${shippingOptionsHTML()}
+          </div>
+          <div class="section-error" id="shipping-error"></div>
+        </div>
+        <div class="component-block">
+          <h3>Medio de pago</h3>
+          <div class="option-list" id="payment-options">
+            ${optionCardsHTML("payment", PAYMENT_OPTIONS)}
+          </div>
+          <div class="section-error" id="payment-error"></div>
+        </div>
+        <div class="send-bar">
+          <button class="send-btn" id="send-btn">Enviar info por WhatsApp</button>
+          <div class="send-progress" id="send-progress"></div>
+        </div>
+      `;
+
+      pack.components.forEach((comp, ci) => {
+        root.querySelectorAll(`#gallery-${ci} .thumb-wrap:not(.out)`).forEach(wrap => {
+          wrap.addEventListener("click", () => {
+            const title = wrap.dataset.title;
+            const current = selections[ci][title] || 0;
+            if (comp.qty !== null && countFor(ci) >= comp.qty) return;
+            if (unitsUsed(pack, comp.product, title) >= variantStock[ci][title]) return;
+            selections[ci][title] = current + 1;
+            renderBadges(pack, ci);
+            updateSendState(pack);
+          });
+        });
+
+        document.getElementById(`clear-${ci}`).addEventListener("click", () => {
+          selections[ci] = {};
+          renderBadges(pack, ci);
+          updateSendState(pack);
+        });
+      });
+
+      if (pack.addon) {
+        const addonBtn = document.getElementById("addon-btn");
+        const addonPanel = document.getElementById("addon-panel");
+        addonBtn.addEventListener("click", () => {
+          addonOpen = !addonOpen;
+          addonPanel.hidden = !addonOpen;
+          addonBtn.textContent = addonOpen ? "No, mejor no" : "Sí, quiero";
+          addonBtn.classList.toggle("addon-btn--open", addonOpen);
+          if (!addonOpen) {
+            addonSelections = {};
+            renderAddonBadges();
+          }
+        });
+
+        root.querySelectorAll("#gallery-addon .thumb-wrap:not(.out)").forEach(wrap => {
+          wrap.addEventListener("click", () => {
+            const title = wrap.dataset.title;
+            if (unitsUsed(pack, pack.addon.product, title) >= addonStock[title]) return;
+            addonSelections[title] = (addonSelections[title] || 0) + 1;
+            renderAddonBadges();
+          });
+        });
+
+        document.getElementById("clear-addon").addEventListener("click", () => {
+          addonSelections = {};
+          renderAddonBadges();
+        });
+      }
+
+      root.querySelectorAll('input[name="shipping"]').forEach(radio => {
+        radio.addEventListener("change", e => {
+          selectedShipping = e.target.value;
+          if (selectedShipping !== "interior") dacMode = "";
+          root.querySelectorAll('.option-card-wrap[data-group="shipping"]').forEach(card => {
+            card.classList.toggle("selected", card.querySelector("input").checked);
+          });
+          renderShippingDetails(pack);
+          updateSendState(pack);
+        });
+      });
+
+      root.querySelectorAll('input[name="payment"]').forEach(radio => {
+        radio.addEventListener("change", e => {
+          selectedPayment = e.target.value;
+          root.querySelectorAll('.option-card[data-group="payment"]').forEach(card => {
+            card.classList.toggle("selected", card.querySelector("input").checked);
+          });
+          updateSendState(pack);
+        });
+      });
+
+      if (pack.upsell) {
+        root.querySelectorAll(".upsell-option").forEach(el => {
+          el.addEventListener("click", () => {
+            const id = el.dataset.id;
+            selectedUpsell = selectedUpsell === id ? null : id;
+            root.querySelectorAll(".upsell-option").forEach(o => {
+              o.classList.toggle("selected", o.dataset.id === selectedUpsell);
+            });
+          });
+        });
+      }
+
+      document.getElementById("send-btn").addEventListener("click", () => {
+        const problem = firstUnmetTarget(pack);
+        if (problem) {
+          problem.show();
+          if (problem.el) problem.el.scrollIntoView({ behavior: "smooth", block: "center" });
+          return;
+        }
+        if (typeof fbq === "function") fbq("track", "Contact");
+        window.open(buildWhatsAppLink(pack), "_blank");
+      });
+
+      updateSendState(pack);
+    }
+
+    init();
+  </script>
+</body>
+</html>

@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Elegí tus diseños | SIMBA Kids UY</title>
+<link rel="icon" type="image/png" href="https://cdn.shopify.com/s/files/1/0930/9575/6095/files/Diseno_sin_titulo_2.png?v=1742408340">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Elegí tus diseños | SIMBA Kids UY">
+<meta property="og:description" content="Pedidos mayoristas: elegí los diseños y enviámelos por WhatsApp.">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Elegí tus diseños | SIMBA Kids UY">
+<meta name="twitter:description" content="Pedidos mayoristas: elegí los diseños y enviámelos por WhatsApp.">
+<link rel="stylesheet" href="assets/css/styles.css">
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '511844655087071');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=511844655087071&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+</head>
+<body>
+  <div class="topbar">
+    <span class="brand">SIMBA</span>
+    <span class="tagline">Pedidos mayoristas</span>
+  </div>
+
+  <div class="container">
+    <div class="hero">
+      <h1>Elegí tus diseños</h1>
+    </div>
+
+    <div id="form-root">Cargando...</div>
+  </div>
+
+  <script src="assets/js/config.js"></script>
+  <script src="data/products.js"></script>
+  <script src="assets/js/data-source.js"></script>
+  <script>
+    const COMPONENTS = [
+      { product: "panal-agua", label: "Pañales para el Agua" },
+      { product: "bolsa-chica", label: "Bolsa Impermeable Chica 20x25" },
+      { product: "bolsa-mediana", label: "Bolsa Impermeable Mediana 30x40" }
+    ];
+
+    const root = document.getElementById("form-root");
+
+    const SHIPPING_OPTIONS = {
+      pickup: {
+        title: "Retiro en Aguada",
+        detail: "A una cuadra del Palacio Legislativo. Coordinamos el retiro luego de confirmada la venta."
+      },
+      interior: {
+        title: "Envío por DAC",
+        detail: "El costo del envío se abona al recibir el pedido."
+      }
+    };
+
+    const SHIPPING_FIELD_LABELS = {
+      nombre: "Nombre y apellido",
+      direccion: "Dirección de entrega",
+      localidad: "Localidad y departamento",
+      celular: "Celular de contacto"
+    };
+
+    let selections = {};
+    let variantStock = {};
+    let selectedShipping = "";
+    let dacMode = "";
+    let shippingFields = {};
+
+    function shippingFieldKeys() {
+      if (selectedShipping === "pickup") return ["nombre"];
+      if (selectedShipping === "interior") {
+        if (dacMode === "agencia") return ["nombre", "localidad", "celular"];
+        if (dacMode === "domicilio") return ["nombre", "direccion", "localidad", "celular"];
+        return null;
+      }
+      return [];
+    }
+
+    function shippingFieldsHTML(keys) {
+      if (!keys || keys.length === 0) return "";
+      return `<div class="shipping-fields">` + keys.map(k => `
+        <div class="field-group">
+          <label>${SHIPPING_FIELD_LABELS[k]}</label>
+          <input type="text" class="field-input" data-key="${k}" value="${(shippingFields[k] || "").replace(/"/g, "&quot;")}" placeholder="${SHIPPING_FIELD_LABELS[k]}">
+        </div>`).join("") + `</div>`;
+    }
+
+    function shippingOptionsHTML() {
+      return Object.entries(SHIPPING_OPTIONS).map(([value, opt]) => `
+        <div class="option-card-wrap" data-group="shipping" data-value="${value}">
+          <label class="option-card">
+            <input type="radio" name="shipping" value="${value}">
+            <div class="option-text">
+              <strong>${opt.title}</strong>
+              <span>${opt.detail}</span>
+            </div>
+          </label>
+          <div class="option-inline-extra" id="extra-${value}"></div>
+        </div>`).join("");
+    }
+
+    function renderShippingDetails() {
+      Object.keys(SHIPPING_OPTIONS).forEach(v => {
+        const el = document.getElementById(`extra-${v}`);
+        if (el) el.innerHTML = "";
+      });
+      const container = document.getElementById(`extra-${selectedShipping}`);
+      if (!container) return;
+
+      if (selectedShipping === "interior") {
+        const dacOption = (value, label) => `
+          <label class="option-card ${dacMode === value ? "selected" : ""}">
+            <input type="radio" name="dac-mode" value="${value}" ${dacMode === value ? "checked" : ""}>
+            <div class="option-text"><strong>${label}</strong></div>
+          </label>`;
+        container.innerHTML =
+          `<div class="option-list dac-mode-list">${dacOption("agencia", "Retiro en agencia")}${dacOption("domicilio", "Enviar a mi domicilio")}</div>` +
+          shippingFieldsHTML(shippingFieldKeys());
+
+        container.querySelectorAll('input[name="dac-mode"]').forEach(r => {
+          r.addEventListener("change", e => {
+            dacMode = e.target.value;
+            clearSectionError("shipping-error", "shipping-options");
+            renderShippingDetails();
+          });
+        });
+      } else {
+        container.innerHTML = shippingFieldsHTML(shippingFieldKeys());
+      }
+
+      container.querySelectorAll(".field-input").forEach(input => {
+        input.addEventListener("input", e => {
+          shippingFields[e.target.dataset.key] = e.target.value;
+        });
+      });
+    }
+
+    function sortedVariants(variants) {
+      return variants.slice().sort((a, b) => a.title.localeCompare(b.title, "es"));
+    }
+
+    function galleryHTML(variants, ci) {
+      return sortedVariants(variants).map(v => {
+        const out = v.stock <= 0;
+        const low = !out && v.stock <= 3;
+        return `
+        <div class="thumb-wrap ${out ? "out" : ""}" data-ci="${ci}" data-title="${v.title}">
+          <div class="thumb ${out ? "out" : ""}">
+            <img src="${v.image}" alt="${v.title}" loading="lazy">
+            ${low ? '<div class="low-badge">🔥 ¡ÚLTIMAS UNIDADES!</div>' : ""}
+            ${out ? '<div class="out-label">SIN STOCK</div>' : ""}
+            <div class="count-badge"></div>
+          </div>
+          <div class="thumb-name">${v.title}</div>
+        </div>`;
+      }).join("");
+    }
+
+    function countFor(ci) {
+      return Object.values(selections[ci] || {}).reduce((a, b) => a + b, 0);
+    }
+
+    function totalCount() {
+      return COMPONENTS.reduce((sum, c, ci) => sum + countFor(ci), 0);
+    }
+
+    function clearSectionError(errId, listId) {
+      const errEl = document.getElementById(errId);
+      if (errEl) errEl.textContent = "";
+      if (listId) {
+        const list = document.getElementById(listId);
+        if (list) list.classList.remove("has-error");
+      }
+    }
+
+    function setSectionError(errId, listId, msg) {
+      const errEl = document.getElementById(errId);
+      if (errEl) errEl.textContent = msg;
+      if (listId) {
+        const list = document.getElementById(listId);
+        if (list) list.classList.add("has-error");
+      }
+    }
+
+    function renderBadges(ci) {
+      const galleryEl = document.getElementById(`gallery-${ci}`);
+      galleryEl.querySelectorAll(".thumb-wrap").forEach(wrap => {
+        const count = selections[ci][wrap.dataset.title] || 0;
+        wrap.querySelector(".thumb").classList.toggle("selected", count > 0);
+        wrap.querySelector(".count-badge").textContent = count > 0 ? String(count) : "";
+      });
+
+      const total = countFor(ci);
+      document.getElementById(`comp-progress-${ci}`).textContent =
+        total > 0 ? `Elegiste ${total} diseño${total > 1 ? "s" : ""}` : "Elegí los que quieras";
+      document.getElementById(`clear-${ci}`).style.display = total > 0 ? "inline-flex" : "none";
+    }
+
+    function updateProgress() {
+      const total = totalCount();
+      document.getElementById("send-progress").textContent =
+        `${total} ${total === 1 ? "producto elegido" : "productos elegidos"}`;
+      if (total > 0) clearSectionError("items-error");
+    }
+
+    function buildWhatsAppLink() {
+      const lines = ["Hola, quiero hacer un pedido mayorista:"];
+
+      lines.push("");
+      lines.push("Ya vi los diseños, me gustarían estos:");
+
+      COMPONENTS.forEach((comp, ci) => {
+        const entries = Object.entries(selections[ci]).filter(([, count]) => count > 0);
+        if (entries.length === 0) return;
+        lines.push("");
+        lines.push(`*${comp.label}* (${countFor(ci)}):`);
+        entries.forEach(([title, count]) => {
+          lines.push(`- ${title}${count > 1 ? ` (x${count})` : ""}`);
+        });
+      });
+
+      // Solo se usan los datos del tipo de envío elegido (puede haber quedado texto de otra opción).
+      const keys = shippingFieldKeys() || [];
+      const val = k => (keys.includes(k) ? (shippingFields[k] || "").trim() : "");
+
+      lines.push("");
+      if (val("nombre")) lines.push(`Mi nombre es ${val("nombre")}.`);
+      if (selectedShipping === "pickup") {
+        lines.push("Cuando el pedido esté listo, lo voy a retirar en su Pick-up de Aguada.");
+      } else if (dacMode === "agencia") {
+        lines.push(`Quiero que me lo envíen por DAC, para retirarlo en la agencia${val("localidad") ? ` de ${val("localidad")}` : ""}.`);
+      } else {
+        const donde = [val("direccion"), val("localidad")].filter(Boolean).join(", ");
+        lines.push(`Quiero que me lo envíen por DAC a mi domicilio${donde ? ` en ${donde}` : ""}.`);
+      }
+      if (val("celular")) lines.push(`Mi celular es ${val("celular")}.`);
+
+      const text = encodeURIComponent(lines.join("\n"));
+      return `https://wa.me/${window.SIMBA_CONFIG.whatsappNumber}?text=${text}`;
+    }
+
+    function firstUnmetTarget() {
+      if (totalCount() === 0) {
+        return { el: document.getElementById("items"),
+          show: () => setSectionError("items-error", null, "Elegí al menos un diseño") };
+      }
+      if (!selectedShipping) {
+        return { el: document.getElementById("shipping-options"),
+          show: () => setSectionError("shipping-error", "shipping-options", "Elegí retiro o envío") };
+      }
+      if (selectedShipping === "interior" && !dacMode) {
+        return { el: document.getElementById("shipping-options"),
+          show: () => setSectionError("shipping-error", "shipping-options", "Elegí retiro en agencia o envío a domicilio") };
+      }
+      return null;
+    }
+
+    async function init() {
+      const products = await getProducts();
+
+      const componentBlocks = COMPONENTS.map((comp, ci) => {
+        const prod = products[comp.product];
+        selections[ci] = {};
+        variantStock[ci] = {};
+        prod.variants.forEach(v => { variantStock[ci][v.title] = v.stock; });
+        return `
+          <div class="component-block" ${ci === 0 ? 'style="margin-top:0; padding-top:0; border-top:none;"' : ""}>
+            <h3>${comp.label}</h3>
+            <div class="hint">Tocá una foto para elegirla. Si querés el mismo diseño más de una vez, tocala de nuevo.</div>
+            <div class="gallery" id="gallery-${ci}">${galleryHTML(prod.variants, ci)}</div>
+            <div class="comp-footer">
+              <span class="comp-progress" id="comp-progress-${ci}">Elegí los que quieras</span>
+              <button type="button" class="clear-btn" id="clear-${ci}" style="display:none">Limpiar selección</button>
+            </div>
+          </div>`;
+      }).join("");
+
+      root.innerHTML = `
+        <div id="items">${componentBlocks}</div>
+        <div class="section-error" id="items-error"></div>
+        <div class="component-block">
+          <h3>Retiro o Envío</h3>
+          <div class="option-list" id="shipping-options">
+            ${shippingOptionsHTML()}
+          </div>
+          <div class="section-error" id="shipping-error"></div>
+        </div>
+        <div class="send-bar">
+          <button class="send-btn" id="send-btn">Enviar pedido por WhatsApp</button>
+          <div class="send-progress" id="send-progress"></div>
+        </div>
+      `;
+
+      COMPONENTS.forEach((comp, ci) => {
+        root.querySelectorAll(`#gallery-${ci} .thumb-wrap:not(.out)`).forEach(wrap => {
+          wrap.addEventListener("click", () => {
+            const title = wrap.dataset.title;
+            const current = selections[ci][title] || 0;
+            if (current >= variantStock[ci][title]) return;
+            selections[ci][title] = current + 1;
+            renderBadges(ci);
+            updateProgress();
+          });
+        });
+
+        document.getElementById(`clear-${ci}`).addEventListener("click", () => {
+          selections[ci] = {};
+          renderBadges(ci);
+          updateProgress();
+        });
+      });
+
+      root.querySelectorAll('input[name="shipping"]').forEach(radio => {
+        radio.addEventListener("change", e => {
+          selectedShipping = e.target.value;
+          if (selectedShipping !== "interior") dacMode = "";
+          root.querySelectorAll('.option-card-wrap[data-group="shipping"]').forEach(card => {
+            card.classList.toggle("selected", card.querySelector("input").checked);
+          });
+          clearSectionError("shipping-error", "shipping-options");
+          renderShippingDetails();
+        });
+      });
+
+      document.getElementById("send-btn").addEventListener("click", () => {
+        const problem = firstUnmetTarget();
+        if (problem) {
+          problem.show();
+          problem.el.scrollIntoView({ behavior: "smooth", block: "center" });
+          return;
+        }
+        if (typeof fbq === "function") fbq("track", "Contact");
+        window.open(buildWhatsAppLink(), "_blank");
+      });
+
+      updateProgress();
+    }
+
+    init();
+  </script>
+</body>
+</html>

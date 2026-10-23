@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pañales para el Agua | SIMBA Kids UY</title>
+<link rel="icon" type="image/png" href="https://cdn.shopify.com/s/files/1/0930/9575/6095/files/Diseno_sin_titulo_2.png?v=1742408340">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Pañales para el Agua | SIMBA Kids UY">
+<meta property="og:description" content="Elegí tu pañal de agua o promo, mirá los diseños disponibles, seleccioná los tuyos y enviámelos por WhatsApp.">
+<meta property="og:image" content="https://cdn.shopify.com/s/files/1/0930/9575/6095/files/foto_portada_para_las_landing_panales_ecologicos_simba.jpg?v=1788392374">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Pañales para el Agua | SIMBA Kids UY">
+<meta name="twitter:description" content="Elegí tu pañal de agua o promo, mirá los diseños disponibles, seleccioná los tuyos y enviámelos por WhatsApp.">
+<meta name="twitter:image" content="https://cdn.shopify.com/s/files/1/0930/9575/6095/files/foto_portada_para_las_landing_panales_ecologicos_simba.jpg?v=1788392374">
+<link rel="stylesheet" href="assets/css/styles.css">
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '511844655087071');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=511844655087071&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+</head>
+<body>
+  <div class="topbar">
+    <span class="brand">SIMBA</span>
+    <span class="tagline">Pañales para el Agua</span>
+  </div>
+
+  <div class="container">
+    <div class="hero">
+      <h1>Pañales para el Agua 🏖️</h1>
+      <p>Elegí tu pañal suelto o promo, mirá los diseños disponibles, seleccioná los tuyos y enviámelos por WhatsApp.</p>
+    </div>
+
+    <div id="agua-section">
+      <div class="pack-grid" id="grid-agua"></div>
+    </div>
+  </div>
+
+  <footer class="site-footer">SIMBA Kids UY · Pedidos por diseño</footer>
+
+  <script src="assets/js/config.js"></script>
+  <script src="data/products.js"></script>
+  <script src="data/packs.js"></script>
+  <script src="assets/js/data-source.js"></script>
+  <script>
+    function cardHTML(pack) {
+      const badge = pack.badge ? `<span class="badge">${pack.badge}</span>` : "";
+      return `
+        <a class="pack-card" href="pack.html?slug=${pack.slug}">
+          ${badge}
+          <img src="${pack.image}" alt="${pack.name}" loading="lazy">
+          <div class="info">
+            <div class="name">${pack.name}</div>
+            <div class="subtitle">${pack.subtitle}</div>
+          </div>
+        </a>`;
+    }
+
+    getPacks().then(packs => {
+      const visible = packs.filter(p => p.active !== false);
+      document.getElementById("grid-agua").innerHTML = visible.map(cardHTML).join("");
+    });
+  </script>
+</body>
+</html>
