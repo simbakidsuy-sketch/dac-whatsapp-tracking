@@ -806,8 +806,8 @@
   "8821635595149": {
     "destinatario": "NATALIA CABRERA",
     "phone": "095172188",
-    "status": "Tu paquete está en reparto (9 a 20hs)",
-    "updated_at": "2026-10-23T14:02:15"
+    "status": "Tu paquete fue entregado",
+    "updated_at": "2026-10-23T18:35:42"
   },
   "8821635665115": {
     "destinatario": "YAMILA PEREIRA",
@@ -818,8 +818,8 @@
   "8821635752666": {
     "destinatario": "LUCILA LIMA",
     "phone": "099721522",
-    "status": "Tu paquete está en reparto (9 a 20hs)",
-    "updated_at": "2026-10-23T14:02:17"
+    "status": "Tu paquete fue entregado",
+    "updated_at": "2026-10-23T18:35:42"
   },
   "8821635772921": {
     "destinatario": "OLGA DEL PUERTO",
@@ -830,14 +830,14 @@
   "8821635805025": {
     "destinatario": "MANUELA GARCIA.",
     "phone": "092799535",
-    "status": "Tu paquete está en reparto (9 a 20hs)",
-    "updated_at": "2026-10-23T14:02:17"
+    "status": "Tu paquete fue entregado",
+    "updated_at": "2026-10-23T18:35:43"
   },
   "8821635819710": {
     "destinatario": "JORGELINA MOREIRA",
     "phone": "099714540",
-    "status": "Tu paquete se encuentra en TRES CRUCES",
-    "updated_at": "2026-10-23T14:02:18"
+    "status": "Tu paquete se encuentra en FRAY MARCOS",
+    "updated_at": "2026-10-23T18:35:43"
   },
   "8821635831745": {
     "destinatario": "NOELIA MESA",
