@@ -173,6 +173,12 @@
     "status": "Tu paquete se encuentra en LA CAPUERA",
     "updated_at": "2026-10-24T16:50:17"
   },
+  "8001644948855": {
+    "destinatario": "SOFÍA RAMOS",
+    "phone": "091284299",
+    "status": "El remitente hizo el despacho virtual y DAC está esperando tu paquete",
+    "updated_at": "2026-10-24T21:43:35"
+  },
   "8821381103186": {
     "destinatario": "JURI SILVA",
     "phone": null,
@@ -910,5 +916,23 @@
     "phone": "093506850",
     "status": "El remitente hizo el despacho virtual y DAC está esperando tu paquete",
     "updated_at": "2026-10-24T19:13:12"
+  },
+  "8821644990847": {
+    "destinatario": "GLORIA DOS SANTOS",
+    "phone": "099595330",
+    "status": "El remitente hizo el despacho virtual y DAC está esperando tu paquete",
+    "updated_at": "2026-10-24T21:43:36"
+  },
+  "8821645001218": {
+    "destinatario": "EVELYN CAROLINA JOURDÁN PÉREZ",
+    "phone": "096421660",
+    "status": "El remitente hizo el despacho virtual y DAC está esperando tu paquete",
+    "updated_at": "2026-10-24T21:43:36"
+  },
+  "8821645024841": {
+    "destinatario": "EVELIN RUSCH",
+    "phone": "098193167",
+    "status": "El remitente hizo el despacho virtual y DAC está esperando tu paquete",
+    "updated_at": "2026-10-24T21:43:36"
   }
 }
