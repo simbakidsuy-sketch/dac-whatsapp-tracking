@@ -74,8 +74,8 @@
   "8001639037325": {
     "destinatario": "YENIFFER VARGAS",
     "phone": "091978131",
-    "status": "Tu paquete está en viaje a BATLLE Y ORDONEZ",
-    "updated_at": "2026-10-24T13:27:40"
+    "status": "Tu paquete se encuentra en BATLLE Y ORDONEZ",
+    "updated_at": "2026-10-24T19:13:10"
   },
   "8001639037616": {
     "destinatario": "MARÍA NEMMER",
@@ -116,8 +116,8 @@
   "8001639228578": {
     "destinatario": "SEBASTIÁN GARCÍA",
     "phone": "091988514",
-    "status": "Tu paquete está en viaje a TERMINAL FLORIDA",
-    "updated_at": "2026-10-24T13:27:42"
+    "status": "Tu paquete se encuentra en TERMINAL FLORIDA",
+    "updated_at": "2026-10-24T19:13:10"
   },
   "8001639243357": {
     "destinatario": "VICTORIA GIMENEZ",
@@ -836,8 +836,8 @@
   "8821635819710": {
     "destinatario": "JORGELINA MOREIRA",
     "phone": "099714540",
-    "status": "Tu paquete se encuentra en FRAY MARCOS",
-    "updated_at": "2026-10-23T18:35:43"
+    "status": "Tu paquete fue entregado",
+    "updated_at": "2026-10-24T19:13:10"
   },
   "8821635831745": {
     "destinatario": "NOELIA MESA",
@@ -874,5 +874,41 @@
     "phone": "098168386",
     "status": "El remitente hizo el despacho virtual y DAC está esperando tu paquete",
     "updated_at": "2026-10-23T21:49:57"
+  },
+  "8821644813873": {
+    "destinatario": "ANGELES MILAGROS PORTO",
+    "phone": "099566629",
+    "status": "El remitente hizo el despacho virtual y DAC está esperando tu paquete",
+    "updated_at": "2026-10-24T19:13:11"
+  },
+  "8821644822933": {
+    "destinatario": "SOFIA BELTRAMELLI",
+    "phone": "099177381",
+    "status": "El remitente hizo el despacho virtual y DAC está esperando tu paquete",
+    "updated_at": "2026-10-24T19:13:11"
+  },
+  "8821644827358": {
+    "destinatario": "SHEILA ALMEIDA",
+    "phone": "098104230",
+    "status": "El remitente hizo el despacho virtual y DAC está esperando tu paquete",
+    "updated_at": "2026-10-24T19:13:11"
+  },
+  "8821644830474": {
+    "destinatario": "DANIEL MONTALDO",
+    "phone": "091850526",
+    "status": "El remitente hizo el despacho virtual y DAC está esperando tu paquete",
+    "updated_at": "2026-10-24T19:13:11"
+  },
+  "8821644832635": {
+    "destinatario": "PAOLA NUÑEZ",
+    "phone": "097691485",
+    "status": "El remitente hizo el despacho virtual y DAC está esperando tu paquete",
+    "updated_at": "2026-10-24T19:13:12"
+  },
+  "8821644850369": {
+    "destinatario": "MARÍA CABRERA.",
+    "phone": "093506850",
+    "status": "El remitente hizo el despacho virtual y DAC está esperando tu paquete",
+    "updated_at": "2026-10-24T19:13:12"
   }
 }
