@@ -26,8 +26,8 @@
   "8001638731689": {
     "destinatario": "DINORAH BATTÓ",
     "phone": "091433836",
-    "status": "Fuimos a tu domicilio a realizar la entrega, pero no se pudo concretar.",
-    "updated_at": "2026-10-26T18:47:19"
+    "status": "Tu paquete quedó listo para retirar en la agencia",
+    "updated_at": "2026-10-26T23:00:21"
   },
   "8001638822315": {
     "destinatario": "STEPHANY DÍAZ",
@@ -50,8 +50,8 @@
   "8001639007669": {
     "destinatario": "ALBANY BERNALES",
     "phone": "098781548",
-    "status": "Tu paquete está en reparto (9 a 20hs)",
-    "updated_at": "2026-10-26T18:47:20"
+    "status": "Disculpas, no alcanzamos a entregar tu paquete, nuevamente saldrá a reparto",
+    "updated_at": "2026-10-26T23:00:21"
   },
   "8001639035655": {
     "destinatario": "CANDELA PEÑA",
@@ -80,8 +80,8 @@
   "8001639037616": {
     "destinatario": "MARÍA NEMMER",
     "phone": "099312851",
-    "status": "Tu paquete está en reparto (9 a 20hs)",
-    "updated_at": "2026-10-26T18:47:20"
+    "status": "Reclamo cerrado.",
+    "updated_at": "2026-10-26T23:00:22"
   },
   "8001639038092": {
     "destinatario": "CATHERINE MORAN",
@@ -110,8 +110,8 @@
   "8001639220841": {
     "destinatario": "VERONICA JORGE",
     "phone": "091969818",
-    "status": "Tu paquete está en reparto (9 a 20hs)",
-    "updated_at": "2026-10-26T18:47:20"
+    "status": "Tu paquete fue entregado",
+    "updated_at": "2026-10-26T23:00:22"
   },
   "8001639228578": {
     "destinatario": "SEBASTIÁN GARCÍA",
@@ -152,8 +152,8 @@
   "8001640436534": {
     "destinatario": "CAROLINA ALCORTA",
     "phone": "099233816",
-    "status": "Tu paquete está en reparto (9 a 20hs)",
-    "updated_at": "2026-10-26T18:47:21"
+    "status": "Tu paquete fue entregado",
+    "updated_at": "2026-10-26T23:00:23"
   },
   "8001640436723": {
     "destinatario": "ALVARO LORETO",
@@ -170,8 +170,8 @@
   "8001640436949": {
     "destinatario": "ELISA MELGAREJO",
     "phone": "092490256",
-    "status": "Tu paquete se encuentra en LA CAPUERA",
-    "updated_at": "2026-10-24T16:50:17"
+    "status": "Tu paquete fue entregado",
+    "updated_at": "2026-10-26T23:00:23"
   },
   "8001644948855": {
     "destinatario": "SOFÍA RAMOS",
@@ -878,8 +878,8 @@
   "8821643215411": {
     "destinatario": "YEZMIN JOZAMI",
     "phone": "098168386",
-    "status": "Tu paquete se encuentra en TRES CRUCES",
-    "updated_at": "2026-10-26T18:47:22"
+    "status": "Tu paquete se encuentra en CANELONES",
+    "updated_at": "2026-10-26T23:00:23"
   },
   "8821644813873": {
     "destinatario": "ANGELES MILAGROS PORTO",
@@ -938,8 +938,8 @@
   "8821647011531": {
     "destinatario": "MERCEDES GÜENAGA",
     "phone": "095366211",
-    "status": "Tu paquete se encuentra en TRES CRUCES",
-    "updated_at": "2026-10-26T18:47:24"
+    "status": "Tu paquete se encuentra en CANELONES",
+    "updated_at": "2026-10-26T23:00:24"
   },
   "8821648085214": {
     "destinatario": "HUGO NICOLÁS MARTÍNEZ TORNARÍA",
