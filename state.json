@@ -32,8 +32,8 @@
   "8001638822315": {
     "destinatario": "STEPHANY DÍAZ",
     "phone": null,
-    "status": "Tu paquete se encuentra en SAN JOSE",
-    "updated_at": "2026-10-24T13:27:39"
+    "status": "Tu paquete está en reparto (9 a 20hs)",
+    "updated_at": "2026-10-26T12:11:39"
   },
   "8001638973049": {
     "destinatario": "EMILIANO FERNÁNDEZ",
@@ -140,8 +140,8 @@
   "8001640420178": {
     "destinatario": "LUCÍA MUSSI",
     "phone": "092731300",
-    "status": "Tu paquete fue validado en nuestro centro de distribución",
-    "updated_at": "2026-10-24T13:27:43"
+    "status": "Tu paquete está en reparto (9 a 20hs)",
+    "updated_at": "2026-10-26T12:11:39"
   },
   "8001640436439": {
     "destinatario": "MILAGROS MÁRQUEZ",
@@ -164,8 +164,8 @@
   "8001640436875": {
     "destinatario": "FÁTIMA RODRÍGUEZ",
     "phone": "091954549",
-    "status": "Tu paquete está en viaje a MALDONADO",
-    "updated_at": "2026-10-24T13:27:44"
+    "status": "Tu paquete está en reparto (9 a 20hs)",
+    "updated_at": "2026-10-26T12:11:39"
   },
   "8001640436949": {
     "destinatario": "ELISA MELGAREJO",
