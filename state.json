@@ -26,8 +26,8 @@
   "8001638731689": {
     "destinatario": "DINORAH BATTÓ",
     "phone": "091433836",
-    "status": "Tu paquete quedó listo para retirar en la agencia",
-    "updated_at": "2026-10-26T23:00:21"
+    "status": "Tu paquete fue entregado",
+    "updated_at": "2026-10-27T19:47:29"
   },
   "8001638822315": {
     "destinatario": "STEPHANY DÍAZ",
@@ -92,8 +92,8 @@
   "8001639038536": {
     "destinatario": "BELÉN ECHENIQUE",
     "phone": "098130752",
-    "status": "Tu paquete se encuentra en SALTO TERMINAL",
-    "updated_at": "2026-10-24T13:27:41"
+    "status": "Tu paquete fue entregado",
+    "updated_at": "2026-10-27T19:47:29"
   },
   "8001639163852": {
     "destinatario": "PAULINA PEREZ",
@@ -878,14 +878,14 @@
   "8821643215411": {
     "destinatario": "YEZMIN JOZAMI",
     "phone": "098168386",
-    "status": "Tu paquete está en reparto (9 a 20hs)",
-    "updated_at": "2026-10-27T14:47:00"
+    "status": "Tu paquete fue entregado",
+    "updated_at": "2026-10-27T19:47:29"
   },
   "8821644813873": {
     "destinatario": "ANGELES MILAGROS PORTO",
     "phone": "099566629",
-    "status": "Tu paquete está en reparto (9 a 20hs)",
-    "updated_at": "2026-10-27T14:47:01"
+    "status": "El destinatario rechazó el paquete, será devuelto al remitente",
+    "updated_at": "2026-10-27T19:47:29"
   },
   "8821644822933": {
     "destinatario": "SOFIA BELTRAMELLI",
@@ -896,8 +896,8 @@
   "8821644827358": {
     "destinatario": "SHEILA ALMEIDA",
     "phone": "098104230",
-    "status": "Tu paquete se encuentra en TREINTA Y TRES",
-    "updated_at": "2026-10-27T14:47:01"
+    "status": "Tu paquete fue entregado",
+    "updated_at": "2026-10-27T19:47:30"
   },
   "8821644830474": {
     "destinatario": "DANIEL MONTALDO",
@@ -926,8 +926,8 @@
   "8821645001218": {
     "destinatario": "EVELYN CAROLINA JOURDÁN PÉREZ",
     "phone": "096421660",
-    "status": "Tu paquete está en reparto (9 a 20hs)",
-    "updated_at": "2026-10-27T14:47:04"
+    "status": "Tu paquete fue entregado",
+    "updated_at": "2026-10-27T19:47:30"
   },
   "8821645024841": {
     "destinatario": "EVELIN RUSCH",
