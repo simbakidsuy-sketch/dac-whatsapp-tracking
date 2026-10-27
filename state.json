@@ -50,8 +50,8 @@
   "8001639007669": {
     "destinatario": "ALBANY BERNALES",
     "phone": "098781548",
-    "status": "Disculpas, no alcanzamos a entregar tu paquete, nuevamente saldrá a reparto",
-    "updated_at": "2026-10-26T23:00:21"
+    "status": "Tu paquete fue entregado",
+    "updated_at": "2026-10-27T14:47:00"
   },
   "8001639035655": {
     "destinatario": "CANDELA PEÑA",
@@ -74,8 +74,8 @@
   "8001639037325": {
     "destinatario": "YENIFFER VARGAS",
     "phone": "091978131",
-    "status": "Tu paquete se encuentra en BATLLE Y ORDONEZ",
-    "updated_at": "2026-10-24T19:13:10"
+    "status": "Tu paquete fue entregado",
+    "updated_at": "2026-10-27T14:47:00"
   },
   "8001639037616": {
     "destinatario": "MARÍA NEMMER",
@@ -176,8 +176,8 @@
   "8001644948855": {
     "destinatario": "SOFÍA RAMOS",
     "phone": "091284299",
-    "status": "Tu paquete fue validado en nuestro centro de distribución",
-    "updated_at": "2026-10-26T18:47:23"
+    "status": "Tu paquete se encuentra en CONCHILLAS",
+    "updated_at": "2026-10-27T14:47:03"
   },
   "8821381103186": {
     "destinatario": "JURI SILVA",
@@ -872,68 +872,68 @@
   "8821643048984": {
     "destinatario": "ROSALÍA CORIO.",
     "phone": "099416496",
-    "status": "Tu paquete fue validado en nuestro centro de distribución",
-    "updated_at": "2026-10-26T18:47:22"
+    "status": "Tu paquete se encuentra en LAS PIEDRAS",
+    "updated_at": "2026-10-27T14:47:00"
   },
   "8821643215411": {
     "destinatario": "YEZMIN JOZAMI",
     "phone": "098168386",
-    "status": "Tu paquete se encuentra en CANELONES",
-    "updated_at": "2026-10-26T23:00:23"
+    "status": "Tu paquete está en reparto (9 a 20hs)",
+    "updated_at": "2026-10-27T14:47:00"
   },
   "8821644813873": {
     "destinatario": "ANGELES MILAGROS PORTO",
     "phone": "099566629",
-    "status": "Tu paquete fue validado en nuestro centro de distribución",
-    "updated_at": "2026-10-26T18:47:22"
+    "status": "Tu paquete está en reparto (9 a 20hs)",
+    "updated_at": "2026-10-27T14:47:01"
   },
   "8821644822933": {
     "destinatario": "SOFIA BELTRAMELLI",
     "phone": "099177381",
-    "status": "Tu paquete fue validado en nuestro centro de distribución",
-    "updated_at": "2026-10-26T18:47:22"
+    "status": "Tu paquete fue entregado",
+    "updated_at": "2026-10-27T14:47:01"
   },
   "8821644827358": {
     "destinatario": "SHEILA ALMEIDA",
     "phone": "098104230",
-    "status": "Tu paquete fue validado en nuestro centro de distribución",
-    "updated_at": "2026-10-26T18:47:22"
+    "status": "Tu paquete se encuentra en TREINTA Y TRES",
+    "updated_at": "2026-10-27T14:47:01"
   },
   "8821644830474": {
     "destinatario": "DANIEL MONTALDO",
     "phone": "091850526",
-    "status": "Tu paquete fue validado en nuestro centro de distribución",
-    "updated_at": "2026-10-26T18:47:23"
+    "status": "Tu paquete se encuentra en FRAY BENTOS",
+    "updated_at": "2026-10-27T14:47:01"
   },
   "8821644832635": {
     "destinatario": "PAOLA NUÑEZ",
     "phone": "097691485",
-    "status": "Tu paquete fue validado en nuestro centro de distribución",
-    "updated_at": "2026-10-26T18:47:23"
+    "status": "Tu paquete se encuentra en COLONIA SHOPPING",
+    "updated_at": "2026-10-27T14:47:02"
   },
   "8821644850369": {
     "destinatario": "MARÍA CABRERA.",
     "phone": "093506850",
-    "status": "Tu paquete fue validado en nuestro centro de distribución",
-    "updated_at": "2026-10-26T18:47:23"
+    "status": "Tu paquete se encuentra en TOLEDO",
+    "updated_at": "2026-10-27T14:47:03"
   },
   "8821644990847": {
     "destinatario": "GLORIA DOS SANTOS",
     "phone": "099595330",
-    "status": "Tu paquete fue validado en nuestro centro de distribución",
-    "updated_at": "2026-10-26T18:47:24"
+    "status": "Tu paquete fue entregado",
+    "updated_at": "2026-10-27T14:47:04"
   },
   "8821645001218": {
     "destinatario": "EVELYN CAROLINA JOURDÁN PÉREZ",
     "phone": "096421660",
-    "status": "Tu paquete fue validado en nuestro centro de distribución",
-    "updated_at": "2026-10-26T18:47:24"
+    "status": "Tu paquete está en reparto (9 a 20hs)",
+    "updated_at": "2026-10-27T14:47:04"
   },
   "8821645024841": {
     "destinatario": "EVELIN RUSCH",
     "phone": "098193167",
-    "status": "Tu paquete fue validado en nuestro centro de distribución",
-    "updated_at": "2026-10-26T18:47:24"
+    "status": "Tu paquete fue entregado",
+    "updated_at": "2026-10-27T14:47:04"
   },
   "8821647011531": {
     "destinatario": "MERCEDES GÜENAGA",
