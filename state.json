@@ -914,8 +914,8 @@
   "8821644850369": {
     "destinatario": "MARÍA CABRERA.",
     "phone": "093506850",
-    "status": "Tu paquete se encuentra en TOLEDO",
-    "updated_at": "2026-10-27T14:47:03"
+    "status": "Tu paquete fue entregado",
+    "updated_at": "2026-10-28T16:11:39"
   },
   "8821644990847": {
     "destinatario": "GLORIA DOS SANTOS",
@@ -944,7 +944,7 @@
   "8821648085214": {
     "destinatario": "HUGO NICOLÁS MARTÍNEZ TORNARÍA",
     "phone": "091202229",
-    "status": "El remitente hizo el despacho virtual y DAC está esperando tu paquete",
-    "updated_at": "2026-10-26T18:47:24"
+    "status": "Tu paquete fue recibido por DAC en: LA COMERCIAL",
+    "updated_at": "2026-10-28T16:11:39"
   }
 }
