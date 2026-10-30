@@ -182,8 +182,8 @@
   "8001658442926": {
     "destinatario": "VICTORIA MARTINELLI",
     "phone": "094563373",
-    "status": "El remitente hizo el despacho virtual y DAC está esperando tu paquete",
-    "updated_at": "2026-10-29T20:02:00"
+    "status": "Tu paquete se encuentra en YOUNG",
+    "updated_at": "2026-10-30T13:17:20"
   },
   "8821381103186": {
     "destinatario": "JURI SILVA",
@@ -950,19 +950,19 @@
   "8821648085214": {
     "destinatario": "HUGO NICOLÁS MARTÍNEZ TORNARÍA",
     "phone": "091202229",
-    "status": "Tu paquete se encuentra en SALINAS",
-    "updated_at": "2026-10-29T20:02:00"
+    "status": "Tu paquete fue entregado",
+    "updated_at": "2026-10-30T13:17:19"
   },
   "8821656489136": {
     "destinatario": "MELINA MÜLLER",
     "phone": "098226501",
-    "status": "El remitente hizo el despacho virtual y DAC está esperando tu paquete",
-    "updated_at": "2026-10-28T21:13:24"
+    "status": "Tu paquete se encuentra en FRAY BENTOS",
+    "updated_at": "2026-10-30T13:17:19"
   },
   "8821658760966": {
     "destinatario": "CLAUDIA GALLO",
     "phone": "099936484",
-    "status": "El remitente hizo el despacho virtual y DAC está esperando tu paquete",
-    "updated_at": "2026-10-29T20:02:01"
+    "status": "Tu paquete está en reparto (9 a 20hs)",
+    "updated_at": "2026-10-30T13:17:20"
   }
 }
