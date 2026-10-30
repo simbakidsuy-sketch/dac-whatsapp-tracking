@@ -962,7 +962,13 @@
   "8821658760966": {
     "destinatario": "CLAUDIA GALLO",
     "phone": "099936484",
-    "status": "Tu paquete está en reparto (9 a 20hs)",
-    "updated_at": "2026-10-30T13:17:20"
+    "status": "Tu paquete fue entregado",
+    "updated_at": "2026-10-30T18:42:30"
+  },
+  "8821663844479": {
+    "destinatario": "MICHELLE ACHE",
+    "phone": "094233277",
+    "status": "El remitente hizo el despacho virtual y DAC está esperando tu paquete",
+    "updated_at": "2026-10-30T18:42:30"
   }
 }
