@@ -185,6 +185,18 @@
     "status": "Tu paquete fue entregado",
     "updated_at": "2026-10-30T22:45:23"
   },
+  "8001670303174": {
+    "destinatario": "MARÍA JOSÉ GARCÍA",
+    "phone": "098199800",
+    "status": "Tu paquete fue recibido por DAC en: CENTRO DE DISTRIBUCION",
+    "updated_at": "2026-11-02T22:06:18"
+  },
+  "8001671083118": {
+    "destinatario": "MILAGROS MÁRQUEZ",
+    "phone": "091915338",
+    "status": "El remitente hizo el despacho virtual y DAC está esperando tu paquete",
+    "updated_at": "2026-11-02T22:06:21"
+  },
   "8821381103186": {
     "destinatario": "JURI SILVA",
     "phone": null,
@@ -968,7 +980,49 @@
   "8821663844479": {
     "destinatario": "MICHELLE ACHE",
     "phone": "094233277",
+    "status": "Tu paquete fue recibido por DAC en: CENTRO DE DISTRIBUCION",
+    "updated_at": "2026-11-02T22:06:17"
+  },
+  "8821670290820": {
+    "destinatario": "DESIRE PONS",
+    "phone": "092444452",
+    "status": "Tu paquete fue recibido por DAC en: CENTRO DE DISTRIBUCION",
+    "updated_at": "2026-11-02T22:06:18"
+  },
+  "8821670383849": {
+    "destinatario": "CARINA MADRUGA",
+    "phone": "098231788",
+    "status": "Tu paquete fue recibido por DAC en: CENTRO DE DISTRIBUCION",
+    "updated_at": "2026-11-02T22:06:19"
+  },
+  "8821670463423": {
+    "destinatario": "VALERIA RODRIGUEZ CASTILLO",
+    "phone": "098801034",
+    "status": "Tu paquete fue recibido por DAC en: CENTRO DE DISTRIBUCION",
+    "updated_at": "2026-11-02T22:06:20"
+  },
+  "8821670612083": {
+    "destinatario": "YAMILA PEREIRA",
+    "phone": "092788834",
+    "status": "Tu paquete fue recibido por DAC en: CENTRO DE DISTRIBUCION",
+    "updated_at": "2026-11-02T22:06:20"
+  },
+  "8821670643576": {
+    "destinatario": "LORENA ROMANZO",
+    "phone": "091224320",
+    "status": "Tu paquete fue recibido por DAC en: CENTRO DE DISTRIBUCION",
+    "updated_at": "2026-11-02T22:06:20"
+  },
+  "8821670879815": {
+    "destinatario": "VIVIANA ALCAIRE",
+    "phone": "099967297",
+    "status": "Tu paquete fue recibido por DAC en: CENTRO DE DISTRIBUCION",
+    "updated_at": "2026-11-02T22:06:20"
+  },
+  "8821671394643": {
+    "destinatario": "JUAN CRUZ ANSALDI",
+    "phone": "097302326",
     "status": "El remitente hizo el despacho virtual y DAC está esperando tu paquete",
-    "updated_at": "2026-10-30T18:42:30"
+    "updated_at": "2026-11-02T22:06:21"
   }
 }
