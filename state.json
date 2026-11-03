@@ -188,14 +188,20 @@
   "8001670303174": {
     "destinatario": "MARÍA JOSÉ GARCÍA",
     "phone": "098199800",
-    "status": "Tu paquete se encuentra en PARQUE DEL PLATA",
-    "updated_at": "2026-11-03T11:35:05"
+    "status": "Tu paquete fue entregado",
+    "updated_at": "2026-11-03T18:59:25"
   },
   "8001671083118": {
     "destinatario": "MILAGROS MÁRQUEZ",
     "phone": "091915338",
+    "status": "Tu paquete fue recibido por DAC en: CENTRO DE DISTRIBUCION",
+    "updated_at": "2026-11-03T18:59:27"
+  },
+  "8001674580911": {
+    "destinatario": "NATALIA PEREIRA",
+    "phone": "096931389",
     "status": "El remitente hizo el despacho virtual y DAC está esperando tu paquete",
-    "updated_at": "2026-11-02T22:06:21"
+    "updated_at": "2026-11-03T18:59:32"
   },
   "8821381103186": {
     "destinatario": "JURI SILVA",
@@ -980,14 +986,14 @@
   "8821663844479": {
     "destinatario": "MICHELLE ACHE",
     "phone": "094233277",
-    "status": "Tu paquete está en viaje a MALDONADO",
-    "updated_at": "2026-11-03T11:35:04"
+    "status": "Fuimos a tu domicilio a realizar la entrega, pero no se pudo concretar.",
+    "updated_at": "2026-11-03T18:59:24"
   },
   "8821670290820": {
     "destinatario": "DESIRE PONS",
     "phone": "092444452",
-    "status": "Tu paquete está en viaje a PIRIAPOLIS",
-    "updated_at": "2026-11-03T11:35:04"
+    "status": "Tu paquete se encuentra en PIRIAPOLIS",
+    "updated_at": "2026-11-03T18:59:25"
   },
   "8821670383849": {
     "destinatario": "CARINA MADRUGA",
@@ -1004,14 +1010,14 @@
   "8821670612083": {
     "destinatario": "YAMILA PEREIRA",
     "phone": "092788834",
-    "status": "Tu paquete se encuentra en CENTRO OPERACIONES MVD",
-    "updated_at": "2026-11-03T11:35:05"
+    "status": "Tu paquete está en reparto (9 a 20hs)",
+    "updated_at": "2026-11-03T18:59:25"
   },
   "8821670643576": {
     "destinatario": "LORENA ROMANZO",
     "phone": "091224320",
-    "status": "Tu paquete se encuentra en CENTRO DISTRIBUCION PAYSANDU",
-    "updated_at": "2026-11-03T11:35:06"
+    "status": "Tu paquete fue entregado",
+    "updated_at": "2026-11-03T18:59:25"
   },
   "8821670879815": {
     "destinatario": "VIVIANA ALCAIRE",
@@ -1022,14 +1028,14 @@
   "8821671394643": {
     "destinatario": "JUAN CRUZ ANSALDI",
     "phone": "097302326",
-    "status": "El remitente hizo el despacho virtual y DAC está esperando tu paquete",
-    "updated_at": "2026-11-02T22:06:21"
+    "status": "Tu paquete fue recibido por DAC en: CENTRO DE DISTRIBUCION",
+    "updated_at": "2026-11-03T18:59:29"
   },
   "8821671647559": {
     "destinatario": "MARIO VALLES",
     "phone": "092044127",
-    "status": "El remitente hizo el despacho virtual y DAC está esperando tu paquete",
-    "updated_at": "2026-11-03T11:35:06"
+    "status": "Tu paquete fue recibido por DAC en: CENTRO DE DISTRIBUCION",
+    "updated_at": "2026-11-03T18:59:30"
   },
   "8821671718887": {
     "destinatario": "GABRIELA RESENDE GUERRA",
@@ -1040,26 +1046,26 @@
   "8821671729883": {
     "destinatario": "WINSTER ACKERMANN",
     "phone": "092370363",
-    "status": "El remitente hizo el despacho virtual y DAC está esperando tu paquete",
-    "updated_at": "2026-11-03T11:35:07"
+    "status": "Tu paquete fue recibido por DAC en: CENTRO DE DISTRIBUCION",
+    "updated_at": "2026-11-03T18:59:30"
   },
   "8821671759413": {
     "destinatario": "ELENA ÁLVAREZ",
     "phone": "095668299",
-    "status": "El remitente hizo el despacho virtual y DAC está esperando tu paquete",
-    "updated_at": "2026-11-03T11:35:07"
+    "status": "Tu paquete fue recibido por DAC en: CENTRO DE DISTRIBUCION",
+    "updated_at": "2026-11-03T18:59:30"
   },
   "8821671781732": {
     "destinatario": "SOFÍA SERRANA TECHERA",
     "phone": "091269155",
-    "status": "El remitente hizo el despacho virtual y DAC está esperando tu paquete",
-    "updated_at": "2026-11-03T11:35:07"
+    "status": "Tu paquete fue recibido por DAC en: CENTRO DE DISTRIBUCION",
+    "updated_at": "2026-11-03T18:59:30"
   },
   "8821671857115": {
     "destinatario": "SABRINA D’AMICO",
     "phone": "097291628",
-    "status": "El remitente hizo el despacho virtual y DAC está esperando tu paquete",
-    "updated_at": "2026-11-03T11:35:07"
+    "status": "Tu paquete fue recibido por DAC en: CENTRO DE DISTRIBUCION",
+    "updated_at": "2026-11-03T18:59:31"
   },
   "8821672703066": {
     "destinatario": "DÉBORA GONZÁLEZ",
@@ -1070,7 +1076,19 @@
   "8821672765145": {
     "destinatario": "EMILY OLASE",
     "phone": "099858743",
+    "status": "Tu paquete fue recibido por DAC en: CENTRO DE DISTRIBUCION",
+    "updated_at": "2026-11-03T18:59:32"
+  },
+  "8821673961868": {
+    "destinatario": "CARINA COLINA",
+    "phone": "098235513",
+    "status": "Tu paquete fue recibido por DAC en: CENTRO DE DISTRIBUCION",
+    "updated_at": "2026-11-03T18:59:32"
+  },
+  "8821674828689": {
+    "destinatario": "CAMILO ACOSTA",
+    "phone": "099069609",
     "status": "El remitente hizo el despacho virtual y DAC está esperando tu paquete",
-    "updated_at": "2026-11-03T11:35:08"
+    "updated_at": "2026-11-03T18:59:33"
   }
 }
