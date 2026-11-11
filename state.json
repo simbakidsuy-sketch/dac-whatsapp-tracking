@@ -224,8 +224,8 @@
   "8001694990185": {
     "destinatario": "DANIELA PINTOS HUERTAS",
     "phone": "099923025",
-    "status": "Tu paquete está en viaje a TACUAREMBO DEPOSITO",
-    "updated_at": "2026-11-10T22:27:34"
+    "status": "Tu paquete fue entregado",
+    "updated_at": "2026-11-11T17:40:29"
   },
   "8821381103186": {
     "destinatario": "JURI SILVA",
@@ -1304,8 +1304,8 @@
   "8821689242142": {
     "destinatario": "PAMELA LÓPEZ",
     "phone": "098929729",
-    "status": "Tu paquete se encuentra en SAN JOSE",
-    "updated_at": "2026-11-10T17:12:08"
+    "status": "Tu paquete fue entregado",
+    "updated_at": "2026-11-11T17:40:28"
   },
   "8821689388522": {
     "destinatario": "NATALIA TUYA",
@@ -1322,8 +1322,8 @@
   "8821694189692": {
     "destinatario": "ROMINA SISMANDE",
     "phone": "092376593",
-    "status": "Tu paquete se encuentra en DEPOSITO DURAZNO",
-    "updated_at": "2026-11-10T17:12:09"
+    "status": "Tu paquete fue entregado",
+    "updated_at": "2026-11-11T17:40:28"
   },
   "8821694346935": {
     "destinatario": "GERARDO MIRANDA",
@@ -1346,73 +1346,91 @@
   "8821694729973": {
     "destinatario": "KATERIN LEITES ACOSTA",
     "phone": "094544366",
-    "status": "Tu paquete está en viaje a LAS PIEDRAS",
-    "updated_at": "2026-11-10T17:12:11"
+    "status": "Tu paquete se encuentra en CENTRO OPERACIONES MVD",
+    "updated_at": "2026-11-11T17:40:29"
   },
   "8821695048157": {
     "destinatario": "JASTIN LEMOS",
     "phone": "096294428",
-    "status": "Tu paquete está en viaje a SAN CARLOS DAC",
-    "updated_at": "2026-11-10T22:27:34"
+    "status": "Tu paquete se encuentra en SAN CARLOS DAC",
+    "updated_at": "2026-11-11T17:40:30"
   },
   "8821695098549": {
     "destinatario": "ERNESTO GONZALEZ",
     "phone": "099886356",
-    "status": "Tu paquete está en viaje a MALDONADO",
-    "updated_at": "2026-11-10T22:27:34"
+    "status": "Tu paquete fue entregado",
+    "updated_at": "2026-11-11T17:40:31"
   },
   "8821695739498": {
     "destinatario": "YIRSSI BANDERA",
     "phone": "099850441",
-    "status": "Tu paquete fue recibido por DAC en: CENTRO DE DISTRIBUCION",
-    "updated_at": "2026-11-10T17:12:12"
+    "status": "Tu paquete está listo para entregar en BARROS BLANCOS. Por consulta de ubicación y horario de la Agencia puede ingresar a nuestro sitio web www.dac.com.uy",
+    "updated_at": "2026-11-11T17:40:31"
   },
   "8821695799966": {
     "destinatario": "RITA GONZALEZ",
     "phone": "092228126",
-    "status": "Tu paquete está en viaje a DEPOSITO SALTO",
-    "updated_at": "2026-11-10T22:27:35"
+    "status": "Fuimos a tu domicilio a realizar la entrega, pero no se pudo concretar.",
+    "updated_at": "2026-11-11T17:40:31"
   },
   "8821696288648": {
     "destinatario": "JUAN CRUZ ANSALDI",
     "phone": "097302326",
-    "status": "Tu paquete está en viaje a MALDONADO",
-    "updated_at": "2026-11-10T22:27:35"
+    "status": "Tu paquete fue entregado",
+    "updated_at": "2026-11-11T17:40:32"
   },
   "8821696414633": {
     "destinatario": "EDUARDO PÍGOLA",
     "phone": "099287576",
-    "status": "Tu paquete está en viaje a MINAS",
-    "updated_at": "2026-11-10T22:27:35"
+    "status": "Tu paquete fue entregado",
+    "updated_at": "2026-11-11T17:40:33"
   },
   "8821696859321": {
     "destinatario": "JESSIKA MORALES",
     "phone": "098592396",
-    "status": "Tu paquete fue recibido por DAC en: CENTRO DE DISTRIBUCION",
-    "updated_at": "2026-11-10T17:12:14"
+    "status": "Tu paquete está en viaje a EL PINAR",
+    "updated_at": "2026-11-11T17:40:33"
   },
   "8821696977833": {
     "destinatario": "PATRICIA BARBOZA",
     "phone": "093614405",
-    "status": "Tu paquete fue recibido por DAC en: CENTRO DE DISTRIBUCION",
-    "updated_at": "2026-11-10T17:12:14"
+    "status": "Tu paquete se encuentra en CENTRO OPERACIONES MVD",
+    "updated_at": "2026-11-11T17:40:33"
   },
   "8821697060386": {
     "destinatario": "MORITZ SPIER",
     "phone": "099519018",
-    "status": "Tu paquete está en viaje a SAN CARLOS DAC",
-    "updated_at": "2026-11-10T22:27:35"
+    "status": "Tu paquete se encuentra en SAN CARLOS DAC",
+    "updated_at": "2026-11-11T17:40:34"
   },
   "8821697151087": {
     "destinatario": "VALENTINA EASTMAN",
     "phone": "099516897",
-    "status": "Tu paquete fue recibido por DAC en: CENTRO DE DISTRIBUCION",
-    "updated_at": "2026-11-10T17:12:15"
+    "status": "Tu paquete está en viaje a EL PINAR",
+    "updated_at": "2026-11-11T17:40:35"
   },
   "8821697472879": {
     "destinatario": "CINTHIA MENA",
     "phone": "097197630",
-    "status": "Tu paquete fue recibido por DAC en: CENTRO DE DISTRIBUCION",
-    "updated_at": "2026-11-10T17:12:15"
+    "status": "Tu paquete se encuentra en PANDO",
+    "updated_at": "2026-11-11T17:40:35"
+  },
+  "8821704110519": {
+    "destinatario": "RAFAELA GONZALEZ",
+    "phone": "099015517",
+    "status": "Tu paquete fue recibido por DAC en: LA COMERCIAL",
+    "updated_at": "2026-11-11T17:40:36"
+  },
+  "8821704199493": {
+    "destinatario": "EZEQUIEL PALACIOS MURTEZA",
+    "phone": "092207669",
+    "status": "Tu paquete fue recibido por DAC en: LA COMERCIAL",
+    "updated_at": "2026-11-11T17:40:36"
+  },
+  "8821704501472": {
+    "destinatario": "BALERIN ROMERO",
+    "phone": "098543292",
+    "status": "Tu paquete fue recibido por DAC en: LA COMERCIAL",
+    "updated_at": "2026-11-11T17:40:36"
   }
 }
