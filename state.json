@@ -1334,8 +1334,8 @@
   "8821694388574": {
     "destinatario": "KATERIN LEITES ACOSTA",
     "phone": "095282333",
-    "status": "Tu paquete se encuentra en SALINAS",
-    "updated_at": "2026-11-10T17:12:10"
+    "status": "Tu paquete fue entregado",
+    "updated_at": "2026-11-11T23:59:36"
   },
   "8821694631466": {
     "destinatario": "KATERIN VARELA OLIVERA",
@@ -1370,8 +1370,8 @@
   "8821695799966": {
     "destinatario": "RITA GONZALEZ",
     "phone": "092228126",
-    "status": "Fuimos a tu domicilio a realizar la entrega, pero no se pudo concretar.",
-    "updated_at": "2026-11-11T17:40:31"
+    "status": "Tu paquete se encuentra en SALTO CERRITO",
+    "updated_at": "2026-11-11T23:59:36"
   },
   "8821696288648": {
     "destinatario": "JUAN CRUZ ANSALDI",
@@ -1388,8 +1388,8 @@
   "8821696859321": {
     "destinatario": "JESSIKA MORALES",
     "phone": "098592396",
-    "status": "Tu paquete está en viaje a EL PINAR",
-    "updated_at": "2026-11-11T17:40:33"
+    "status": "Tu paquete se encuentra en EL PINAR",
+    "updated_at": "2026-11-11T23:59:36"
   },
   "8821696977833": {
     "destinatario": "PATRICIA BARBOZA",
@@ -1406,31 +1406,31 @@
   "8821697151087": {
     "destinatario": "VALENTINA EASTMAN",
     "phone": "099516897",
-    "status": "Tu paquete está en viaje a EL PINAR",
-    "updated_at": "2026-11-11T17:40:35"
+    "status": "Tu paquete se encuentra en EL PINAR",
+    "updated_at": "2026-11-11T23:59:37"
   },
   "8821697472879": {
     "destinatario": "CINTHIA MENA",
     "phone": "097197630",
-    "status": "Tu paquete se encuentra en PANDO",
-    "updated_at": "2026-11-11T17:40:35"
+    "status": "Tu paquete fue entregado",
+    "updated_at": "2026-11-11T23:59:37"
   },
   "8821704110519": {
     "destinatario": "RAFAELA GONZALEZ",
     "phone": "099015517",
-    "status": "Tu paquete fue recibido por DAC en: LA COMERCIAL",
-    "updated_at": "2026-11-11T17:40:36"
+    "status": "Tu paquete está en viaje a DEPOSITO SALTO",
+    "updated_at": "2026-11-11T23:59:37"
   },
   "8821704199493": {
     "destinatario": "EZEQUIEL PALACIOS MURTEZA",
     "phone": "092207669",
-    "status": "Tu paquete fue recibido por DAC en: LA COMERCIAL",
-    "updated_at": "2026-11-11T17:40:36"
+    "status": "Tu paquete está en viaje a COLONIA SHOPPING",
+    "updated_at": "2026-11-11T23:59:37"
   },
   "8821704501472": {
     "destinatario": "BALERIN ROMERO",
     "phone": "098543292",
-    "status": "Tu paquete fue recibido por DAC en: LA COMERCIAL",
-    "updated_at": "2026-11-11T17:40:36"
+    "status": "Tu paquete está en viaje a PAN DE AZUCAR DAC",
+    "updated_at": "2026-11-11T23:59:38"
   }
 }
