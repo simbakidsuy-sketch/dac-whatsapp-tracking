@@ -1364,14 +1364,14 @@
   "8821695739498": {
     "destinatario": "YIRSSI BANDERA",
     "phone": "099850441",
-    "status": "Tu paquete está listo para entregar en BARROS BLANCOS. Por consulta de ubicación y horario de la Agencia puede ingresar a nuestro sitio web www.dac.com.uy",
-    "updated_at": "2026-11-11T17:40:31"
+    "status": "Tu paquete fue entregado",
+    "updated_at": "2026-11-12T15:51:52"
   },
   "8821695799966": {
     "destinatario": "RITA GONZALEZ",
     "phone": "092228126",
-    "status": "Tu paquete se encuentra en SALTO CERRITO",
-    "updated_at": "2026-11-11T23:59:36"
+    "status": "Tu paquete quedó listo para retirar en la agencia",
+    "updated_at": "2026-11-12T15:51:52"
   },
   "8821696288648": {
     "destinatario": "JUAN CRUZ ANSALDI",
@@ -1388,14 +1388,14 @@
   "8821696859321": {
     "destinatario": "JESSIKA MORALES",
     "phone": "098592396",
-    "status": "Tu paquete se encuentra en EL PINAR",
-    "updated_at": "2026-11-11T23:59:36"
+    "status": "Tu paquete está en reparto (9 a 20hs)",
+    "updated_at": "2026-11-12T15:51:52"
   },
   "8821696977833": {
     "destinatario": "PATRICIA BARBOZA",
     "phone": "093614405",
-    "status": "Tu paquete se encuentra en CENTRO OPERACIONES MVD",
-    "updated_at": "2026-11-11T17:40:33"
+    "status": "Tu paquete fue entregado",
+    "updated_at": "2026-11-12T15:51:52"
   },
   "8821697060386": {
     "destinatario": "MORITZ SPIER",
@@ -1406,8 +1406,8 @@
   "8821697151087": {
     "destinatario": "VALENTINA EASTMAN",
     "phone": "099516897",
-    "status": "Tu paquete se encuentra en EL PINAR",
-    "updated_at": "2026-11-11T23:59:37"
+    "status": "Tu paquete está en reparto (9 a 20hs)",
+    "updated_at": "2026-11-12T15:51:53"
   },
   "8821697472879": {
     "destinatario": "CINTHIA MENA",
@@ -1418,19 +1418,31 @@
   "8821704110519": {
     "destinatario": "RAFAELA GONZALEZ",
     "phone": "099015517",
-    "status": "Tu paquete está en viaje a DEPOSITO SALTO",
-    "updated_at": "2026-11-11T23:59:37"
+    "status": "Tu paquete fue entregado",
+    "updated_at": "2026-11-12T15:51:53"
   },
   "8821704199493": {
     "destinatario": "EZEQUIEL PALACIOS MURTEZA",
     "phone": "092207669",
-    "status": "Tu paquete está en viaje a COLONIA SHOPPING",
-    "updated_at": "2026-11-11T23:59:37"
+    "status": "Tu paquete está en reparto (9 a 20hs)",
+    "updated_at": "2026-11-12T15:51:53"
   },
   "8821704501472": {
     "destinatario": "BALERIN ROMERO",
     "phone": "098543292",
     "status": "Tu paquete está en viaje a PAN DE AZUCAR DAC",
     "updated_at": "2026-11-11T23:59:38"
+  },
+  "8821709685234": {
+    "destinatario": "MILAGROS RODRÍGUEZ",
+    "phone": "098155337",
+    "status": "El remitente hizo el despacho virtual y DAC está esperando tu paquete",
+    "updated_at": "2026-11-12T15:51:54"
+  },
+  "8821710141859": {
+    "destinatario": "NADIA BARRIOS",
+    "phone": "098972171",
+    "status": "El remitente hizo el despacho virtual y DAC está esperando tu paquete",
+    "updated_at": "2026-11-12T15:51:54"
   }
 }
