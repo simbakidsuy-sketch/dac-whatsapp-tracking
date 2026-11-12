@@ -1346,8 +1346,8 @@
   "8821694729973": {
     "destinatario": "KATERIN LEITES ACOSTA",
     "phone": "094544366",
-    "status": "Tu paquete se encuentra en CENTRO OPERACIONES MVD",
-    "updated_at": "2026-11-11T17:40:29"
+    "status": "Tu paquete se encuentra en LAS PIEDRAS",
+    "updated_at": "2026-11-12T22:01:24"
   },
   "8821695048157": {
     "destinatario": "JASTIN LEMOS",
@@ -1388,8 +1388,8 @@
   "8821696859321": {
     "destinatario": "JESSIKA MORALES",
     "phone": "098592396",
-    "status": "Tu paquete está en reparto (9 a 20hs)",
-    "updated_at": "2026-11-12T15:51:52"
+    "status": "Tu paquete fue entregado",
+    "updated_at": "2026-11-12T22:01:24"
   },
   "8821696977833": {
     "destinatario": "PATRICIA BARBOZA",
@@ -1406,8 +1406,8 @@
   "8821697151087": {
     "destinatario": "VALENTINA EASTMAN",
     "phone": "099516897",
-    "status": "Tu paquete está en reparto (9 a 20hs)",
-    "updated_at": "2026-11-12T15:51:53"
+    "status": "Tu paquete fue entregado",
+    "updated_at": "2026-11-12T22:01:24"
   },
   "8821697472879": {
     "destinatario": "CINTHIA MENA",
@@ -1424,25 +1424,31 @@
   "8821704199493": {
     "destinatario": "EZEQUIEL PALACIOS MURTEZA",
     "phone": "092207669",
-    "status": "Tu paquete está en reparto (9 a 20hs)",
-    "updated_at": "2026-11-12T15:51:53"
+    "status": "Tu paquete fue entregado",
+    "updated_at": "2026-11-12T22:01:25"
   },
   "8821704501472": {
     "destinatario": "BALERIN ROMERO",
     "phone": "098543292",
-    "status": "Tu paquete está en viaje a PAN DE AZUCAR DAC",
-    "updated_at": "2026-11-11T23:59:38"
+    "status": "Tu paquete se encuentra en PAN DE AZUCAR DAC",
+    "updated_at": "2026-11-12T22:01:25"
   },
   "8821709685234": {
     "destinatario": "MILAGROS RODRÍGUEZ",
     "phone": "098155337",
-    "status": "El remitente hizo el despacho virtual y DAC está esperando tu paquete",
-    "updated_at": "2026-11-12T15:51:54"
+    "status": "Tu paquete fue recibido por DAC en: LA COMERCIAL",
+    "updated_at": "2026-11-12T22:01:26"
   },
   "8821710141859": {
     "destinatario": "NADIA BARRIOS",
     "phone": "098972171",
-    "status": "El remitente hizo el despacho virtual y DAC está esperando tu paquete",
-    "updated_at": "2026-11-12T15:51:54"
+    "status": "Tu paquete fue recibido por DAC en: LA COMERCIAL",
+    "updated_at": "2026-11-12T22:01:26"
+  },
+  "8821710522677": {
+    "destinatario": "OFELIA GONZALEZ",
+    "phone": "099858213",
+    "status": "Tu paquete fue recibido por DAC en: LA COMERCIAL",
+    "updated_at": "2026-11-12T22:01:27"
   }
 }
