@@ -1346,14 +1346,14 @@
   "8821694729973": {
     "destinatario": "KATERIN LEITES ACOSTA",
     "phone": "094544366",
-    "status": "Tu paquete se encuentra en LAS PIEDRAS",
-    "updated_at": "2026-11-12T22:01:24"
+    "status": "Tu paquete fue entregado",
+    "updated_at": "2026-11-13T23:25:17"
   },
   "8821695048157": {
     "destinatario": "JASTIN LEMOS",
     "phone": "096294428",
-    "status": "Tu paquete está en reparto (9 a 20hs)",
-    "updated_at": "2026-11-13T17:58:30"
+    "status": "Tu paquete quedó listo para retirar en la agencia",
+    "updated_at": "2026-11-13T23:25:17"
   },
   "8821695098549": {
     "destinatario": "ERNESTO GONZALEZ",
@@ -1448,7 +1448,13 @@
   "8821710522677": {
     "destinatario": "OFELIA GONZALEZ",
     "phone": "099858213",
-    "status": "Tu paquete está en viaje a DEPOSITO DURAZNO",
-    "updated_at": "2026-11-13T17:58:30"
+    "status": "Tu paquete se encuentra en DEPOSITO DURAZNO",
+    "updated_at": "2026-11-13T23:25:17"
+  },
+  "8821716379674": {
+    "destinatario": "LAURA VÁZQUEZ",
+    "phone": "092374509",
+    "status": "El remitente hizo el despacho virtual y DAC está esperando tu paquete",
+    "updated_at": "2026-11-13T23:25:17"
   }
 }
