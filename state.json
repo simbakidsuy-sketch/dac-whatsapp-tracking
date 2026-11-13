@@ -1352,8 +1352,8 @@
   "8821695048157": {
     "destinatario": "JASTIN LEMOS",
     "phone": "096294428",
-    "status": "Tu paquete se encuentra en SAN CARLOS DAC",
-    "updated_at": "2026-11-11T17:40:30"
+    "status": "Tu paquete está en reparto (9 a 20hs)",
+    "updated_at": "2026-11-13T17:58:30"
   },
   "8821695098549": {
     "destinatario": "ERNESTO GONZALEZ",
@@ -1436,19 +1436,19 @@
   "8821709685234": {
     "destinatario": "MILAGROS RODRÍGUEZ",
     "phone": "098155337",
-    "status": "Tu paquete fue recibido por DAC en: LA COMERCIAL",
-    "updated_at": "2026-11-12T22:01:26"
+    "status": "Tu paquete fue entregado",
+    "updated_at": "2026-11-13T17:58:30"
   },
   "8821710141859": {
     "destinatario": "NADIA BARRIOS",
     "phone": "098972171",
-    "status": "Tu paquete fue recibido por DAC en: LA COMERCIAL",
-    "updated_at": "2026-11-12T22:01:26"
+    "status": "Tu paquete fue entregado",
+    "updated_at": "2026-11-13T17:58:30"
   },
   "8821710522677": {
     "destinatario": "OFELIA GONZALEZ",
     "phone": "099858213",
-    "status": "Tu paquete fue recibido por DAC en: LA COMERCIAL",
-    "updated_at": "2026-11-12T22:01:27"
+    "status": "Tu paquete está en viaje a DEPOSITO DURAZNO",
+    "updated_at": "2026-11-13T17:58:30"
   }
 }
