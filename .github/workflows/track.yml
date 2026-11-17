@@ -56,7 +56,9 @@ jobs:
         run: python dac_whatsapp_tracker.py
 
       - name: Guardar el estado actualizado
-        if: always()
+        # En modo prueba (dry_run) NO se guarda el estado: si se guardara, los cambios
+        # quedarian marcados como avisados y el cliente nunca recibiria su WhatsApp.
+        if: always() && (github.event_name != 'workflow_dispatch' || inputs.dry_run == 'false' || inputs.dry_run == '0')
         run: |
           git config user.name "dac-whatsapp-bot"
           git config user.email "actions@github.com"
