@@ -2,15 +2,25 @@ name: DAC WhatsApp Tracking
 
 on:
   schedule:
-    # Corre cada 30 minutos
-    - cron: "*/30 * * * *"
+    # Reloj de RESPALDO de GitHub (el principal es cron-job.org, cada 20 min).
+    # GitHub atrasa o saltea corridas, sobre todo en minutos redondos (:00, :30),
+    # por eso usamos minutos "raros". Horas en UTC: 11-23 UTC = 08-20 hs Uruguay.
+    # Lunes (1) a sabado (6). El script igual tiene su propio freno de horario.
+    - cron: "7,37 11-23 * * 1-6"
   workflow_dispatch:
-    # Permite tocar "Run workflow" a mano desde la pestana Actions, para probar
+    # Permite tocar "Run workflow" a mano desde la pestana Actions, para probar,
+    # y es lo que usa cron-job.org para dispararlo a horario.
     inputs:
       dry_run:
         description: "Modo de prueba (no manda WhatsApp reales)"
         required: false
         default: "true"
+
+# Nunca corren dos a la vez: si cron-job.org y el reloj de respaldo coinciden,
+# la segunda espera a que termine la primera (asi no se manda el mismo WhatsApp dos veces).
+concurrency:
+  group: dac-whatsapp-tracking
+  cancel-in-progress: false
 
 permissions:
   contents: write
@@ -18,9 +28,14 @@ permissions:
 jobs:
   track:
     runs-on: ubuntu-latest
+    timeout-minutes: 10
     steps:
       - name: Descargar el repositorio
         uses: actions/checkout@v4
+        with:
+          # Siempre la ultima version de main (con el state.json mas nuevo),
+          # aunque esta corrida haya quedado esperando a otra.
+          ref: main
 
       - name: Configurar Python
         uses: actions/setup-python@v5
@@ -41,9 +56,14 @@ jobs:
         run: python dac_whatsapp_tracker.py
 
       - name: Guardar el estado actualizado
+        if: always()
         run: |
           git config user.name "dac-whatsapp-bot"
           git config user.email "actions@github.com"
           git add state.json
           git diff --quiet --cached || git commit -m "Actualiza estado de envios"
-          git push
+          for i in 1 2 3; do
+            git pull --rebase origin main && git push && exit 0
+            sleep 5
+          done
+          exit 1
