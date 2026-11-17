@@ -230,8 +230,14 @@
   "8001722749656": {
     "destinatario": "LUCIA ALMIRON",
     "phone": "092469153",
+    "status": "Tu paquete se encuentra en PAYSANDU NORTE",
+    "updated_at": "2026-11-17T19:16:11"
+  },
+  "8001729992469": {
+    "destinatario": "ANGIE RIVERO",
+    "phone": "098029049",
     "status": "Tu paquete fue recibido por DAC en: CENTRO DE DISTRIBUCION",
-    "updated_at": "2026-11-16T17:53:02"
+    "updated_at": "2026-11-17T19:16:15"
   },
   "8821381103186": {
     "destinatario": "JURI SILVA",
@@ -1454,43 +1460,73 @@
   "8821710522677": {
     "destinatario": "OFELIA GONZALEZ",
     "phone": "099858213",
-    "status": "Tu paquete se encuentra en DEPOSITO DURAZNO",
-    "updated_at": "2026-11-13T23:25:17"
+    "status": "Tu paquete fue entregado",
+    "updated_at": "2026-11-17T19:16:09"
   },
   "8821716379674": {
     "destinatario": "LAURA VÁZQUEZ",
     "phone": "092374509",
-    "status": "Tu paquete fue recibido por DAC en: CENTRO DE DISTRIBUCION",
-    "updated_at": "2026-11-16T17:53:01"
+    "status": "Tu paquete fue entregado",
+    "updated_at": "2026-11-17T19:16:09"
   },
   "8821722742895": {
     "destinatario": "CAMILA CALO",
     "phone": "094026418",
-    "status": "Tu paquete fue recibido por DAC en: CENTRO DE DISTRIBUCION",
-    "updated_at": "2026-11-16T17:53:01"
+    "status": "Fuimos a tu domicilio a realizar la entrega, pero no se pudo concretar.",
+    "updated_at": "2026-11-17T19:16:10"
   },
   "8821722746066": {
     "destinatario": "CAROLINA HERNANDEZ",
     "phone": "091001989",
-    "status": "Tu paquete fue recibido por DAC en: CENTRO DE DISTRIBUCION",
-    "updated_at": "2026-11-16T17:53:02"
+    "status": "Tu paquete quedó listo para retirar en la agencia",
+    "updated_at": "2026-11-17T19:16:10"
   },
   "8821722769566": {
     "destinatario": "JESSIKA MORALES",
     "phone": "098592396",
-    "status": "Tu paquete fue recibido por DAC en: CENTRO DE DISTRIBUCION",
-    "updated_at": "2026-11-16T17:53:03"
+    "status": "Tu paquete fue entregado",
+    "updated_at": "2026-11-17T19:16:11"
   },
   "8821723017855": {
     "destinatario": "VICTORIA BRAVI",
     "phone": "091535958",
-    "status": "Tu paquete fue recibido por DAC en: CENTRO DE DISTRIBUCION",
-    "updated_at": "2026-11-16T17:53:03"
+    "status": "Tu paquete está en viaje a BELLA UNION",
+    "updated_at": "2026-11-17T19:16:12"
   },
   "8821723397330": {
     "destinatario": "MICAELA PERDOMO",
     "phone": "099882108",
-    "status": "El remitente hizo el despacho virtual y DAC está esperando tu paquete",
-    "updated_at": "2026-11-16T17:53:04"
+    "status": "Tu paquete fue recibido por DAC en: CENTRO DE DISTRIBUCION",
+    "updated_at": "2026-11-17T19:16:12"
+  },
+  "8821726959935": {
+    "destinatario": "SARA NAVARRO",
+    "phone": "091483011",
+    "status": "Tu paquete fue recibido por DAC en: CENTRO DE DISTRIBUCION",
+    "updated_at": "2026-11-17T19:16:12"
+  },
+  "8821729261589": {
+    "destinatario": "LETICIA FERRARI",
+    "phone": "096212665",
+    "status": "Tu paquete fue recibido por DAC en: CENTRO DE DISTRIBUCION",
+    "updated_at": "2026-11-17T19:16:13"
+  },
+  "8821729367716": {
+    "destinatario": "MICAELA CAFFARO",
+    "phone": "094628504",
+    "status": "Tu paquete fue recibido por DAC en: CENTRO DE DISTRIBUCION",
+    "updated_at": "2026-11-17T19:16:13"
+  },
+  "8821729408911": {
+    "destinatario": "CAMILA BELO",
+    "phone": "098379213",
+    "status": "Tu paquete fue recibido por DAC en: CENTRO DE DISTRIBUCION",
+    "updated_at": "2026-11-17T19:16:14"
+  },
+  "8821729706385": {
+    "destinatario": "MANUELA RIVERO",
+    "phone": "092358813",
+    "status": "Tu paquete fue recibido por DAC en: CENTRO DE DISTRIBUCION",
+    "updated_at": "2026-11-17T19:16:14"
   }
 }
