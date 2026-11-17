@@ -1472,8 +1472,8 @@
   "8821722742895": {
     "destinatario": "CAMILA CALO",
     "phone": "094026418",
-    "status": "Fuimos a tu domicilio a realizar la entrega, pero no se pudo concretar.",
-    "updated_at": "2026-11-17T19:16:10"
+    "status": "Tu paquete quedó listo para retirar en la agencia",
+    "updated_at": "2026-11-17T20:02:06"
   },
   "8821722746066": {
     "destinatario": "CAROLINA HERNANDEZ",
@@ -1490,8 +1490,8 @@
   "8821723017855": {
     "destinatario": "VICTORIA BRAVI",
     "phone": "091535958",
-    "status": "Tu paquete está en viaje a BELLA UNION",
-    "updated_at": "2026-11-17T19:16:12"
+    "status": "Tu paquete se encuentra en BELLA UNION",
+    "updated_at": "2026-11-17T20:02:07"
   },
   "8821723397330": {
     "destinatario": "MICAELA PERDOMO",
@@ -1528,5 +1528,11 @@
     "phone": "092358813",
     "status": "Tu paquete fue recibido por DAC en: CENTRO DE DISTRIBUCION",
     "updated_at": "2026-11-17T19:16:14"
+  },
+  "8821731403717": {
+    "destinatario": "DAIANA CHOLLET",
+    "phone": "099649200",
+    "status": "El remitente hizo el despacho virtual y DAC está esperando tu paquete",
+    "updated_at": "2026-11-17T20:02:08"
   }
 }
