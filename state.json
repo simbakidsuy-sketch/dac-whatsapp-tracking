@@ -1558,5 +1558,11 @@
     "phone": "099474398",
     "status": "El remitente hizo el despacho virtual y DAC está esperando tu paquete",
     "updated_at": "2026-11-18T11:00:33"
+  },
+  "8821733792644": {
+    "destinatario": "LORENA SOSA",
+    "phone": "098119227",
+    "status": "El remitente hizo el despacho virtual y DAC está esperando tu paquete",
+    "updated_at": "2026-11-18T15:00:26"
   }
 }
