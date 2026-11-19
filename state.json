@@ -1544,8 +1544,8 @@
   "8821732959361": {
     "destinatario": "GIMENA GARRIDO VILLAR",
     "phone": "094277334",
-    "status": "Tu paquete se encuentra en EL PINAR",
-    "updated_at": "2026-11-19T11:20:22"
+    "status": "Tu paquete está en reparto (9 a 20hs)",
+    "updated_at": "2026-11-19T13:20:19"
   },
   "8821732962746": {
     "destinatario": "VERONICA RODRIGUEZ",
@@ -1564,5 +1564,11 @@
     "phone": "098119227",
     "status": "Tu paquete se encuentra en LASCANO DAC",
     "updated_at": "2026-11-19T11:00:29"
+  },
+  "8821737995941": {
+    "destinatario": "MARIANA RODRÍGUEZ",
+    "phone": "099306736",
+    "status": "El remitente hizo el despacho virtual y DAC está esperando tu paquete",
+    "updated_at": "2026-11-19T13:20:19"
   }
 }
