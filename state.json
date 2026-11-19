@@ -1496,8 +1496,8 @@
   "8821723397330": {
     "destinatario": "MICAELA PERDOMO",
     "phone": "099882108",
-    "status": "Tu paquete se encuentra en MINAS",
-    "updated_at": "2026-11-18T12:00:25"
+    "status": "Tu paquete fue entregado",
+    "updated_at": "2026-11-19T20:20:33"
   },
   "8821726959935": {
     "destinatario": "SARA NAVARRO",
@@ -1576,5 +1576,11 @@
     "phone": "098834806",
     "status": "Tu paquete fue recibido por DAC en: LA COMERCIAL",
     "updated_at": "2026-11-19T19:27:13"
+  },
+  "8821740100679": {
+    "destinatario": "FLORENCIA FIRPO",
+    "phone": "091085637",
+    "status": "El remitente hizo el despacho virtual y DAC está esperando tu paquete",
+    "updated_at": "2026-11-19T20:20:33"
   }
 }
