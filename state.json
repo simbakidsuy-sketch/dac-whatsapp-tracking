@@ -1570,5 +1570,11 @@
     "phone": "099306736",
     "status": "El remitente hizo el despacho virtual y DAC está esperando tu paquete",
     "updated_at": "2026-11-19T13:20:19"
+  },
+  "8821739147169": {
+    "destinatario": "ANNABELLA PALOMBO",
+    "phone": "098834806",
+    "status": "El remitente hizo el despacho virtual y DAC está esperando tu paquete",
+    "updated_at": "2026-11-19T17:20:19"
   }
 }
