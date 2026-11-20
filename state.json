@@ -239,6 +239,12 @@
     "status": "Tu paquete fue entregado",
     "updated_at": "2026-11-18T21:00:24"
   },
+  "8001742652522": {
+    "destinatario": "SOFIA IRULEGUY",
+    "phone": "097530485",
+    "status": "El remitente hizo el despacho virtual y DAC está esperando tu paquete",
+    "updated_at": "2026-11-20T15:40:17"
+  },
   "8821381103186": {
     "destinatario": "JURI SILVA",
     "phone": null,
@@ -1582,5 +1588,11 @@
     "phone": "091085637",
     "status": "El remitente hizo el despacho virtual y DAC está esperando tu paquete",
     "updated_at": "2026-11-19T20:20:33"
+  },
+  "8821742608674": {
+    "destinatario": "ANA MIRABALLES",
+    "phone": "098394954",
+    "status": "El remitente hizo el despacho virtual y DAC está esperando tu paquete",
+    "updated_at": "2026-11-20T15:40:17"
   }
 }
