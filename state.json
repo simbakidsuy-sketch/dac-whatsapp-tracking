@@ -242,8 +242,8 @@
   "8001742652522": {
     "destinatario": "SOFIA IRULEGUY",
     "phone": "097530485",
-    "status": "Tu paquete fue recibido por DAC en: CENTRO DE DISTRIBUCION",
-    "updated_at": "2026-11-20T18:20:23"
+    "status": "Tu paquete fue validado en nuestro centro de distribución",
+    "updated_at": "2026-11-20T19:40:28"
   },
   "8821381103186": {
     "destinatario": "JURI SILVA",
@@ -1592,13 +1592,13 @@
   "8821742608674": {
     "destinatario": "ANA MIRABALLES",
     "phone": "098394954",
-    "status": "Tu paquete fue recibido por DAC en: CENTRO DE DISTRIBUCION",
-    "updated_at": "2026-11-20T18:20:22"
+    "status": "Tu paquete fue validado en nuestro centro de distribución",
+    "updated_at": "2026-11-20T19:40:27"
   },
   "8821743193018": {
     "destinatario": "ARACELI MARICHAL",
     "phone": "099155325",
-    "status": "Tu paquete fue recibido por DAC en: CENTRO DE DISTRIBUCION",
-    "updated_at": "2026-11-20T18:20:23"
+    "status": "Tu paquete fue validado en nuestro centro de distribución",
+    "updated_at": "2026-11-20T19:40:28"
   }
 }
