@@ -1594,5 +1594,11 @@
     "phone": "098394954",
     "status": "El remitente hizo el despacho virtual y DAC está esperando tu paquete",
     "updated_at": "2026-11-20T15:40:17"
+  },
+  "8821743193018": {
+    "destinatario": "ARACELI MARICHAL",
+    "phone": "099155325",
+    "status": "El remitente hizo el despacho virtual y DAC está esperando tu paquete",
+    "updated_at": "2026-11-20T17:00:51"
   }
 }
