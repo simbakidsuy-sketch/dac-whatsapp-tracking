@@ -1600,5 +1600,11 @@
     "phone": "099155325",
     "status": "Tu paquete se encuentra en LIBERTAD",
     "updated_at": "2026-11-21T11:40:20"
+  },
+  "8821750776482": {
+    "destinatario": "KAREN MENONI PEÑA",
+    "phone": "091274720",
+    "status": "El remitente hizo el despacho virtual y DAC está esperando tu paquete",
+    "updated_at": "2026-11-23T13:40:18"
   }
 }
