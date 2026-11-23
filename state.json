@@ -1618,5 +1618,23 @@
     "phone": "097143333",
     "status": "El remitente hizo el despacho virtual y DAC está esperando tu paquete",
     "updated_at": "2026-11-23T14:00:27"
+  },
+  "8821750919976": {
+    "destinatario": "BETIANA PEREZ MURIAS",
+    "phone": "098946551",
+    "status": "El remitente hizo el despacho virtual y DAC está esperando tu paquete",
+    "updated_at": "2026-11-23T14:20:17"
+  },
+  "8821750949565": {
+    "destinatario": "ROMINA CORREA",
+    "phone": "098850472",
+    "status": "El remitente hizo el despacho virtual y DAC está esperando tu paquete",
+    "updated_at": "2026-11-23T14:20:18"
+  },
+  "8821750973231": {
+    "destinatario": "CLAUDIA HERNÁNDEZ",
+    "phone": "094096791",
+    "status": "El remitente hizo el despacho virtual y DAC está esperando tu paquete",
+    "updated_at": "2026-11-23T14:20:18"
   }
 }
