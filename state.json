@@ -1678,5 +1678,11 @@
     "phone": "098158769",
     "status": "El remitente hizo el despacho virtual y DAC está esperando tu paquete",
     "updated_at": "2026-11-23T18:00:40"
+  },
+  "8821752703511": {
+    "destinatario": "FLORENCIA MONTES",
+    "phone": "093796728",
+    "status": "El remitente hizo el despacho virtual y DAC está esperando tu paquete",
+    "updated_at": "2026-11-23T19:20:20"
   }
 }
