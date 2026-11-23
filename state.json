@@ -1666,5 +1666,17 @@
     "phone": "099655885",
     "status": "Tu paquete fue recibido por DAC en: CENTRO DE DISTRIBUCION",
     "updated_at": "2026-11-23T16:00:38"
+  },
+  "8821752240835": {
+    "destinatario": "MAICA VILLA",
+    "phone": "097081560",
+    "status": "El remitente hizo el despacho virtual y DAC está esperando tu paquete",
+    "updated_at": "2026-11-23T18:00:39"
+  },
+  "8821752293486": {
+    "destinatario": "CARMEN SANTANA",
+    "phone": "098158769",
+    "status": "El remitente hizo el despacho virtual y DAC está esperando tu paquete",
+    "updated_at": "2026-11-23T18:00:40"
   }
 }
