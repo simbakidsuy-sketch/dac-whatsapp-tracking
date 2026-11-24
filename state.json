@@ -1696,5 +1696,11 @@
     "phone": "091005655",
     "status": "El remitente hizo el despacho virtual y DAC está esperando tu paquete",
     "updated_at": "2026-11-24T11:40:25"
+  },
+  "8821755019090": {
+    "destinatario": "ANNELLE PUY",
+    "phone": "094025741",
+    "status": "El remitente hizo el despacho virtual y DAC está esperando tu paquete",
+    "updated_at": "2026-11-24T13:00:36"
   }
 }
