@@ -1646,8 +1646,8 @@
   "8821750973231": {
     "destinatario": "CLAUDIA HERNÁNDEZ",
     "phone": "094096791",
-    "status": "Tu paquete está en viaje a ECILDA PAULLIER",
-    "updated_at": "2026-11-24T11:00:25"
+    "status": "Tu paquete se encuentra en ECILDA PAULLIER",
+    "updated_at": "2026-11-24T11:40:25"
   },
   "8821751063731": {
     "destinatario": "JUAN MANUEL ORTIZ",
@@ -1690,5 +1690,11 @@
     "phone": "093796728",
     "status": "El remitente hizo el despacho virtual y DAC está esperando tu paquete",
     "updated_at": "2026-11-23T19:20:20"
+  },
+  "8821754820016": {
+    "destinatario": "VERÓNICA MARTÍNEZ",
+    "phone": "091005655",
+    "status": "El remitente hizo el despacho virtual y DAC está esperando tu paquete",
+    "updated_at": "2026-11-24T11:40:25"
   }
 }
