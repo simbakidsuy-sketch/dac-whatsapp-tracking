@@ -1634,8 +1634,8 @@
   "8821750919976": {
     "destinatario": "BETIANA PEREZ MURIAS",
     "phone": "098946551",
-    "status": "Tu paquete fue validado en nuestro centro de distribución",
-    "updated_at": "2026-11-24T11:00:24"
+    "status": "Tu paquete está en reparto (9 a 20hs)",
+    "updated_at": "2026-11-24T13:20:17"
   },
   "8821750949565": {
     "destinatario": "ROMINA CORREA",
@@ -1646,8 +1646,8 @@
   "8821750973231": {
     "destinatario": "CLAUDIA HERNÁNDEZ",
     "phone": "094096791",
-    "status": "Tu paquete se encuentra en ECILDA PAULLIER",
-    "updated_at": "2026-11-24T11:40:25"
+    "status": "Tu paquete está en reparto (9 a 20hs)",
+    "updated_at": "2026-11-24T13:20:18"
   },
   "8821751063731": {
     "destinatario": "JUAN MANUEL ORTIZ",
@@ -1702,5 +1702,11 @@
     "phone": "094025741",
     "status": "El remitente hizo el despacho virtual y DAC está esperando tu paquete",
     "updated_at": "2026-11-24T13:00:36"
+  },
+  "8821755166826": {
+    "destinatario": "ADRIANA MIRAZON",
+    "phone": "099831602",
+    "status": "El remitente hizo el despacho virtual y DAC está esperando tu paquete",
+    "updated_at": "2026-11-24T13:20:18"
   }
 }
