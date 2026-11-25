@@ -254,8 +254,8 @@
   "8001753146817": {
     "destinatario": "ANABEL REYES",
     "phone": "099773206",
-    "status": "Tu paquete está en reparto (9 a 20hs)",
-    "updated_at": "2026-11-25T11:20:18"
+    "status": "Tu paquete está en viaje a SAN JOSE",
+    "updated_at": "2026-11-25T13:00:28"
   },
   "8821381103186": {
     "destinatario": "JURI SILVA",
@@ -1628,8 +1628,8 @@
   "8821750846344": {
     "destinatario": "VICTORIA HOLMBERG",
     "phone": "097143333",
-    "status": "Tu paquete se encuentra en MALDONADO",
-    "updated_at": "2026-11-24T12:20:33"
+    "status": "Tu paquete está en reparto (9 a 20hs)",
+    "updated_at": "2026-11-25T13:00:28"
   },
   "8821750919976": {
     "destinatario": "BETIANA PEREZ MURIAS",
@@ -1688,8 +1688,8 @@
   "8821752703511": {
     "destinatario": "FLORENCIA MONTES",
     "phone": "093796728",
-    "status": "Tu paquete se encuentra en CENTRO OPERACIONES MVD",
-    "updated_at": "2026-11-25T11:00:23"
+    "status": "Tu paquete está en viaje a CIUDAD DEL PLATA",
+    "updated_at": "2026-11-25T13:00:28"
   },
   "8821754820016": {
     "destinatario": "VERÓNICA MARTÍNEZ",
