@@ -1762,5 +1762,11 @@
     "phone": "098176150",
     "status": "El remitente hizo el despacho virtual y DAC está esperando tu paquete",
     "updated_at": "2026-11-25T19:00:23"
+  },
+  "8821761024858": {
+    "destinatario": "LUCIANA FERREIRA",
+    "phone": "094818246",
+    "status": "El remitente hizo el despacho virtual y DAC está esperando tu paquete",
+    "updated_at": "2026-11-25T19:20:18"
   }
 }
