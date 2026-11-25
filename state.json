@@ -257,6 +257,12 @@
     "status": "Tu paquete está en viaje a SAN JOSE",
     "updated_at": "2026-11-25T13:00:28"
   },
+  "8001759814985": {
+    "destinatario": "ROMY DACOSTA",
+    "phone": "092919037",
+    "status": "El remitente hizo el despacho virtual y DAC está esperando tu paquete",
+    "updated_at": "2026-11-25T15:20:19"
+  },
   "8821381103186": {
     "destinatario": "JURI SILVA",
     "phone": null,
@@ -1658,8 +1664,8 @@
   "8821751087895": {
     "destinatario": "MARIA ORIGONI",
     "phone": "091369923",
-    "status": "Tu paquete se encuentra en AGENCIA JOSE PEDRO VARELA",
-    "updated_at": "2026-11-24T12:00:30"
+    "status": "Tu paquete fue entregado",
+    "updated_at": "2026-11-25T15:20:18"
   },
   "8821751225183": {
     "destinatario": "SABRINA SOLARI",
