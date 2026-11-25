@@ -254,8 +254,8 @@
   "8001753146817": {
     "destinatario": "ANABEL REYES",
     "phone": "099773206",
-    "status": "Tu paquete está en viaje a SAN JOSE",
-    "updated_at": "2026-11-24T23:00:24"
+    "status": "Tu paquete se encuentra en TRES CRUCES",
+    "updated_at": "2026-11-25T11:00:24"
   },
   "8821381103186": {
     "destinatario": "JURI SILVA",
@@ -1688,26 +1688,26 @@
   "8821752703511": {
     "destinatario": "FLORENCIA MONTES",
     "phone": "093796728",
-    "status": "Tu paquete está en viaje a CIUDAD DEL PLATA",
-    "updated_at": "2026-11-24T23:00:24"
+    "status": "Tu paquete se encuentra en CENTRO OPERACIONES MVD",
+    "updated_at": "2026-11-25T11:00:23"
   },
   "8821754820016": {
     "destinatario": "VERÓNICA MARTÍNEZ",
     "phone": "091005655",
-    "status": "Tu paquete está en viaje a CENTRO DE DISTRIBUCION",
-    "updated_at": "2026-11-24T23:00:24"
+    "status": "Tu paquete fue validado en nuestro centro de distribución",
+    "updated_at": "2026-11-25T11:00:24"
   },
   "8821755019090": {
     "destinatario": "ANNELLE PUY",
     "phone": "094025741",
-    "status": "Tu paquete está en viaje a EL PINAR",
-    "updated_at": "2026-11-24T23:00:25"
+    "status": "Tu paquete se encuentra en EL PINAR",
+    "updated_at": "2026-11-25T11:00:24"
   },
   "8821755166826": {
     "destinatario": "ADRIANA MIRAZON",
     "phone": "099831602",
-    "status": "Tu paquete está en viaje a TACUAREMBO DEPOSITO",
-    "updated_at": "2026-11-24T22:20:18"
+    "status": "Tu paquete se encuentra en TACUAREMBO DEPOSITO",
+    "updated_at": "2026-11-25T11:00:24"
   },
   "8821756779918": {
     "destinatario": "IRINA DE LOS SANTOS",
