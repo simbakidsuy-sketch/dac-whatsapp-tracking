@@ -254,8 +254,8 @@
   "8001753146817": {
     "destinatario": "ANABEL REYES",
     "phone": "099773206",
-    "status": "Tu paquete está en viaje a SAN JOSE",
-    "updated_at": "2026-11-25T13:00:28"
+    "status": "Tu paquete fue entregado",
+    "updated_at": "2026-11-25T21:00:26"
   },
   "8001759814985": {
     "destinatario": "ROMY DACOSTA",
@@ -1774,5 +1774,11 @@
     "phone": "091353671",
     "status": "El remitente hizo el despacho virtual y DAC está esperando tu paquete",
     "updated_at": "2026-11-25T19:40:25"
+  },
+  "8821761641477": {
+    "destinatario": "FENY FERNÁNDEZ",
+    "phone": "094689689",
+    "status": "El remitente hizo el despacho virtual y DAC está esperando tu paquete",
+    "updated_at": "2026-11-25T21:00:26"
   }
 }
