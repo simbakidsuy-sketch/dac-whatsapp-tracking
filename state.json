@@ -1756,5 +1756,11 @@
     "phone": "091618508",
     "status": "Tu paquete se encuentra en TRES CRUCES",
     "updated_at": "2026-11-25T18:40:18"
+  },
+  "8821760962818": {
+    "destinatario": "VANESSA ABREU",
+    "phone": "098176150",
+    "status": "El remitente hizo el despacho virtual y DAC está esperando tu paquete",
+    "updated_at": "2026-11-25T19:00:23"
   }
 }
