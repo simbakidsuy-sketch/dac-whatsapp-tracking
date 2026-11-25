@@ -1744,5 +1744,11 @@
     "phone": "092069386",
     "status": "El remitente hizo el despacho virtual y DAC está esperando tu paquete",
     "updated_at": "2026-11-24T18:40:32"
+  },
+  "8821759763852": {
+    "destinatario": "LIZET SUAREZ",
+    "phone": "091618508",
+    "status": "El remitente hizo el despacho virtual y DAC está esperando tu paquete",
+    "updated_at": "2026-11-25T15:00:27"
   }
 }
