@@ -1792,5 +1792,11 @@
     "phone": "093769644",
     "status": "El remitente hizo el despacho virtual y DAC está esperando tu paquete",
     "updated_at": "2026-11-26T13:20:23"
+  },
+  "8821763633441": {
+    "destinatario": "PATRICIA PÉREZ",
+    "phone": "092390577",
+    "status": "El remitente hizo el despacho virtual y DAC está esperando tu paquete",
+    "updated_at": "2026-11-26T15:20:21"
   }
 }
