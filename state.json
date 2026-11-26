@@ -266,8 +266,8 @@
   "8001764137274": {
     "destinatario": "FLORENCIA ROJANO",
     "phone": "099331810",
-    "status": "Tu paquete fue recibido por DAC en: CENTRO DE DISTRIBUCION",
-    "updated_at": "2026-11-26T18:00:37"
+    "status": "Tu paquete fue validado en nuestro centro de distribución",
+    "updated_at": "2026-11-26T23:00:28"
   },
   "8821381103186": {
     "destinatario": "JURI SILVA",
@@ -1784,14 +1784,14 @@
   "8821761641477": {
     "destinatario": "FENY FERNÁNDEZ",
     "phone": "094689689",
-    "status": "Tu paquete fue recibido por DAC en: ADMINISTRACION CDD",
-    "updated_at": "2026-11-26T18:00:35"
+    "status": "Tu paquete fue validado en nuestro centro de distribución",
+    "updated_at": "2026-11-26T23:00:27"
   },
   "8821762968410": {
     "destinatario": "MARISSA VINAY",
     "phone": "094090765",
-    "status": "Tu paquete fue recibido por DAC en: ADMINISTRACION CDD",
-    "updated_at": "2026-11-26T18:00:36"
+    "status": "Tu paquete fue validado en nuestro centro de distribución",
+    "updated_at": "2026-11-26T23:00:27"
   },
   "8821763088045": {
     "destinatario": "NATALIA MOTTA ROCHA",
@@ -1802,13 +1802,13 @@
   "8821763633441": {
     "destinatario": "PATRICIA PÉREZ",
     "phone": "092390577",
-    "status": "Tu paquete fue recibido por DAC en: ADMINISTRACION CDD",
-    "updated_at": "2026-11-26T18:00:37"
+    "status": "Tu paquete fue validado en nuestro centro de distribución",
+    "updated_at": "2026-11-26T23:00:27"
   },
   "8821764275766": {
     "destinatario": "LAURA JORAJURIA",
     "phone": "099535921",
-    "status": "Tu paquete fue recibido por DAC en: ADMINISTRACION CDD",
-    "updated_at": "2026-11-26T18:00:37"
+    "status": "Tu paquete fue validado en nuestro centro de distribución",
+    "updated_at": "2026-11-26T23:00:28"
   }
 }
