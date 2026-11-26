@@ -1730,8 +1730,8 @@
   "8821756826982": {
     "destinatario": "ERIKA VILLAR",
     "phone": "091261569",
-    "status": "Tu paquete está en reparto (9 a 20hs)",
-    "updated_at": "2026-11-26T12:00:26"
+    "status": "Tu paquete fue entregado",
+    "updated_at": "2026-11-26T12:40:17"
   },
   "8821756857495": {
     "destinatario": "STEFANIA NUÑEZ",
@@ -1780,5 +1780,11 @@
     "phone": "094689689",
     "status": "El remitente hizo el despacho virtual y DAC está esperando tu paquete",
     "updated_at": "2026-11-25T21:00:26"
+  },
+  "8821762968410": {
+    "destinatario": "MARISSA VINAY",
+    "phone": "094090765",
+    "status": "El remitente hizo el despacho virtual y DAC está esperando tu paquete",
+    "updated_at": "2026-11-26T12:40:17"
   }
 }
