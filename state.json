@@ -263,6 +263,12 @@
     "status": "Tu paquete fue entregado",
     "updated_at": "2026-11-26T12:20:19"
   },
+  "8001764137274": {
+    "destinatario": "FLORENCIA ROJANO",
+    "phone": "099331810",
+    "status": "El remitente hizo el despacho virtual y DAC está esperando tu paquete",
+    "updated_at": "2026-11-26T17:00:29"
+  },
   "8821381103186": {
     "destinatario": "JURI SILVA",
     "phone": null,
@@ -1724,8 +1730,8 @@
   "8821756803388": {
     "destinatario": "SOFÍA ÁLVAREZ",
     "phone": "092642639",
-    "status": "Tu paquete está en reparto (9 a 20hs)",
-    "updated_at": "2026-11-26T16:00:26"
+    "status": "Tu paquete fue entregado",
+    "updated_at": "2026-11-26T17:00:28"
   },
   "8821756826982": {
     "destinatario": "ERIKA VILLAR",
