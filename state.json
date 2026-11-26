@@ -1634,8 +1634,8 @@
   "8821750846344": {
     "destinatario": "VICTORIA HOLMBERG",
     "phone": "097143333",
-    "status": "Fuimos a tu domicilio a realizar la entrega, pero no se pudo concretar.",
-    "updated_at": "2026-11-25T22:00:25"
+    "status": "Tu paquete está en reparto (9 a 20hs)",
+    "updated_at": "2026-11-26T13:20:23"
   },
   "8821750919976": {
     "destinatario": "BETIANA PEREZ MURIAS",
@@ -1786,5 +1786,11 @@
     "phone": "094090765",
     "status": "El remitente hizo el despacho virtual y DAC está esperando tu paquete",
     "updated_at": "2026-11-26T12:40:17"
+  },
+  "8821763088045": {
+    "destinatario": "NATALIA MOTTA ROCHA",
+    "phone": "093769644",
+    "status": "El remitente hizo el despacho virtual y DAC está esperando tu paquete",
+    "updated_at": "2026-11-26T13:20:23"
   }
 }
