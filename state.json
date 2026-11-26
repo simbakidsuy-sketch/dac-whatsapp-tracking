@@ -260,8 +260,8 @@
   "8001759814985": {
     "destinatario": "ROMY DACOSTA",
     "phone": "092919037",
-    "status": "Tu paquete está en viaje a SALTO CERRITO",
-    "updated_at": "2026-11-25T21:20:23"
+    "status": "Tu paquete se encuentra en SALTO CERRITO",
+    "updated_at": "2026-11-26T11:00:28"
   },
   "8821381103186": {
     "destinatario": "JURI SILVA",
@@ -1718,44 +1718,44 @@
   "8821756779918": {
     "destinatario": "IRINA DE LOS SANTOS",
     "phone": "092010908",
-    "status": "Tu paquete está en viaje a SALTO TERMINAL",
-    "updated_at": "2026-11-25T21:20:22"
+    "status": "Tu paquete se encuentra en SALTO TERMINAL",
+    "updated_at": "2026-11-26T11:00:26"
   },
   "8821756803388": {
     "destinatario": "SOFÍA ÁLVAREZ",
     "phone": "092642639",
-    "status": "Tu paquete se encuentra en TRES CRUCES",
-    "updated_at": "2026-11-25T18:40:17"
+    "status": "Tu paquete está en viaje a MELO",
+    "updated_at": "2026-11-26T11:00:26"
   },
   "8821756826982": {
     "destinatario": "ERIKA VILLAR",
     "phone": "091261569",
-    "status": "Tu paquete se encuentra en TRES CRUCES",
-    "updated_at": "2026-11-25T18:40:17"
+    "status": "Tu paquete se encuentra en TREINTA Y TRES",
+    "updated_at": "2026-11-26T11:00:27"
   },
   "8821756857495": {
     "destinatario": "STEFANIA NUÑEZ",
     "phone": "099942381",
-    "status": "Tu paquete se encuentra en TRES CRUCES",
-    "updated_at": "2026-11-25T18:40:17"
+    "status": "Tu paquete está en viaje a MALDONADO",
+    "updated_at": "2026-11-26T11:00:27"
   },
   "8821756908584": {
     "destinatario": "CAMILA ACOSTA",
     "phone": "095849125",
-    "status": "Tu paquete se encuentra en TRES CRUCES",
-    "updated_at": "2026-11-25T18:40:18"
+    "status": "Tu paquete está en viaje a MALDONADO",
+    "updated_at": "2026-11-26T11:00:28"
   },
   "8821756923197": {
     "destinatario": "KATHERINE STABILE",
     "phone": "092069386",
-    "status": "Tu paquete se encuentra en TRES CRUCES",
-    "updated_at": "2026-11-25T18:40:18"
+    "status": "Tu paquete se encuentra en CENTRO OPERACIONES MVD",
+    "updated_at": "2026-11-26T11:00:28"
   },
   "8821759763852": {
     "destinatario": "LIZET SUAREZ",
     "phone": "091618508",
-    "status": "Tu paquete se encuentra en CENTRO DE DISTRIBUCION",
-    "updated_at": "2026-11-25T22:40:17"
+    "status": "Tu paquete fue validado en nuestro centro de distribución",
+    "updated_at": "2026-11-26T11:00:28"
   },
   "8821760962818": {
     "destinatario": "VANESSA ABREU",
