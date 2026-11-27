@@ -1814,19 +1814,25 @@
   "8821766678013": {
     "destinatario": "ALEJANDRINA PAIS",
     "phone": "099355279",
-    "status": "El remitente hizo el despacho virtual y DAC está esperando tu paquete",
-    "updated_at": "2026-11-27T12:00:32"
+    "status": "Tu paquete fue recibido por DAC en: LA COMERCIAL",
+    "updated_at": "2026-11-27T18:00:30"
   },
   "8821767197951": {
     "destinatario": "VALERIA PIREZ",
     "phone": "091398467",
-    "status": "El remitente hizo el despacho virtual y DAC está esperando tu paquete",
-    "updated_at": "2026-11-27T14:00:37"
+    "status": "Tu paquete fue recibido por DAC en: LA COMERCIAL",
+    "updated_at": "2026-11-27T18:00:30"
   },
   "8821767669464": {
     "destinatario": "STEPHANIE PINTOS DA SILVA LEIVAS",
     "phone": "098472617",
-    "status": "El remitente hizo el despacho virtual y DAC está esperando tu paquete",
-    "updated_at": "2026-11-27T16:00:25"
+    "status": "Tu paquete fue recibido por DAC en: LA COMERCIAL",
+    "updated_at": "2026-11-27T18:00:31"
+  },
+  "8821768140225": {
+    "destinatario": "JOHANA VÁZQUEZ",
+    "phone": "098256460",
+    "status": "Tu paquete fue recibido por DAC en: LA COMERCIAL",
+    "updated_at": "2026-11-27T18:00:31"
   }
 }
