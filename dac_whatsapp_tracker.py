@@ -111,7 +111,7 @@ DIAS_A_REVISAR = 5
 #   del que vino cargado en DAC.
 # Para agregar una: "numero_de_guia": None,  (o el telefono correcto entre comillas)
 GUIAS_CORREGIDAS = {
-    "8821764275766": None,  # LAURA JORAJURIA: telefono 099535921 era de otra persona (27/11/2026)
+    "8821764275766": "099565921",  # LAURA JORAJURIA: en DAC quedo 099535921 (de otra persona); el correcto es este (27/11/2026)
 }
 
 
