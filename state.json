@@ -1778,8 +1778,8 @@
   "8821761201867": {
     "destinatario": "RAQUEL PAIVA",
     "phone": "091353671",
-    "status": "Tu paquete fue validado en nuestro centro de distribución",
-    "updated_at": "2026-11-27T11:00:25"
+    "status": "Tu paquete está en viaje a CENTRO DE DISTRIBUCION",
+    "updated_at": "2026-11-27T16:00:25"
   },
   "8821761641477": {
     "destinatario": "FENY FERNÁNDEZ",
@@ -1822,5 +1822,11 @@
     "phone": "091398467",
     "status": "El remitente hizo el despacho virtual y DAC está esperando tu paquete",
     "updated_at": "2026-11-27T14:00:37"
+  },
+  "8821767669464": {
+    "destinatario": "STEPHANIE PINTOS DA SILVA LEIVAS",
+    "phone": "098472617",
+    "status": "El remitente hizo el despacho virtual y DAC está esperando tu paquete",
+    "updated_at": "2026-11-27T16:00:25"
   }
 }
