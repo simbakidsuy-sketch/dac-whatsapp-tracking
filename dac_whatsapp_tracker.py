@@ -105,6 +105,16 @@ DAC_TRACKING_URL_PREFIX = "https://www.dac.com.uy/envios/rastreo/Codigo_Rastreo/
 DIAS_A_REVISAR = 5
 
 
+# Guias con el telefono equivocado o que no hay que avisar.
+# - Si el valor es None: NO se le manda ningun WhatsApp a esa guia.
+# - Si el valor es un telefono (ej. "099123456"): se avisa a ESE numero en vez
+#   del que vino cargado en DAC.
+# Para agregar una: "numero_de_guia": None,  (o el telefono correcto entre comillas)
+GUIAS_CORREGIDAS = {
+    "8821764275766": None,  # LAURA JORAJURIA: telefono 099535921 era de otra persona (27/11/2026)
+}
+
+
 # Horario en el que esta permitido correr el script y mandar WhatsApp a los
 # clientes (hora de Uruguay). Fuera de este horario el script no consulta DAC
 # ni manda nada; simplemente no hace nada y termina. Esto evita que le lleguen
@@ -452,8 +462,15 @@ def main() -> int:
         if not telefono:
             telefono = registro_previo.get("phone")
 
+        # Correcciones manuales (ver GUIAS_CORREGIDAS arriba).
+        avisos_desactivados = False
+        if k_guia in GUIAS_CORREGIDAS:
+            telefono = GUIAS_CORREGIDAS[k_guia]
+            avisos_desactivados = not telefono
 
-        if telefono:
+        if avisos_desactivados:
+            log(f"  Guia {k_guia} ({destinatario}): avisos desactivados a mano (telefono equivocado). No se manda WhatsApp.")
+        elif telefono:
             estado_texto = texto_amigable_para_estado(estado_actual)
             if DRY_RUN:
                 log(
